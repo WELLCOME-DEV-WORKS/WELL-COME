@@ -378,12 +378,6 @@
     
         
 
-        // 로컬 스토리지에 값 저장
-        function saveToLocalStorage(key, value) {
-          localStorage.setItem(key, value);
-          console.log(localStorage); // 저장된 로컬 스토리지 확인
-        }
-
         // 설립 지역 데이터 리스트
         const regionSelect = document.getElementById("regionSelect");
         regionSelect.addEventListener("change", function() {
@@ -391,60 +385,87 @@
           console.log(this.value);
           saveToLocalStorage(`${currentStep} selectedValue`, selectedValue);
         });
-    
-        // 카드 클릭 시 로컬 스토리지에 값 저장
-        function handleCardClick(event) {
-          const selectedRadioValue = event.currentTarget.querySelector('input[type="radio"]');
-          if (selectedRadioValue) {
-            saveToLocalStorage(`${currentStep} selectedValue`, selectedRadioValue.value);
-          } 
-        }
-
-        // 다음 단계로 이동하는 함수
-        function goToNextStep() {
-          const currentStepElement = steps[currentStep];
-    
-          if (!validateStep()) {
-            return; // 유효성 검사 실패 시 종료
-          }
-    
-          currentStepElement.classList.remove("active");
-         
-
-          currentStep += 1; // 다음 단계로 이동
-    
-          if (currentStep < steps.length) {
-            steps[currentStep].classList.add("active");
-          }
-    
-          // 결과 페이지로 이동
-          if (currentStep === steps.length - 1) {
-            setTimeout(() => {
-              const loadingSection = document.getElementById("fc-scoreResultLoading");
-              loadingSection.classList.remove("active");
-              // 추가 로직...
-            }, 1500);
-          }
-        }
-
-        // 카드 클릭 이벤트 추가
+            // 카드 클릭 이벤트 추가
         const radioSelectBoxes = document.querySelectorAll('.fc-radio-SelectBox');
         radioSelectBoxes.forEach(box => {
-          box.addEventListener('click', handleCardClick); // 카드 클릭 시 값 저장
+          box.addEventListener('click', handleCardClick); // 카드 클릭 시 이벤트 핸들러 추가
         });
 
-      // input text 추가 이벤트
-      const textSelectBoxes = document.querySelectorAll('.fc-formButton');
-      textSelectBoxes.forEach((input) => {
-        input.addEventListener('input', (e) => {
-          const value = e.target.value;
-          const placeholder = input.placeholder;
+        // 카드 클릭 이벤트 핸들러
+        function handleCardClick(event) {
+          const selectedRadioValue = event.currentTarget.querySelector('input[type="radio"]');
+          highlightSelectedCard(event.currentTarget); // 카드 강조 처리
+          if (selectedRadioValue) {
+            saveSelectedValue(selectedRadioValue.value); // 로컬 스토리지에 값 저장
+          }
+        }
 
+        // 카드 강조 처리 함수
+        function highlightSelectedCard(clickedCard) {
+          // 모든 카드에서 'selected' 클래스 제거
+          radioSelectBoxes.forEach(box => {
+            box.classList.remove('selected');
+          });
+          
+          // 클릭된 카드에 'selected' 클래스 추가
+          clickedCard.classList.add('selected');
+        }
+
+        // 로컬 스토리지에 값 저장 함수
+        function saveSelectedValue(value) {
           saveToLocalStorage(`${currentStep} selectedValue`, value);
+        }
 
-          console.log(`Saved ${placeholder}: ${value}`); // 저장된 값 확인용
+        // 로컬 스토리지에 값 저장
+        function saveToLocalStorage(key, value) {
+          localStorage.setItem(key, value);
+          console.log(localStorage); // 저장된 로컬 스토리지 확인
+        }
+
+
+
+          
+      // 다음 단계로 이동하는 함수
+      function goToNextStep() {
+        const currentStepElement = steps[currentStep];
+  
+        if (!validateStep()) {
+          return; // 유효성 검사 실패 시 종료
+        }
+  
+        currentStepElement.classList.remove("active");
+        
+
+        currentStep += 1; // 다음 단계로 이동
+  
+        if (currentStep < steps.length) {
+          steps[currentStep].classList.add("active");
+        }
+  
+        // 결과 페이지로 이동
+        if (currentStep === steps.length - 1) {
+          setTimeout(() => {
+            const loadingSection = document.getElementById("fc-scoreResultLoading");
+            loadingSection.classList.remove("active");
+            // 추가 로직...
+          }, 1500);
+        }
+      }
+
+   
+
+        // input text 추가 이벤트
+        const textSelectBoxes = document.querySelectorAll('.fc-formButton');
+        textSelectBoxes.forEach((input) => {
+          input.addEventListener('input', (e) => {
+            const value = e.target.value;
+            const placeholder = input.placeholder;
+
+            saveToLocalStorage(`${currentStep} selectedValue`, value);
+
+            console.log(`Saved ${placeholder}: ${value}`); // 저장된 값 확인용
+          });
         });
-      });
       
         // 다음 버튼 클릭 시 goToNextStep 호출
         nextButtons.forEach((button) => {
@@ -470,7 +491,7 @@
 
       const submitInfo = () => {
         console.log('submitInfo');
-        const sumbmitLimit = localStorage.getItem('6 selectedValue')
+        const submitLimit = localStorage.getItem('6 selectedValue')
 
         if (submitLimit && submitLimit.length >= 2) {
         document.getElementById("input_txt_2adc34665cda5").value =
