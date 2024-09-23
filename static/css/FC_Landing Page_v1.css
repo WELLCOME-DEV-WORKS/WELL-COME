@@ -1,0 +1,260 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fullpage {
+    z-index: 0;
+    width: 100%;
+    
+}
+
+h1{
+font-size: 6em;
+font-size: calc(2em + 2vw);
+font-family: arial,helvetica;
+margin:0;
+}
+
+.section{
+text-align:center;
+font-family: arial,helvetica;
+color: #fff;
+}
+
+.intro p{
+width: 50%;
+margin: 0.5em auto;
+font-size: 1.65em;
+}
+
+/* Backgrounds colors for sections */
+.fp-section:nth-child(1){
+background-image: linear-gradient(128deg,#40afff,#3f61ff);
+}
+
+.fp-section:nth-child(2){
+background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
+}
+
+.fp-section:nth-child(3){
+background-image: linear-gradient(128deg,#fc40ff,#543fff);
+}
+
+/* Setting states for animations */
+#section3 h1,
+#section2 h1{
+transform: scale(0.8);
+position:relative;
+transition: all 600ms ease;
+opacity: 0;
+}
+
+#section2 h1.active{
+transform: scale(1);
+opacity: 1;
+}
+
+#section3 button,
+#section2 p{
+transform: translate3d(0, 50px, 0);
+opacity: 0;
+transition: all 700ms ease;
+transition-delay: 200ms;
+}
+
+#section2 p.active{
+transform: translate3d(0, 0, 0);
+opacity: 1;
+}
+
+
+/* .fp-overflow{
+overflow: visible !important;
+} */
+
+
+/**
+* Here we fire the animation for section 3.
+* As the fp-viewing class in the body changes on each section and slide.
+*/
+body.fp-viewing-3rdPage #section3 h1{
+transform: scale(1);
+opacity: 1;
+transition-delay: 700ms;
+}
+body.fp-viewing-3rdPage #section3 button{
+transform: translate3d(0, 0, 0);
+opacity: 1;
+transition-delay: 700ms;
+}
+
+
+
+
+/* Overwriting styles for the navigation dots */
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span{
+background: white;
+}
+
+/* This is just for fun */
+#section1, .section {
+    position: relative;
+    overflow: hidden;
+}
+
+#section1 h1{
+position: absolute;
+margin: 0 auto;
+left: 0;
+right: 0;
+animation-name: floating;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+animation-duration: 3s;
+}
+
+@keyframes floating {
+0% {
+transform: translate(0%, -30%);    
+}
+25% {
+transform: translate(5px, calc(-20% + 25px));   
+}   
+50% {
+transform: translate(10px, calc(-20% + 15px));   
+}   
+75% {
+transform: translate(0%, calc(-20% + 25px));   
+}   
+100% {
+transform: translate(0%, -30%);
+}   
+}
+
+
+/* 
+섹션 1
+*/
+
+/* 이미지 래퍼 스타일 */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+      .section1-container.img {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 이미지 공통 스타일 */
+      img.img {
+        position: absolute;
+        width: 660px;
+        height: auto;
+        flex-shrink: 0;
+        position: relative;
+        box-shadow: 5px 5px 14px #0000007c;
+         }
+
+      @media screen and (max-width: 375px) {
+        img.img {
+          width: 300px;
+          height: auto;
+          box-shadow: 2px 2px 7px #0000007c;
+        }
+      }
+
+       /* 여권 이미지별 스타일 */
+       img.passport1 {
+        transform: rotate(-8.515deg);
+        z-index: 3;
+        left: 170px;
+        top: -280px;
+        animation-name: moveTo10;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+      img.passport2 {
+        transform: rotate(28.515deg);
+        z-index: 2;
+        left: 140px;
+        top: -200px;
+        animation-name: moveTo12;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+                    }
+
+      img.passport3 {
+        transform: rotate(-8.104deg);
+        z-index: 1;
+        right: -300px;
+        top: -10px;
+        animation-name: moveTo3;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+
+      img.passport4 {
+        transform: rotate(17.104deg);
+        z-index: 5;
+        left: 50px;
+        bottom: 600px;
+        animation-name: moveTo8;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+
+      img.passport5 {
+        transform: rotate(-30.104deg);
+        z-index: 4;
+        left: 200px;
+        bottom: 700px;
+        animation-name: moveTo5;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+
+      /* 여권 애니메이션 */
+      @keyframes moveTo10 {
+        to {
+          transform: translate(-100vw, -100vh);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveTo12 {
+        to {
+          transform: translateY(-100vh);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveTo3 {
+        to {
+          transform: translateX(100vw);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveTo8 {
+        to {
+          transform: translate(-100vw, 100vh);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveTo5 {
+        to {
+          transform: translate(100vw, 100vh);
+          opacity: 0;
+        }
+      }
