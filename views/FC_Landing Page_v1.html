@@ -4,142 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/css/FC_Landing Page_v1.css">
+    <script src="../static/js/FC_Landing Page_v1.js" defer></script>
 </head>
-<style>
-      *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        #fullpage {
-            z-index: 0;
-            width: 100%;
-            
-        }
-
-        .index {
-margin: 0 !important;
-        }
-
-h1{
-    font-size: 6em;
-    font-size: calc(2em + 2vw);
-    font-family: arial,helvetica;
-    margin:0;
-}
-
-.section{
-    text-align:center;
-    font-family: arial,helvetica;
-    color: #fff;
-}
-
-.intro p{
-    width: 50%;
-    margin: 0.5em auto;
-    font-size: 1.65em;
-}
-
-/* Backgrounds colors for sections */
-.fp-section:nth-child(1){
-    background-image: linear-gradient(128deg,#40afff,#3f61ff);
-}
-
-.fp-section:nth-child(2){
-    background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
-}
-
-.fp-section:nth-child(3){
-    background-image: linear-gradient(128deg,#fc40ff,#543fff);
-}
-
-/* Setting states for animations */
-#section3 h1,
-#slide2-1 h1{
-    transform: scale(0.8);
-    position:relative;
-    transition: all 600ms ease;
-    opacity: 0;
-}
-
-#slide2-1 h1.active{
-    transform: scale(1);
-    opacity: 1;
-}
-
-#section3 p,
-#slide2-1 p{
-    transform: translate3d(0, 50px, 0);
-    opacity: 0;
-    transition: all 700ms ease;
-    transition-delay: 200ms;
-}
-
-#slide2-1 p.active{
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-}
-
-.fp-overflow{
-    overflow: visible !important;
-}
-
-/**
-* Here we fire the animation for section 3.
-* As the fp-viewing class in the body changes on each section and slide.
-*/
-body.fp-viewing-3rdPage #section3 h1{
-    transform: scale(1);
-    opacity: 1;
-    transition-delay: 700ms;
-}
-body.fp-viewing-3rdPage #section3 p{
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-    transition-delay: 700ms;
-}
-
-
-
-/* Overwriting styles for the navigation dots */
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span{
-    background: white;
-}
-
-/* This is just for fun */
-#section1 h1{
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    animation-name: floating;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-}
-
-@keyframes floating {
-    0% {
-        transform: translate(0%, -30%);    
-    }
-    25% {
-        transform: translate(5px, calc(-20% + 25px));   
-    }   
-    50% {
-        transform: translate(10px, calc(-20% + 15px));   
-    }   
-    75% {
-        transform: translate(0%, calc(-20% + 25px));   
-    }   
-    100% {
-        transform: translate(0%, -30%);
-    }   
-}
-
-
-</style>
 <body>
         <!-- fullPage.js cdn -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -148,57 +15,68 @@ body.fp-viewing-3rdPage #section3 p{
 <div id="fullpage">
     <div class="section" id="section1">
         <h1>Animations</h1>
+        <div class="section1-container img">
+            <img
+              src="../static/img/Korea.jpg"
+              alt="passport3"
+              class="img passport1"
+              id="passport-img-1"
+            />
+            <img
+              src="../static/img/China.jpg"
+              alt="passport1"
+              class="img passport2"
+              id="passport-img-2"
+            />
+            <img
+              src="../static/img/Japan.jpg"
+              alt="passport2"
+              class="img passport3"
+              id="passport-img-3"
+            />
+          </div>
+           <div class="section1-container img">
+            <img
+              src="../static/img/USA.jpg"
+              alt="passport4"
+              class="img passport4"
+              id="passport-img-4"
+            />
+            <img
+              src="../static/img/Vietnam.jpg"
+              alt="passport5"
+              class="img passport5"
+              id="passport-img-5"
+            />
+          </div>  
     </div>
     <div class="section" id="section2">
-        <div class="slide" id="slide2-1">
+        <div class="slide" id="slide2">
             <div class="intro">
                 <h1>Section 2</h1>
-                <p>Animation triggered by fullPage callbacks.</p>
-            </div>
+                  <!-- <ul class="why-list">
+                    <li class="why-item why-item1">选择“웰컴”的五大理由</li>
+                    <li class="why-item why-item2">选择“웰컴”的五大理由</li>
+                    <li class="why-item why-item3">选择“웰컴”的五大理由</li>
+                    <li class="why-item why-item4">选择“웰컴”的五大理由</li>
+                    <li class="why-item why-item5">选择“웰컴”的五大理由</li>
+                  </ul> -->
+                <p class="why-item why-item1">选择“웰컴”的五大理由</p>
+                <p class="why-item why-item2">选择“웰컴”的五大理由</p>
+                <p class="why-item why-item3">选择“웰컴”的五大理由</p>
+                <p class="why-item why-item4">选择“웰컴”的五大理由</p>
+                <p class="why-item why-item5">选择“웰컴”的五大理由</p>
+                </div>
         </div>
     
     </div>
     <div class="section" id="section3">
         <div class="intro">
-            <h1>Section 3</h1>
-            <p>Animation triggered by CSS state classes</p>
+            <h1>외국인 법인설립은 웰컴에서</h1>
+            <p><button>바로 시작하기</button></p>
         </div>
-    </div>
+
+           </div>
 </div>
     </body>
-    <script>
-   var myFullpage = new fullpage('#fullpage', {
-    
-    afterLoad: function(origin, destination, direction){
-        const section2H1 = document.querySelector('#section2').querySelector('h1');
-        const section2P = document.querySelector('#section2').querySelector('p');
-        
-        // reaching section 2?
-        if(destination.index == 1){
-            section2H1.classList.add('active');
-            section2P.classList.add('active');
-        }
-
-        // back to original state
-        else if(origin && origin.index == 1){
-            section2H1.classList.remove('active');
-            section2P.classList.remove('active');
-        }
-
-        // The section 3 is using the state classes to fire the animation
-        // See the CSS code on the styles
-
-    },
-
-    // Optional
-    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-    menu: '#menu',
-
-    navigation: true,
- navigationTooltips: ['First Section', 'Second Section', 'Third Section'],
-
-
-
-});
-    </script>
 </html>
