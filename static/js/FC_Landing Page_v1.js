@@ -3,10 +3,10 @@
   var myFullpage = new fullpage('#fullpage', {
    
    afterLoad: function(origin, destination){
-    const section1IMG = document.querySelector('#section1').querySelector('img');
-       const section2H1 = document.querySelector('#section2').querySelector('h1');
+    const section1IMG = document.querySelector('#section1 img')
+       const section2H1 = document.querySelector('#section2 h1');
        const section2P = document.querySelectorAll('#section2 p');
-       const section3BT = document.querySelector('#section3').querySelector('button');
+       const section3BT = document.querySelector('#section3 button');
        // reaching section 2?
        if(destination.index == 1){
         section1IMG.classList.add('active');
@@ -30,9 +30,13 @@
            section3BT.classList.remove('active');
        }
 
-       // The section 3 is using the state classes to fire the animation
-       // See the CSS code on the styles
+
    },
+
+  // Loop vertical options
+  loopTop: true,
+  loopBottom: true,
+
 
    // Optional
    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],

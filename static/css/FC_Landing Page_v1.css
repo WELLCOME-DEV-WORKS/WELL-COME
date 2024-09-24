@@ -318,12 +318,12 @@ transform: translate(0%, -30%);
     border-radius: 50px;
     transform: translate3d(0, 50px, 0);
     opacity: 0;
-    transition: opacity 700ms ease, transform 700ms ease;  
+    transition: opacity 700ms ease, transform 700ms ease;   
      transition-delay: 200ms;
 } 
 
 .startBT:hover, .startBT:active {
-  background-color:#ffffff;
+  background-color:#fff;
   color: #8C1DEF;
   font-weight: 600;
   font-family: 'Pretendard Variable';
