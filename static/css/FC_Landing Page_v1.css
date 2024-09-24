@@ -194,6 +194,41 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
       }
 
+      /* 여권 이미지 active 작동 */
+      img.passport1.active {
+        animation-name: moveTo10;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+      img.passport2.active {
+        z-index: 2;
+        animation-name: moveTo12;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+                    }
+
+      img.passport3.active {
+        z-index: 1;
+        animation-name: moveTo3;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+
+      img.passport4.active {
+        z-index: 5;
+        animation-name: moveTo8;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+
+      img.passport5.active {
+        z-index: 4;
+        animation-name: moveTo5;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+      
+
       /* 여권 애니메이션 */
         @keyframes moveTo10 {
         to {

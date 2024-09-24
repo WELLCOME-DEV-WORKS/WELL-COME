@@ -35,7 +35,6 @@
     }
 
     else if (origin && origin.index == 1) {
-      section1IMG.classList.remove('active');
       section2H1.classList.remove('active');
       section2P.forEach(p => p.classList.remove('active'));
       section3BT.classList.remove('active');
