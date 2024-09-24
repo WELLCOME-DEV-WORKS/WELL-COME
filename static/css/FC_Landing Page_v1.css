@@ -56,9 +56,7 @@ opacity: 0;
 transform: scale(1);
 opacity: 1;
 }
-
-#section3 button,
-#section2 p{
+/* #section2 p{
 transform: translate3d(0, 50px, 0);
 opacity: 0;
 transition: all 700ms ease;
@@ -68,6 +66,44 @@ transition-delay: 200ms;
 #section2 p.active{
 transform: translate3d(0, 0, 0);
 opacity: 1;
+} */
+
+/* 공통 애니메이션 */
+p.why-item {
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  transition: all 700ms ease;
+}
+
+/* 순차적으로 애니메이션 딜레이 적용 */
+p.why-item1.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition-delay: 0s; /* 첫 번째는 바로 표시 */
+}
+
+p.why-item2.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition-delay: 0.3s; 
+}
+
+p.why-item3.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition-delay: 0.6s; 
+}
+
+p.why-item4.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+p.why-item5.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition-delay: 1.2s;
 }
 
 
@@ -97,8 +133,10 @@ transition-delay: 700ms;
 /* Overwriting styles for the navigation dots */
 #fp-nav ul li a span, 
 .fp-slidesNav ul li a span{
-background: white;
+background: rgb(255, 255, 255) !important;
 }
+
+
 
 /* This is just for fun */
 #section1, .section {
@@ -147,6 +185,7 @@ transform: translate(0%, -30%);
     width: 100%;
     height: 100%;
 }
+
 
       .section1-container.img {
         display: flex;
@@ -259,8 +298,38 @@ transform: translate(0%, -30%);
         }
       }
 
-           /* 섹션 3 라이브러리 디폴트 제거 */
-           .fp-watermark{
-            display: none;
-          }
-    
+
+/* 
+섹션3
+*/
+    /* 섹션3 라이브러리 디폴트 제거 */
+    .fp-watermark{
+    display: none;
+  }
+
+  /* 섹션3 버튼 디자인 */
+  .startBT {
+    margin-top: 40px;
+    width: 220px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: white;
+    font-family: 'Pretendard Variable';
+    cursor: pointer;
+    border-radius: 50px;
+    transform: translate3d(0, 50px, 0);
+    opacity: 0;
+    transition: all 700ms ease;
+    transition-delay: 200ms;
+}
+
+.startBT:hover {
+    background-color: white;
+    color: #007AFF;
+}
+
+
+         
