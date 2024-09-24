@@ -576,7 +576,14 @@
     if (selectedRegion) {
         let subRegions = areaList[selectedRegion];
 
-        
+        // 하위 지역이 없음인 경우
+        if (subRegions.length === 0 || subRegions[0] === "없음") {
+            let option = document.createElement("option");
+            option.value = "없음";
+            option.textContent = "없음";
+            subRegionSelect.appendChild(option);
+            subRegionSelect.value = "없음"; // "없음" 선택
+        } else {
             // 하위 지역 추가
             subRegions.forEach(function(subRegion) {
                 let option = document.createElement("option");
@@ -584,7 +591,7 @@
                 option.textContent = subRegion;
                 subRegionSelect.appendChild(option);
             });
-        
+          }
     }
 }
 
