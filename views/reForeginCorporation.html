@@ -124,7 +124,7 @@
         <section class="fc-form-multiStep" id="fc-intellectualPropertyRights-sub">
           <div class="fc-scoreDisplay" id="scoreDisplay"></div>
           <div class="fc-form-title">请选择公司设立地区</div>
-          <select name="intellectual_property" class="fc-dropdown" id="regionSelect" onchange="updateSubRegion()">
+          <select name="intellectual_property" class="fc-dropdown" id="regionSelect">
             <option value="">选择 市/道</option>
             <option value="서울특별시">首尔特别市</option>
             <option value="인천광역시">仁川广域市</option>
@@ -279,7 +279,7 @@
         const storedValue = localStorage.getItem(`${currentStep} selectedValue`)
         // 카드 기반 유효성 검사 및 입력 필드 검사 통합
         if (!storedValue) {
-          console.log('카드기반 유효성');
+          console.log('유효성 체크');
           warringPopup(rule.message); // 경고 메시지 표시
           return false; // 유효성 검사 실패
         }
@@ -289,12 +289,7 @@
 
 
       // 설립 지역 데이터 리스트
-      const regionSelect = document.getElementById("regionSelect");
-      regionSelect.addEventListener("change", function () {
-        const selectedValue = this.value;
-        console.log(this.value);
-        saveToLocalStorage(`${currentStep} selectedValue`, selectedValue);
-      });
+
       // 카드 클릭 이벤트 추가
       const radioSelectBoxes = document.querySelectorAll('.fc-radio-SelectBox');
       radioSelectBoxes.forEach(box => {
@@ -332,11 +327,8 @@
         console.log(localStorage); // 저장된 로컬 스토리지 확인
       }
 
-
-
-
       // 다음 단계로 이동하는 함수
-      function goToNextStep() {
+      const goToNextStep = () => {
         const currentStepElement = steps[currentStep];
 
         if (!validateStep()) {
@@ -395,116 +387,155 @@
 
       // 초기 단계 표시
       showStep(currentStep);
-    });
 
 
-    // 하위 주소 로직
-    let areaList = {
-      "首尔特别市": [
-        "江南区", "江南区", "江北区", "江西区", "冠岳区", "广津区", "九老区", "衿川区",
-        "芦原区", "道峰区", "东大门区", "铜雀区", "麻浦区", "西大门区", "瑞草区", "城东区",
-        "城北区", "松坡区", "阳川区", "永登浦区", "龙山区", "恩平区", "钟路区", "中区", "中浪区"
-      ],
-      "京畿道": [
-        "高阳市", "果川市", "光明市", "广州市", "九里市", "军浦市",
-        "金浦市", "南杨州市", "东豆川市", "富川市", "城南市", "水原市",
-        "始兴市", "安山市", "安城市", "安养市", "杨州市", "骊州市",
-        "乌山市", "龙仁市", "义王市", "议政府市", "利川市", "坡州市",
-        "平泽市", "抱川市", "河南市", "华城市"
-      ],
-      "江原特别自治道": [
-        "江陵市", "东海市", "三陟市", "束草市", "原州市", "春川市", "太白市"
-      ],
-      "忠清北道": [
-        "堤川市", "清州市", "忠州市"
-      ],
-      "忠清南道": [
-        "鸡龙市", "公州市", "论山市", "唐津市", "保宁市", "瑞山市", "牙山市", "天安市"
-      ],
-      "全罗北道": [
-        "群山市", "金堤市", "南原市", "益山市", "全州市", "井邑市"
-      ],
-      "全罗南道": [
-        "光阳市", "罗州市", "木浦市", "顺天市", "丽水市"
-      ],
-      "庆尚北道 ": ["庆山市", "庆州市", "龟尾市", "金泉市", "闻庆市", "尚州市",
-        "安东市", "荣州市", "永川市", "浦项市"
-      ],
-      "庆尚南道": [
-        "金海市", "密阳市", "泗川市", "梁山市", "晋州市", "昌原市", "统营市"
-      ],
-      "釜山广域市": ["无"],
-      "大邱广域市": ["无"],
-      "蔚山广域市": ["无"],
-      "光州广域市": ["无"],
-      "大田广域市": ["无"],
-      "世宗特別自治市": ["无"],
-      "济州特别自治道": [
-        "西归浦市", "济州市"
-      ]
-    };
 
-    const updateSubRegion = () => {
-      let regionSelect = document.getElementById("regionSelect");
-      let subRegionSelect = document.getElementById("subRegionSelect");
-      let selectedRegionIndex = regionSelect.selectedIndex;
-      let selectedRegion = regionSelect.options[selectedRegionIndex].text;
-      console.log('selectedRegion', selectedRegion);
+      // 하위 주소 로직
+      const areaList = {
+        "首尔特别市": [
+          "江南区", "江南区", "江北区", "江西区", "冠岳区", "广津区", "九老区", "衿川区",
+          "芦原区", "道峰区", "东大门区", "铜雀区", "麻浦区", "西大门区", "瑞草区", "城东区",
+          "城北区", "松坡区", "阳川区", "永登浦区", "龙山区", "恩平区", "钟路区", "中区", "中浪区"
+        ],
+        "京畿道": [
+          "高阳市", "果川市", "光明市", "广州市", "九里市", "军浦市",
+          "金浦市", "南杨州市", "东豆川市", "富川市", "城南市", "水原市",
+          "始兴市", "安山市", "安城市", "安养市", "杨州市", "骊州市",
+          "乌山市", "龙仁市", "义王市", "议政府市", "利川市", "坡州市",
+          "平泽市", "抱川市", "河南市", "华城市"
+        ],
+        "江原特别自治道": [
+          "江陵市", "东海市", "三陟市", "束草市", "原州市", "春川市", "太白市"
+        ],
+        "忠清北道": [
+          "堤川市", "清州市", "忠州市"
+        ],
+        "忠清南道": [
+          "鸡龙市", "公州市", "论山市", "唐津市", "保宁市", "瑞山市", "牙山市", "天安市"
+        ],
+        "全罗北道": [
+          "群山市", "金堤市", "南原市", "益山市", "全州市", "井邑市"
+        ],
+        "全罗南道": [
+          "光阳市", "罗州市", "木浦市", "顺天市", "丽水市"
+        ],
+        "庆尚北道 ": ["庆山市", "庆州市", "龟尾市", "金泉市", "闻庆市", "尚州市",
+          "安东市", "荣州市", "永川市", "浦项市"
+        ],
+        "庆尚南道": [
+          "金海市", "密阳市", "泗川市", "梁山市", "晋州市", "昌原市", "统营市"
+        ],
+        "釜山广域市": ["无"],
+        "大邱广域市": ["无"],
+        "蔚山广域市": ["无"],
+        "光州广域市": ["无"],
+        "大田广域市": ["无"],
+        "世宗特別自治市": ["无"],
+        "济州特别自治道": [
+          "西归浦市", "济州市"
+        ]
+      };
 
+      const updateSubRegion = () => {
+        let regionSelect = document.getElementById("regionSelect");
+        let subRegionSelect = document.getElementById("subRegionSelect");
+        let selectedRegionIndex = regionSelect.selectedIndex;
+        let selectedRegion = regionSelect.options[selectedRegionIndex].text;
+        console.log('selectedRegion =>', selectedRegion);
 
-      // 하위 지역 초기화
-      subRegionSelect.innerHTML = '<option value="">选择 市/区</option>';
+        // 하위 지역 초기화
+        subRegionSelect.innerHTML = '<option value="">选择 市/区</option>';
 
-      if (selectedRegion) {
-        let subRegions = areaList[selectedRegion];
+        if (selectedRegion) {
+          let subRegions = areaList[selectedRegion];
 
-        // 하위 지역이 없음인 경우
-        if (subRegions.length === 0 || subRegions[0] === "无") {
-          let option = document.createElement("option");
-          option.value = "无";
-          option.textContent = "无";
-          subRegionSelect.appendChild(option);
-          subRegionSelect.value = "无";
-        } else {
-          // 하위 지역 추가
-          subRegions.forEach(function (subRegion) {
+          // 하위 지역이 없음인 경우
+          if (subRegions.length === 0 || subRegions[0] === "无") {
             let option = document.createElement("option");
-            option.value = subRegion;
-            option.textContent = subRegion;
+            option.value = "无";
+            option.textContent = "无";
             subRegionSelect.appendChild(option);
-          });
+            subRegionSelect.value = "无";
+          } else {
+            // 하위 지역 추가
+            subRegions.forEach(function (subRegion) {
+              let option = document.createElement("option");
+              option.value = subRegion;
+              option.textContent = subRegion;
+              subRegionSelect.appendChild(option);
+
+              subRegionSelect.onchange = () => {
+                console.log('하위지역');
+                let selectedSubRegion = subRegionSelect.value;
+                console.log('Selected sub-region saved to localStorage:', selectedSubRegion);
+              };
+            });
+          }
+          saveRegionValue()
         }
       }
-    }
 
 
 
+      const regionSelect = document.getElementById("regionSelect");
+      regionSelect.addEventListener("change", updateSubRegion);
 
+      const saveRegionValue = () => {
+        const regionSelect = document.getElementById("regionSelect");
+        const subRegionSelect = document.getElementById("subRegionSelect");
 
+        let selectedRegionIndex = regionSelect.selectedIndex;
+        let selectedRegion = regionSelect.options[selectedRegionIndex].text; // 선택된 시/도
 
-    const submitInfo = () => {
-      console.log('submitInfo');
-      const submitLimit = localStorage.getItem('6 selectedValue')
+        subRegionSelect.onchange = () => {
+          let selectedSubRegion = subRegionSelect.value; // 선택된 시/구
 
-      if (submitLimit && submitLimit.length >= 2) {
-        document.getElementById("input_txt_2adc34665cda5").value =
-          localStorage.getItem('0 selectedValue')
-        document.getElementById("input_txt_79cacd4241db5").value =
-          localStorage.getItem('1 selectedValue')
-        document.getElementById("input_txt_D44y508KH2").value =
-          localStorage.getItem('2 selectedValue')
-        document.getElementById("input_txt_186pTBK084").value =
-          localStorage.getItem('3 selectedValue')
-        document.getElementById("input_txt_1RBdDI3aF0").value =
-          localStorage.getItem('4 selectedValue')
-        document.getElementById("input_txt_T53Ny7dP83").value =
-          localStorage.getItem('5 selectedValue')
-        document.getElementById("input_txt_6vvJcU7o8Q").value =
-          localStorage.getItem('6 selectedValue')
-        SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
-        localStorage.clear();
+          console.log('selectedRegion =>', selectedRegion);
+          console.log('selectedSubRegion =>', selectedRegion);
+
+          // 주소1(시/도)와 주소2(시/구)를 합칩니다.
+          let fullAddress = `${selectedRegion} ${selectedSubRegion}`;
+          console.log('fullAddress', fullAddress);
+
+          // 로컬 스토리지에 저장
+          saveSelectedValue(fullAddress);
+
+          console.log('Selected full address saved to localStorage:', fullAddress);
+        };
+
       }
-    }
+
+
+
+
+
+
+
+      const submitInfo = () => {
+        console.log('submitInfo');
+        const submitLimit = localStorage.getItem('6 selectedValue')
+
+        if (submitLimit && submitLimit.length >= 2) {
+          document.getElementById("input_txt_2adc34665cda5").value =
+            localStorage.getItem('0 selectedValue')
+          document.getElementById("input_txt_79cacd4241db5").value =
+            localStorage.getItem('1 selectedValue')
+          document.getElementById("input_txt_D44y508KH2").value =
+            localStorage.getItem('2 selectedValue')
+          document.getElementById("input_txt_186pTBK084").value =
+            localStorage.getItem('3 selectedValue')
+          document.getElementById("input_txt_1RBdDI3aF0").value =
+            localStorage.getItem('4 selectedValue')
+          document.getElementById("input_txt_T53Ny7dP83").value =
+            localStorage.getItem('5 selectedValue')
+          document.getElementById("input_txt_6vvJcU7o8Q").value =
+            localStorage.getItem('6 selectedValue')
+          SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
+          localStorage.clear();
+        }
+      }
+
+    });
   </script>
 
 </body>
