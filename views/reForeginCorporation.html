@@ -286,9 +286,6 @@
       }
 
 
-
-      // 설립 지역 데이터 리스트
-
       // 카드 클릭 이벤트 추가
       const radioSelectBoxes = document.querySelectorAll('.fc-radio-SelectBox');
       radioSelectBoxes.forEach(box => {
@@ -333,20 +330,14 @@
         if (!validateStep()) {
           return; // 유효성 검사 실패 시 종료
         }
-
         currentStepElement.classList.remove("active");
-
 
         currentStep += 1; // 다음 단계로 이동
 
         if (currentStep < steps.length) {
           steps[currentStep].classList.add("active");
         }
-
-
       }
-
-
 
       // input text 추가 이벤트
       const textSelectBoxes = document.querySelectorAll('.fc-formButton');
@@ -356,7 +347,6 @@
           const placeholder = input.placeholder;
 
           saveToLocalStorage(`${currentStep} selectedValue`, value);
-
           console.log(`Saved ${placeholder}: ${value}`); // 저장된 값 확인용
         });
       });
@@ -364,7 +354,6 @@
       // 다음 버튼 클릭 시 goToNextStep 호출
       nextButtons.forEach((button) => {
         button.addEventListener("click", goToNextStep);
-
       });
 
       // 이전 버튼 클릭 시 이전 단계로 이동
@@ -376,10 +365,8 @@
           }
         });
       });
-
       // 초기 단계 표시
       showStep(currentStep);
-
 
 
       // 하위 주소 로직
@@ -571,8 +558,6 @@
             "제주시": "济州市"
           }
         }
-
-
       };
 
       const updateSubRegion = () => {
@@ -592,15 +577,6 @@
           let subRegions = areaList[selectedRegion]?.subRegions; // subRegions 가져오기
           console.log('subRegions =>', subRegions);
 
-
-          // 하위 지역이 없음인 경우
-          // if (!subRegions || Object.keys(subRegions).length === 0 || subRegions["无"]) {
-          //   let option = document.createElement("option");
-          //   option.value = "无";
-          //   option.textContent = "无";
-          //   subRegionSelect.appendChild(option);
-          //   subRegionSelect.value = "无";
-          // } else {
           // 하위 지역 추가
           for (let subRegion in subRegions) {
             let option = document.createElement("option");
@@ -608,7 +584,6 @@
             option.textContent = subRegions[subRegion]; // 하위 지역의 한국어 이름
             subRegionSelect.appendChild(option);
           }
-          // }
 
           // 하위 지역 선택 시 이벤트 처리
           subRegionSelect.onchange = () => {
@@ -616,7 +591,6 @@
             let selectedSubRegion = subRegionSelect.value;
             console.log('Selected sub-region saved to localStorage:', selectedSubRegion);
           };
-
           saveRegionValue(); // 지역 값 저장 함수 호출
         }
       };
@@ -644,9 +618,8 @@
           // 로컬 스토리지에 저장
           saveSelectedValue(fullAddress);
 
-          console.log('Selected full address saved to localStorage:', fullAddress);
+          console.log('full address saved:', fullAddress);
         };
-
       }
     });
 
@@ -673,10 +646,7 @@
         localStorage.clear();
       }
     }
-
-
   </script>
-
 </body>
 
 </html>
