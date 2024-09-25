@@ -343,14 +343,7 @@
           steps[currentStep].classList.add("active");
         }
 
-        // 결과 페이지로 이동
-        if (currentStep === steps.length - 1) {
-          setTimeout(() => {
-            const loadingSection = document.getElementById("fc-scoreResultLoading");
-            loadingSection.classList.remove("active");
-            // 추가 로직...
-          }, 1500);
-        }
+
       }
 
 
@@ -598,21 +591,21 @@
 
 
           // 하위 지역이 없음인 경우
-          if (!subRegions || Object.keys(subRegions).length === 0 || subRegions["无"]) {
+          // if (!subRegions || Object.keys(subRegions).length === 0 || subRegions["无"]) {
+          //   let option = document.createElement("option");
+          //   option.value = "无";
+          //   option.textContent = "无";
+          //   subRegionSelect.appendChild(option);
+          //   subRegionSelect.value = "无";
+          // } else {
+          // 하위 지역 추가
+          for (let subRegion in subRegions) {
             let option = document.createElement("option");
-            option.value = "无";
-            option.textContent = "无";
+            option.value = subRegion; // 하위 지역의 원래 이름
+            option.textContent = subRegions[subRegion]; // 하위 지역의 한국어 이름
             subRegionSelect.appendChild(option);
-            subRegionSelect.value = "无";
-          } else {
-            // 하위 지역 추가
-            for (let subRegion in subRegions) {
-              let option = document.createElement("option");
-              option.value = subRegion; // 하위 지역의 원래 이름
-              option.textContent = subRegions[subRegion]; // 하위 지역의 한국어 이름
-              subRegionSelect.appendChild(option);
-            }
           }
+          // }
 
           // 하위 지역 선택 시 이벤트 처리
           subRegionSelect.onchange = () => {
@@ -624,9 +617,6 @@
           saveRegionValue(); // 지역 값 저장 함수 호출
         }
       };
-
-
-
 
       const regionSelect = document.getElementById("regionSelect");
       regionSelect.addEventListener("change", updateSubRegion);
@@ -645,7 +635,7 @@
           console.log('selectedSubRegion =>', selectedRegion);
 
           // 주소1(시/도)와 주소2(시/구)를 합칩니다.
-          let fullAddress = `${selectedRegion} ${selectedSubRegion}`;
+          let fullAddress = selectedRegion + ' ' + selectedSubRegion;
           console.log('fullAddress', fullAddress);
 
           // 로컬 스토리지에 저장
@@ -655,41 +645,35 @@
         };
 
       }
-
-
-
-
-
-
-
-      const submitInfo = () => {
-        console.log('submitInfo');
-        const submitLimit = localStorage.getItem('6 selectedValue')
-
-        if (submitLimit && submitLimit.length >= 2) {
-          document.getElementById("input_txt_2adc34665cda5").value =
-            localStorage.getItem('0 selectedValue')
-          document.getElementById("input_txt_79cacd4241db5").value =
-            localStorage.getItem('1 selectedValue')
-          document.getElementById("input_txt_D44y508KH2").value =
-            localStorage.getItem('2 selectedValue')
-          document.getElementById("input_txt_186pTBK084").value =
-            localStorage.getItem('3 selectedValue')
-          document.getElementById("input_txt_1RBdDI3aF0").value =
-            localStorage.getItem('4 selectedValue')
-          document.getElementById("input_txt_T53Ny7dP83").value =
-            localStorage.getItem('5 selectedValue')
-          document.getElementById("input_txt_6vvJcU7o8Q").value =
-            localStorage.getItem('6 selectedValue')
-          SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
-          localStorage.clear();
-        }
-      }
-
     });
+
+    function submitInfo() {
+      console.log('submitInfo');
+      const submitLimit = localStorage.getItem('6 selectedValue')
+
+      if (submitLimit && submitLimit.length >= 2) {
+        document.getElementById("input_txt_2adc34665cda5").value =
+          localStorage.getItem('0 selectedValue')
+        document.getElementById("input_txt_79cacd4241db5").value =
+          localStorage.getItem('1 selectedValue')
+        document.getElementById("input_txt_D44y508KH2").value =
+          localStorage.getItem('2 selectedValue')
+        document.getElementById("input_txt_186pTBK084").value =
+          localStorage.getItem('3 selectedValue')
+        document.getElementById("input_txt_1RBdDI3aF0").value =
+          localStorage.getItem('4 selectedValue')
+        document.getElementById("input_txt_T53Ny7dP83").value =
+          localStorage.getItem('5 selectedValue')
+        document.getElementById("input_txt_6vvJcU7o8Q").value =
+          localStorage.getItem('6 selectedValue')
+        SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
+        localStorage.clear();
+      }
+    }
+
+
   </script>
 
 </body>
 
 </html>
-input_txt_2adc34665cda5
