@@ -198,8 +198,7 @@
       <div class="fc-warringModal-button">确认</div>
     </div>
   </section>
-  </section>
-  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const nextButtons = document.querySelectorAll(".fc-nextButton");
@@ -287,9 +286,6 @@
       }
 
 
-
-      // 설립 지역 데이터 리스트
-
       // 카드 클릭 이벤트 추가
       const radioSelectBoxes = document.querySelectorAll('.fc-radio-SelectBox');
       radioSelectBoxes.forEach(box => {
@@ -334,27 +330,14 @@
         if (!validateStep()) {
           return; // 유효성 검사 실패 시 종료
         }
-
         currentStepElement.classList.remove("active");
-
 
         currentStep += 1; // 다음 단계로 이동
 
         if (currentStep < steps.length) {
           steps[currentStep].classList.add("active");
         }
-
-        // 결과 페이지로 이동
-        if (currentStep === steps.length - 1) {
-          setTimeout(() => {
-            const loadingSection = document.getElementById("fc-scoreResultLoading");
-            loadingSection.classList.remove("active");
-            // 추가 로직...
-          }, 1500);
-        }
       }
-
-
 
       // input text 추가 이벤트
       const textSelectBoxes = document.querySelectorAll('.fc-formButton');
@@ -364,7 +347,6 @@
           const placeholder = input.placeholder;
 
           saveToLocalStorage(`${currentStep} selectedValue`, value);
-
           console.log(`Saved ${placeholder}: ${value}`); // 저장된 값 확인용
         });
       });
@@ -372,7 +354,6 @@
       // 다음 버튼 클릭 시 goToNextStep 호출
       nextButtons.forEach((button) => {
         button.addEventListener("click", goToNextStep);
-
       });
 
       // 이전 버튼 클릭 시 이전 단계로 이동
@@ -384,98 +365,235 @@
           }
         });
       });
-
       // 초기 단계 표시
       showStep(currentStep);
 
 
-
       // 하위 주소 로직
-      const areaList = {
-        "首尔特别市": [
-          "江南区", "江南区", "江北区", "江西区", "冠岳区", "广津区", "九老区", "衿川区",
-          "芦原区", "道峰区", "东大门区", "铜雀区", "麻浦区", "西大门区", "瑞草区", "城东区",
-          "城北区", "松坡区", "阳川区", "永登浦区", "龙山区", "恩平区", "钟路区", "中区", "中浪区"
-        ],
-        "京畿道": [
-          "高阳市", "果川市", "光明市", "广州市", "九里市", "军浦市",
-          "金浦市", "南杨州市", "东豆川市", "富川市", "城南市", "水原市",
-          "始兴市", "安山市", "安城市", "安养市", "杨州市", "骊州市",
-          "乌山市", "龙仁市", "义王市", "议政府市", "利川市", "坡州市",
-          "平泽市", "抱川市", "河南市", "华城市"
-        ],
-        "江原特别自治道": [
-          "江陵市", "东海市", "三陟市", "束草市", "原州市", "春川市", "太白市"
-        ],
-        "忠清北道": [
-          "堤川市", "清州市", "忠州市"
-        ],
-        "忠清南道": [
-          "鸡龙市", "公州市", "论山市", "唐津市", "保宁市", "瑞山市", "牙山市", "天安市"
-        ],
-        "全罗北道": [
-          "群山市", "金堤市", "南原市", "益山市", "全州市", "井邑市"
-        ],
-        "全罗南道": [
-          "光阳市", "罗州市", "木浦市", "顺天市", "丽水市"
-        ],
-        "庆尚北道 ": ["庆山市", "庆州市", "龟尾市", "金泉市", "闻庆市", "尚州市",
-          "安东市", "荣州市", "永川市", "浦项市"
-        ],
-        "庆尚南道": [
-          "金海市", "密阳市", "泗川市", "梁山市", "晋州市", "昌原市", "统营市"
-        ],
-        "釜山广域市": ["无"],
-        "大邱广域市": ["无"],
-        "蔚山广域市": ["无"],
-        "光州广域市": ["无"],
-        "大田广域市": ["无"],
-        "世宗特別自治市": ["无"],
-        "济州特别自治道": [
-          "西归浦市", "济州市"
-        ]
+      let areaList = {
+        "서울특별시": {
+          "name": "서울특별시",
+          "subRegions": {
+            "강남구": "江南区",
+            "강북구": "江北区",
+            "강서구": "江西区",
+            "관악구": "冠岳区",
+            "광진구": "广津区",
+            "구로구": "九老区",
+            "금천구": "衿川区",
+            "노원구": "芦原区",
+            "도봉구": "道峰区",
+            "동대문구": "东大门区",
+            "동작구": "铜雀区",
+            "마포구": "麻浦区",
+            "서대문구": "西大门区",
+            "서초구": "瑞草区",
+            "성동구": "城东区",
+            "성북구": "城北区",
+            "송파구": "松坡区",
+            "양천구": "阳川区",
+            "영등포구": "永登浦区",
+            "용산구": "龙山区",
+            "은평구": "恩平区",
+            "종로구": "钟路区",
+            "중구": "中区",
+            "중랑구": "中浪区"
+          }
+        },
+
+        "경기도": {
+          "name": "경기도",
+          "subRegions": {
+            "고양시": "高阳市",
+            "과천시": "果川市",
+            "광명시": "光明市",
+            "구리시": "广州市",
+            "구리시": "九里市",
+            "군포시": "军浦市",
+            "김포시": "金浦市",
+            "남양주시": "南杨州市",
+            "동두천시": "东豆川市",
+            "부천시": "富川市",
+            "성남시": "城南市",
+            "수원시": "水原市",
+            "시흥시": "始兴市",
+            "안산시": "安山市",
+            "안성시": "安城市",
+            "안양시": "安养市",
+            "양주시": "杨州市",
+            "이천시": "骊州市",
+            "오산시": "乌山市",
+            "용인시": "龙仁市",
+            "의왕시": "义王市",
+            "의정부시": "议政府市",
+            "이천시": "利川市",
+            "파주시": "坡州市",
+            "평택시": "平泽市",
+            "포천시": "抱川市",
+            "하남시": "河南市",
+            "화성시": "华城市"
+          }
+        },
+        "강원특별자치도": {
+          "name": "강원특별자치도",
+          "subRegions": {
+            "강릉시": "江陵市",
+            "동해시": "东海市",
+            "삼척시": "三陟市",
+            "속초시": "束草市",
+            "원주시": "原州市",
+            "춘천시": "春川市",
+            "태백시": "太白市"
+          }
+        },
+        "충청북도": {
+          "name": "충청북도",
+          "subRegions": {
+            "제천시": "堤川市",
+            "청주시": "清州市",
+            "충주": "忠州市"
+          }
+        },
+        "충청남도": {
+          "name": "충청남도",
+          "subRegions": {
+            "계룡시": "鸡龙市",
+            "공주시": "公州市",
+            "논산시": "论山市",
+            "당진시": "唐津市",
+            "보령시": "保宁市",
+            "서산시": "瑞山市",
+            "아산시": "牙山市",
+            "천안시": "天安市"
+          }
+        },
+        "전라북도": {
+          "name": "전라북도",
+          "subRegions": {
+            "군산시": "群山市",
+            "김제시": "金堤市",
+            "남원시": "南原市",
+            "익산시": "益山市",
+            "전주시": "全州市",
+            "정읍시": "井邑市"
+          }
+        },
+        "전라남도": {
+          "name": "전라남도",
+          "subRegions": {
+            "광양시": "光阳市",
+            "여수시": "罗州市",
+            "목포시": "木浦市",
+            "순천시": "顺天市",
+            "여수시": "丽水市"
+          }
+        },
+        "경상북도": {
+          "name": "경상북도",
+          "subRegions": {
+            "경산시": "庆山市",
+            "경주": "庆州市",
+            "구미시": "龟尾市",
+            "김천시": "金泉市",
+            "문경시": "闻庆市",
+            "상주": "尚州市",
+            "안동시": "安东市",
+            "영주": "荣州市",
+            "영천시": "永川市",
+            "포항시": "浦项市"
+          }
+        },
+        "경상남도": {
+          "name": "경상남도",
+          "subRegions": {
+            "김해시": "金海市",
+            "밀양시": "密阳市",
+            "사천시": "泗川市",
+            "양산시": "梁山市",
+            "진주시": "晋州市",
+            "창원시": "昌原市",
+            "통영시": "统营市"
+          }
+        },
+        "부산광역시": {
+          "name": "부산광역시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "대구광역시": {
+          "name": "대구광역시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "울산광역시": {
+          "name": "울산광역시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "광주광역시": {
+          "name": "광주광역시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "대전광역시": {
+          "name": "대전광역시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "세종특별자치시": {
+          "name": "세종특별자치시",
+          "subRegions": {
+            "없음": "无"
+          }
+        },
+        "제주특별자치도": {
+          "name": "제주특별자치도",
+          "subRegions": {
+            "서귀포시": "西归浦市",
+            "제주시": "济州市"
+          }
+        }
       };
 
       const updateSubRegion = () => {
         let regionSelect = document.getElementById("regionSelect");
+        let selectedRegionValue = regionSelect.value;
         let subRegionSelect = document.getElementById("subRegionSelect");
         let selectedRegionIndex = regionSelect.selectedIndex;
-        let selectedRegion = regionSelect.options[selectedRegionIndex].text;
+        let selectedRegion = regionSelect.options[selectedRegionIndex].value; // value 사용
+        console.log('regionSelect =>', regionSelect);
         console.log('selectedRegion =>', selectedRegion);
+
 
         // 하위 지역 초기화
         subRegionSelect.innerHTML = '<option value="">选择 市/区</option>';
 
         if (selectedRegion) {
-          let subRegions = areaList[selectedRegion];
+          let subRegions = areaList[selectedRegion]?.subRegions; // subRegions 가져오기
+          console.log('subRegions =>', subRegions);
 
-          // 하위 지역이 없음인 경우
-          if (subRegions.length === 0 || subRegions[0] === "无") {
+          // 하위 지역 추가
+          for (let subRegion in subRegions) {
             let option = document.createElement("option");
-            option.value = "无";
-            option.textContent = "无";
+            option.value = subRegion; // 하위 지역의 원래 이름
+            option.textContent = subRegions[subRegion]; // 하위 지역의 한국어 이름
             subRegionSelect.appendChild(option);
-            subRegionSelect.value = "无";
-          } else {
-            // 하위 지역 추가
-            subRegions.forEach(function (subRegion) {
-              let option = document.createElement("option");
-              option.value = subRegion;
-              option.textContent = subRegion;
-              subRegionSelect.appendChild(option);
-
-              subRegionSelect.onchange = () => {
-                console.log('하위지역');
-                let selectedSubRegion = subRegionSelect.value;
-                console.log('Selected sub-region saved to localStorage:', selectedSubRegion);
-              };
-            });
           }
-          saveRegionValue()
+
+          // 하위 지역 선택 시 이벤트 처리
+          subRegionSelect.onchange = () => {
+            console.log('하위지역');
+            let selectedSubRegion = subRegionSelect.value;
+            console.log('Selected sub-region saved to localStorage:', selectedSubRegion);
+          };
+          saveRegionValue(); // 지역 값 저장 함수 호출
         }
-      }
-
-
+      };
 
       const regionSelect = document.getElementById("regionSelect");
       regionSelect.addEventListener("change", updateSubRegion);
@@ -485,7 +603,7 @@
         const subRegionSelect = document.getElementById("subRegionSelect");
 
         let selectedRegionIndex = regionSelect.selectedIndex;
-        let selectedRegion = regionSelect.options[selectedRegionIndex].text; // 선택된 시/도
+        let selectedRegion = regionSelect.options[selectedRegionIndex].value; // 선택된 시/도
 
         subRegionSelect.onchange = () => {
           let selectedSubRegion = subRegionSelect.value; // 선택된 시/구
@@ -494,51 +612,41 @@
           console.log('selectedSubRegion =>', selectedRegion);
 
           // 주소1(시/도)와 주소2(시/구)를 합칩니다.
-          let fullAddress = `${selectedRegion} ${selectedSubRegion}`;
+          let fullAddress = selectedRegion + ' ' + selectedSubRegion;
           console.log('fullAddress', fullAddress);
 
           // 로컬 스토리지에 저장
           saveSelectedValue(fullAddress);
 
-          console.log('Selected full address saved to localStorage:', fullAddress);
+          console.log('full address saved:', fullAddress);
         };
-
       }
-
-
-
-
-
-
-
-      const submitInfo = () => {
-        console.log('submitInfo');
-        const submitLimit = localStorage.getItem('6 selectedValue')
-
-        if (submitLimit && submitLimit.length >= 2) {
-          document.getElementById("input_txt_2adc34665cda5").value =
-            localStorage.getItem('0 selectedValue')
-          document.getElementById("input_txt_79cacd4241db5").value =
-            localStorage.getItem('1 selectedValue')
-          document.getElementById("input_txt_D44y508KH2").value =
-            localStorage.getItem('2 selectedValue')
-          document.getElementById("input_txt_186pTBK084").value =
-            localStorage.getItem('3 selectedValue')
-          document.getElementById("input_txt_1RBdDI3aF0").value =
-            localStorage.getItem('4 selectedValue')
-          document.getElementById("input_txt_T53Ny7dP83").value =
-            localStorage.getItem('5 selectedValue')
-          document.getElementById("input_txt_6vvJcU7o8Q").value =
-            localStorage.getItem('6 selectedValue')
-          SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
-          localStorage.clear();
-        }
-      }
-
     });
-  </script>
 
+    function submitInfo() {
+      console.log('submitInfo');
+      const submitLimit = localStorage.getItem('6 selectedValue')
+
+      if (submitLimit && submitLimit.length >= 2) {
+        document.getElementById("input_txt_2adc34665cda5").value =
+          localStorage.getItem('0 selectedValue')
+        document.getElementById("input_txt_79cacd4241db5").value =
+          localStorage.getItem('1 selectedValue')
+        document.getElementById("input_txt_D44y508KH2").value =
+          localStorage.getItem('2 selectedValue')
+        document.getElementById("input_txt_186pTBK084").value =
+          localStorage.getItem('3 selectedValue')
+        document.getElementById("input_txt_1RBdDI3aF0").value =
+          localStorage.getItem('4 selectedValue')
+        document.getElementById("input_txt_T53Ny7dP83").value =
+          localStorage.getItem('5 selectedValue')
+        document.getElementById("input_txt_6vvJcU7o8Q").value =
+          localStorage.getItem('6 selectedValue')
+        SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
+        localStorage.clear();
+      }
+    }
+  </script>
 </body>
 
 </html>
-input_txt_2adc34665cda5
