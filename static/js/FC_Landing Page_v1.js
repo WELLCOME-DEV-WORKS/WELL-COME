@@ -24,10 +24,10 @@ $(document).ready(function() {
        afterLoad: function(anchorLink, index){
          console.log('anchorLink.index:', anchorLink);
          console.log('index:', index);
-         const section1IMG = $('#section1 img');
-         const section2H1 = $('#section2 h1');
-         const section2P = $('#section2 p');
-         const section3BT = $('#section3 button');
+         const section1IMG = $('#fc-section1 img');
+         const section2H1 = $('#fc-section2 h1');
+         const section2P = $('#fc-section2 p');
+         const section3BT = $('#fc-section3 button');
 
            // section1 도착 시
            if (index === 1) {

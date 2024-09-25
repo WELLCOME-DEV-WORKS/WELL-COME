@@ -26,42 +26,40 @@ color: #fff;
 
 
 /* 배경 색상 */
-#section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
-#section2 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
-#section3 {background-image: linear-gradient(128deg,#FFCA42,#8C1DEF)}
+#fc-section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
+#fc-section2 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
+#fc-section3 {background-image: linear-gradient(128deg,#FFCA42,#8C1DEF)}
 
 /* Setting states for animations */
-#section2 h1,
-#section3 h1{
+#fc-section2 h1,
+#fc-section3 h1{
 transform: scale(0.8);
 position:relative;
 transition: all 600ms ease;
 opacity: 0;
 }
 
-/* active 후 모습 */
-body.fp-viewing-secondPage #section2 h1{
+/* active일 때 스타일 */
+body.fp-viewing-secondPage #fc-section2 h1{
   transform: scale(1);
   opacity: 1;
   transition-delay: 500ms;
   }
-
-  /* active 후 모습 */
-  body.fp-viewing-secondPage #section2 p{
+  body.fp-viewing-secondPage #fc-section2 p{
     transform: scale(1);
     opacity: 1;
     transition-delay: 500ms;
     }
     
-/* active 후 모습 */
-body.fp-viewing-3rdPage #section3 h1{
+
+body.fp-viewing-3rdPage #fc-section3 h1{
   transform: scale(1);
 opacity: 1;
 transition-delay: 500ms;
 }
 
-/* active 후 모습 */
-body.fp-viewing-3rdPage #section3 button{
+
+body.fp-viewing-3rdPage #fc-section3 button{
 transform: translate3d(0, 0, 0);
 opacity: 1;
 transition-delay: 500ms;
@@ -114,7 +112,7 @@ transform: translate(0%, -30%);
 }
 
 
-      .section1-container.img {
+      .fc-section1-container.img {
         display: flex;
         width: 80%;
         align-items: center;
@@ -266,10 +264,23 @@ transform: translate(0%, -30%);
 섹션2
 */
 
-#section2 h1.active{
+#fc-section2 h1.active{
   transform: scale(1);
   opacity: 1;
   }
+
+  #fc-section2 p{
+    width: 50%;
+    margin: 0.5em auto;
+    font-size: 1.65em;
+transform: scale(0.8);
+font-size: 40px;
+margin: 0.7em auto;
+width: auto;
+position:relative;
+transition: all 600ms ease;
+opacity: 0;
+}
 
   /* body.fp-viewing-secondPage #section2 p{
     transform: scale(1);
@@ -285,7 +296,7 @@ transform: translate(0%, -30%);
       font-size: 1.65em;
       }    */
 
-#section2.active .why-item i {animation: fadeUp 0.4s 0.2s both}
+#fc-section2.active .why-item i {animation: fadeUp 0.4s 0.2s both}
 @keyframes fadeUp {
 	0%{transform:translateY(80px); opacity: 0;}
 	100%{transform:translateY(0); opacity: 1;}}
@@ -295,7 +306,7 @@ transform: translate(0%, -30%);
 */
    
   /* 섹션3 버튼 디자인 */
-  #section3 .startBT {
+  #fc-section3 .startBT {
     margin-top: 40px;
     width: 220px;
     height: 40px;
@@ -313,7 +324,7 @@ transform: translate(0%, -30%);
      transition-delay: 200ms;
 } 
 
-.startBT:hover
+#fc-section3 .startBT:hover
 , .startBT:active  {
   background-color:#fff;
   color: #8C1DEF;
