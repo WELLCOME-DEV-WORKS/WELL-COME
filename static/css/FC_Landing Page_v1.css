@@ -5,10 +5,9 @@
     box-sizing: border-box;
 }
 
-#fullpage {
+#fc-fullpage {
     z-index: 0;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 h1{
@@ -24,60 +23,56 @@ font-family: arial,helvetica;
 color: #fff;
 }
 
-.intro p{
-width: 50%;
-margin: 0.5em auto;
-font-size: 1.65em;
-}
 
-/* Backgrounds colors for sections */
-.fp-section:nth-child(1){
-background-image: linear-gradient(128deg,#40afff,#3f61ff);
-}
 
-.fp-section:nth-child(2){
-background-image: linear-gradient(128deg,#40afff,#3f61ff);
-}
-
-.fp-section:nth-child(3){
-background-image: linear-gradient(128deg,#FFCA42,#8C1DEF);
-}
+/* 배경 색상 */
+#section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
+#section2 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
+#section3 {background-image: linear-gradient(128deg,#FFCA42,#8C1DEF)}
 
 /* Setting states for animations */
-#section3 h1,
-#section2 h1{
+#section2 h1,
+#section3 h1{
 transform: scale(0.8);
 position:relative;
 transition: all 600ms ease;
 opacity: 0;
 }
 
+/* active 후 모습 */
+body.fp-viewing-secondPage #section2 h1{
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 500ms;
+  }
 
-/**
-* Here we fire the animation for section 3.
-* As the fp-viewing class in the body changes on each section and slide.
-*/
+  /* active 후 모습 */
+  body.fp-viewing-secondPage #section2 p{
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 500ms;
+    }
+    
+/* active 후 모습 */
 body.fp-viewing-3rdPage #section3 h1{
-transform: scale(1);
+  transform: scale(1);
 opacity: 1;
-transition-delay: 700ms;
+transition-delay: 500ms;
 }
+
+/* active 후 모습 */
 body.fp-viewing-3rdPage #section3 button{
 transform: translate3d(0, 0, 0);
 opacity: 1;
-transition-delay: 700ms;
+transition-delay: 500ms;
 }
 
 
 
-
-/* Overwriting styles for the navigation dots */
 #fp-nav ul li a span, 
 .fp-slidesNav ul li a span{
-background: rgb(255, 255, 255) !important;
+background: rgb(255, 255, 255);
 }
-
-
 
 /* This is just for fun */
  .section {
@@ -200,6 +195,7 @@ transform: translate(0%, -30%);
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
       }
+
       img.passport2.active {
         z-index: 2;
         animation-name: moveTo12;
@@ -274,62 +270,32 @@ transform: translate(0%, -30%);
   transform: scale(1);
   opacity: 1;
   }
-   #section2 p{
-  font-size: 40px;
-  margin: 0.7em auto;
-  width: auto;
-  }
-  
-  
-  
-  /* 공통 애니메이션 */
-  p.why-item {
-    transform: translate3d(0, 50px, 0);
-    opacity: 0;
-    transition: all 500ms ease;
-  }
-  
-  p.why-item1.active {
-    transform: translate3d(0, 0, 0);
+
+  /* body.fp-viewing-secondPage #section2 p{
+    transform: scale(1);
     opacity: 1;
-    transition-delay: 0s; 
-  }
-  
-  p.why-item2.active {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-    transition-delay: 0.2s; 
-  }
-  
-  p.why-item3.active {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-    transition-delay: 0.4s; 
-  }
-  
-  p.why-item4.active {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-    transition-delay: 0.6s;
-  }
-  
-  p.why-item5.active {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-    transition-delay: 0.8s;
-  }
-  
+    font-size: 40px;
+    margin: 0.7em auto;
+    width: auto;
+    } */
+
+    /* #section2 p{
+      width: 50%;
+      margin: 0.5em auto;
+      font-size: 1.65em;
+      }    */
+
+#section2.active .why-item i {animation: fadeUp 0.4s 0.2s both}
+@keyframes fadeUp {
+	0%{transform:translateY(80px); opacity: 0;}
+	100%{transform:translateY(0); opacity: 1;}}
 
 /* 
 섹션3
 */
-    /* 섹션3 라이브러리 디폴트 제거 */
-    .fp-watermark{
-    display: none;
-  }
-
+   
   /* 섹션3 버튼 디자인 */
-  .startBT {
+  #section3 .startBT {
     margin-top: 40px;
     width: 220px;
     height: 40px;
@@ -347,7 +313,8 @@ transform: translate(0%, -30%);
      transition-delay: 200ms;
 } 
 
-.startBT:hover, .startBT:active {
+.startBT:hover
+, .startBT:active  {
   background-color:#fff;
   color: #8C1DEF;
   font-weight: 600;
