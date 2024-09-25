@@ -1,125 +1,83 @@
+// fullPage.js의 afterLoad 이벤트에서 origin은 이전 섹션을 나타내며,
+// destination은 새로 로드된 섹션을 나타냅니다.
+
 $(document).ready(function() {
-   $('#fullpage').fullpage({
-   
-      afterLoad: function(origin, destination){
-         const section1IMG = $('#section1 img');
-         const section2H1 = $('#section2 h1');
-         const section2P = $('#section2 p');
-         const section3BT = $('#section3 button');
-         
-         // section1 도착 시
-         if (destination.index === 0) {
-           section1IMG.addClass('active');
-         }
-   
-         // section2 도착 시
-         else if (destination.index === 1) {
-           section2H1.addClass('active');
-   
-           // 각 p 태그에 순차적으로 active 클래스 추가
-           section2P.each(function(index) {
-             setTimeout(function() {
-               $(section2P[index]).addClass('active');
-             }, index * 100); // 100ms 간격으로 active 클래스 추가
-           });
-   
-           section3BT.addClass('active');
-         }
-   
-         // 원래 상태로 돌아가기
-         if (origin && origin.index === 0) {
-           section1IMG.removeClass('active');
-         }
-   
-         else if (origin && origin.index === 1) {
-           section2H1.removeClass('active');
-           section2P.removeClass('active');
-           section3BT.removeClass('active');
-         }
+     $('#fc-fullpage').fullpage({
+   autoScrolling: true,
+   slidesNavigation: false,
+   easing: 'easeInOutCubic',
+   easingcss3: 'ease',
+   scrollingSpeed: 1000,
+   // responsiveWidth: 920,
+   responsiveWidth: 1000, // 너비가 1000일때 수동 원페이지 -> 스크롤
+     // Loop 설정
+     loopTop: true,
+     loopBottom: true,
+     // Optional
+     anchors: ['firstPage', 'secondPage', '3rdPage'],
+     menu: '#menu',
+     navigation: true,
+     navigationTooltips: ['', '', ''],
+
+       
+       // afterLoad: 섹션이 로드될 때마다 실행
+       afterLoad: function(anchorLink, index){
+         const section1IMG = $('#fc-section1 img');
+         const section2H1 = $('#fc-section2 h1');
+         const section2P = $('#fc-section2 p');
+         const section3BT = $('#fc-section3 button');
+
+           // section1 도착!
+           if (index === 1) {
+               // section1IMG.addClass('active');   
+               section1IMG.each(function() {
+                  $(this).addClass('reset-position');
+              });    
+               if (!sessionStorage.getItem('autoMoved')) {
+                  sessionStorage.setItem('autoMoved', 'true'); // 이동 플래그 설정
+
+                  // 3초 후에 section2로 자동 이동
+                  setTimeout(function() {
+                      $.fn.fullpage.moveTo('secondPage'); // section2로 이동
+                  }, 300); //0.3초 뒤 이동
+              }
+      else {
+         section1IMG.removeClass('reset-position');
+      }
+           }
+
+
+
+           // section2 도착!
+           else if (index === 2) {
+            section2H1.addClass('active');
+            section2P.addClass('active');
+            section3BT.addClass('active');
+           }
+
+           // 원래 상태로 돌아가기
+           if (anchorLink === 'firstPage') {
+               section1IMG.removeClass('active');
+           }
+
+           else if (anchorLink === 'secondPage') {
+               section2H1.removeClass('active');
+               section2P.removeClass('active');
+               section3BT.removeClass('active');
+           }
        },
-   
-       // Loop vertical options
-       loopTop: true,
-       loopBottom: true,
-   
-       // Optional
-       anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-       menu: '#menu',
-   
-       navigation: true,
-       navigationTooltips: ['', '', ''],
-     });
-   
    });
+});
 
 
-
-//  // fullPage.js cdn 
-//   var myFullpage = new fullpage('#fullpage', {
-   
-//    afterLoad: function(origin, destination){
-//       const section1IMG = document.querySelector('#section1 img')
-//       const section2H1 = document.querySelector('#section2 h1');
-//       const section2P = document.querySelectorAll('#section2 p');
-//       const section3BT = document.querySelector('#section3 button');
-      
-    
-//       // section1 도착 시
-//     if (destination.index == 0) {
-//       section1IMG.classList.add('active');
-//     }
-
-//     // section2 도착 시
-//     else if (destination.index == 1) {
-//       section1IMG.classList.add('active');
-//       section2H1.classList.add('active');
-
-//       // 각 p 태그에 순차적으로 active 클래스 추가
-//       section2P.forEach((p, index) => {
-//         setTimeout(() => {
-//           p.classList.add('active');
-//         }, index * 0.1); // 500ms 간격으로 active 클래스 추가
-//       });
-
-//       section3BT.classList.add('active');
-//     }
-
-//     // 원래 상태로 돌아가기
-//     if (origin && origin.index == 0) {
-//       section1IMG.classList.remove('active');
-//     }
-
-//     else if (origin && origin.index == 1) {
-//       section2H1.classList.remove('active');
-//       section2P.forEach(p => p.classList.remove('active'));
-//       section3BT.classList.remove('active');
-//     }
-//   },
-
-
-//   // Loop vertical options
-//   loopTop: true,
-//   loopBottom: true,
-
-
-//    // Optional
-//    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-//    menu: '#menu',
-
-//    navigation: true,
-// navigationTooltips: ['', '', ''],
-// });
-
-// // made with fullpage.js 제거
-// new fullpage('#fullpage', {
-// 	licenseKey:'license here',
-// 	scrollingSpeed: 1000,   
-// 	verticalCentered: false,
-//          credits: { 
-//               enabled: false, 
-//               label: 'Made with fullPage.js',
-//               position: 'right'
-//         },
-// });
-
-
+$(".why-item").each(function(){
+   let text = this;
+   // 각 문자에 <i> 태그 추가
+   text.innerHTML = text.textContent.replace(/\S/g, "<i>$&</i>")
+   $(this).find("i").each(function(index, item){
+     $(this).addClass("num" + index);
+     let i = index / 14;
+     // 각 문자에 애니메이션 딜레이 추가
+     $(this).css("animation-delay", (i + 0.8) + "s")
+   })
+ })
