@@ -17,28 +17,7 @@ font-family: arial,helvetica;
 margin:0;
 }
 
-/* 반응형 설정 */
-/* 작은 화면 (스마트폰) */
-@media (max-width: 600px) {
 
-  i {
-          font-size: 0.45em;
-      margin: 0.3rem;
-      align-items: center;
-      justify-content: center;
-  }
-  h1 {
-      font-size: 1em; 
-      margin: 0.5rem 0; 
-  }
-}
-  
-/* 중간 크기 화면 (태블릿) */
-@media (max-width: 900px) {
-  h1 {
-      font-size: 4em;
-  }
-}
 
 
 .section{
@@ -137,6 +116,21 @@ transform: translate(0%, -30%);
 섹션 1
 */
 
+
+.fc-section1-title {
+  left: 50%;
+  top: 50%;
+  font-weight: 1000;
+  font-size: 12.5vw;
+  margin: 0;
+  z-index: 3;
+  position: absolute; /* 변경: relative에서 absolute로 */
+  transform: translateX(-50%) translateY(-50%); /* 중앙 정렬을 위한 설정 */
+  letter-spacing: 0.01em;
+  line-height: 0.68;
+  white-space: nowrap; /* 줄바꿈 없애기 */
+}
+
 /* 이미지 래퍼 스타일 */
 .image-wrapper {
     position: relative;
@@ -148,7 +142,8 @@ transform: translate(0%, -30%);
 
 
       .fc-section1-container.img {
-        margin: 0;        display: flex;
+        margin: 0;        
+        display: flex;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -157,42 +152,49 @@ transform: translate(0%, -30%);
       /* 이미지 공통 스타일 */
       img.img {
         position: absolute;
-        width: 660px;
+        width: 25vw;
         height: auto;
         flex-shrink: 0;
         box-shadow: 5px 5px 14px #0000007c;
          }
 
-      @media screen and (max-width: 375px) {
-        img.img {
-          width: 300px;
-          height: auto;
-          box-shadow: 2px 2px 7px #0000007c;
+        /* 최소 크기 화면 (핸드폰) */
+         @media (max-width: 600px) {   
+          
+          img.img {
+            opacity: 0;
+          }
+        }          
+        /* 중간 크기 화면 (태블릿) */
+        @media (max-width: 900px) {
+          img.img {
+            opacity: 0;
+          }
         }
-      }
-
+        
        /* 여권 이미지별 스타일 */
        img.passport1 {
-        transform: rotate(-8.515deg);
-        z-index: 3;
+        z-index: 2;
         left: 170px;
         top: -280px;
+        transform: translateX(-5vw)  translateY(15vh) rotate(-8.515deg);
         animation-name: moveTo10;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
       }
+
       img.passport2 {
-        transform: rotate(28.515deg);
-        z-index: 2;
+        transform: rotate(28.515deg) translateX(40vw)  translateY(-40vh);
+        z-index: 4;
         left: 140px;
         top: -200px;
         animation-name: moveTo12;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
-                    }
+        }
 
       img.passport3 {
-        transform: rotate(-8.104deg);
+        transform: rotate(-8.104deg) translateX(-8vw)  translateY(7vh);
         z-index: 1;
         right: -300px;
         top: -10px;
@@ -202,8 +204,8 @@ transform: translate(0%, -30%);
       }
 
       img.passport4 {
-        transform: rotate(17.104deg);
-        z-index: 5;
+        transform: rotate(17.104deg) translateX(20vw)  translateY(94vh);
+        z-index: 3;
         left: 50px;
         bottom: 600px;
         animation-name: moveTo8;
@@ -212,8 +214,8 @@ transform: translate(0%, -30%);
       }
 
       img.passport5 {
-        transform: rotate(-30.104deg);
-        z-index: 4;
+        transform: rotate(-30.104deg) translateX(10vw)  translateY(140vh);
+        z-index: 2;
         left: 200px;
         bottom: 700px;
         animation-name: moveTo5;
@@ -297,6 +299,41 @@ transform: translate(0%, -30%);
 /*
 섹션2
 */
+
+ /* 최소 크기 화면 (핸드폰) */
+ @media (max-width: 600px) {             
+  #fc-section2 h1.active {
+    opacity: 0 !important;
+  }
+}          
+/* 중간 크기 화면 (태블릿) */
+@media (max-width: 900px) {
+  #fc-section2 h1.active {
+    opacity: 0 !important;
+  }
+}
+
+/* 최소 크기 화면 (핸드폰) */
+@media (max-width: 600px) {
+  i {
+      font-size: 1em;
+       }
+  h1 {
+      font-size: 1em; 
+      margin: 0.5rem 0; 
+  }
+}
+  
+/* 중간 크기 화면 (태블릿) */
+@media (max-width: 900px) {
+  i {
+    font-size: 1em;
+}
+  h1 {
+    font-size: 6.5vw; 
+  }
+}
+
 
 #fc-section2 h1.active{
   transform: scale(1);

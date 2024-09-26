@@ -29,7 +29,7 @@ $(document).ready(function() {
 
            // section1 도착!
            if (index === 1) {
-               // section1IMG.addClass('active');   
+               section1IMG.addClass('active');   
                section1IMG.each(function() {
                   $(this).addClass('reset-position');
               });    
@@ -45,8 +45,6 @@ $(document).ready(function() {
          section1IMG.removeClass('reset-position');
       }
            }
-
-
 
            // section2 도착!
            else if (index === 2) {
@@ -81,3 +79,6 @@ $(".why-item").each(function(){
      $(this).css("animation-delay", (i + 0.8) + "s")
    })
  })
+
+
+ 
