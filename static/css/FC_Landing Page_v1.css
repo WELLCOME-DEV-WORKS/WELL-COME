@@ -31,7 +31,7 @@ color: #fff;
 /* 배경 색상 */
 #fc-section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
 #fc-section2 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
-#fc-section3 {background-image: linear-gradient(128deg,#FFCA42,#8C1DEF)}
+#fc-section3 {background-image: linear-gradient(128deg,#342929,#0F0913, #8C9599, #00101A )}
 
 /* Setting states for animations */
 #fc-section2 h1,
@@ -211,6 +211,12 @@ background: rgb(255, 255, 255);
         animation-duration: 1s;
       }
 
+      img.passport1.reverse-animation {
+        animation-name: moveBackTo10;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+    }
+
       img.passport2.active {
         z-index: 2;
         animation-name: moveTo12;
@@ -241,16 +247,23 @@ background: rgb(255, 255, 255);
       
 
       /* 여권 애니메이션 */
-        /* @keyframes moveTo10 {
+       @keyframes moveTo10 {
         to {
           transform: translate(-100vw, -100vh);
           opacity: 0;
         }
       }
 
+      @keyframes moveBackTo10 {
+        to {
+          transform: translate(100vw, 100vh);
+          opacity: 0;
+        }
+      }
+
       @keyframes moveTo12 {
         to {
-          transform: translateY(-100vh);
+          transform: translateY(-230vh);
           opacity: 0;
         }
       }
@@ -271,10 +284,10 @@ background: rgb(255, 255, 255);
 
       @keyframes moveTo5 {
         to {
-          transform: translate(100vw, 100vh);
+          transform: translate(100vw, 300vh);
           opacity: 0;
         }
-      }  */
+      }
 
 
 /*
@@ -285,7 +298,12 @@ background: rgb(255, 255, 255);
 /* 최소 크기 화면 (핸드폰) */
 @media (max-width: 600px) {
   #fc-section2 h1 {
-    font-size: 8vw; 
+    font-size: 8vw;
+    transform: scale(0.8);
+    position:relative;
+    transition: none;
+    transform: none;
+   opacity: 0; 
     }
 
   #fc-section2 p{
@@ -297,16 +315,16 @@ background: rgb(255, 255, 255);
 
   #fc-section2 p>a {
       font-size: 12vh;
-       }
+    }
+} 
 
-      
-
-}
   
 /* 중간 크기 화면 (태블릿) */
 @media (max-width: 900px) {
   #fc-section2 h1 {
-    font-size: 6vw; 
+    font-size: 6vw;
+    transition: none; 
+    transform: none;
 }
 
   #fc-section2 p{
@@ -338,7 +356,7 @@ margin: 1.5rem;
 
 
 #fc-section2.active .why-item a {
-  font-size: 4vw;
+  font-size: 2.5vw;
   animation: fadeUp 0.4s 0.2s both;
  }
 
@@ -377,3 +395,287 @@ margin: 1.5rem;
   font-family: 'Pretendard Variable';
 }
 
+
+
+/ @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.cn-main-page-container {
+display: flex;
+height: 100vh;
+width:90%;
+margin:0 auto;  
+}
+
+.cn-main-page-section {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+color: white;
+text-align: center;
+width: 50%; 
+
+}
+
+.cn-main-page-content {
+position: relative;
+z-index: 2;
+}
+
+.cn-main-page-left {
+
+background: url('https://cdn.imweb.me/thumbnail/20240913/ca08b6b749530.png') no-repeat center center;
+background-size: cover;
+}
+
+.cn-main-page-right {
+background: url('https://cdn.imweb.me/thumbnail/20240913/1c1a765e55a11.png') no-repeat center center;
+background-size: cover;
+}
+
+.cn-main-page-content {
+position: relative;
+z-index: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transform: translateY(15%);
+}
+
+.button-1, .button-2{
+margin-top:60px;
+width: 220px;
+height:40px;
+font-size: 20px;
+font-weight:800;
+border: 1px solid #fff; 
+background-color: transparent; 
+color: white; 
+font-family: 'Pretendard Variable'; 
+cursor: pointer;
+border-radius: 50px; 
+transition: background-color 0.3s ease; 
+}
+
+.button-1:hover {
+background-color: rgba(255, 255, 255, 1); 
+color:#900B0B; 
+
+}
+.button-2:hover {
+background-color: rgba(255, 255, 255, 1); 
+color:#007AFF; 
+
+}
+
+.button-1:active, .button-2:active{
+background: #DCDCDC;
+border: 1px solid #FFFFFF;
+box-shadow: inset 8px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50.5px;
+
+}
+
+.button-1:active {
+background-color: rgba(255, 255, 255, 1); 
+color:#900B0B; 
+
+}
+.button-2:active {
+background-color: rgba(255, 255, 255, 1);
+color:#007AFF; 
+
+}
+
+.cn-main-page-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.4);
+z-index: 1;
+}
+.cn-mainpage-line {
+width: 50%; 
+height: 2px; 
+background-color: rgba(255, 255, 255, 0.7); 
+border: none; 
+margin: 10px auto; 
+border-radius: 5px; 
+}
+.cn-main-page-content h1 {
+font-size: 48px !important;
+margin-bottom: 50px;
+position: relative;
+text-align: center; 
+font-family: 'Pretendard Variable';
+font-weight:600;
+}
+
+.cn-main-page-content h1::before,.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 40%; 
+height: 1px; 
+background-color: rgba(255, 255, 255, 1); 
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: 0;
+}
+
+.cn-main-page-content h1::after {
+right: 0;
+}
+
+.circle {
+width: 10px; 
+height: 10px;
+background-color: rgba(255, 255, 255, 1); 
+border-radius: 50%; 
+position: absolute;
+top: 110%;
+left: 50%; 
+transform: translateX(-50%); 
+margin-top: 20px ;
+}
+
+@media (max-width: 768px) {
+.cn-main-page-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+width:100%;
+align-items:center;
+justify-content:center;
+margin:60px auto;
+height:auto;
+
+}
+
+.cn-main-page-section {
+overflow: hidden;
+width:90%;
+
+}
+
+.cn-main-page-left, 
+.cn-main-page-right {
+background-size: cover;
+background-position: center;
+width: 100%;
+height:510px !important;
+border-radius: 5px;
+}
+
+.button-1, 
+.button-2 {
+width: 190px;
+height: 42px;
+font-size: 18px;
+}
+
+.cn-main-page-content h1 {
+font-size: 32px !important;
+width: 100% !important;
+}
+
+.circle {
+width: 8px;
+height: 8px;
+}
+
+.cn-main-page-content h1::before, 
+.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 60%;
+height: 1px;
+background-color: rgba(255, 255, 255, 1);
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: -50px;
+}
+
+.cn-main-page-content h1::after {
+right: -50px;
+}	
+}
+
+@media (max-width: 441px) {
+.cn-main-page-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+align-items: center;
+justify-content: center;
+margin: 40px auto;
+
+}
+
+.cn-main-page-section {
+overflow: hidden;
+width: 95%;
+}
+
+.cn-main-page-left, 
+.cn-main-page-right {
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 460px !important;
+border-radius: 5px;
+}
+
+
+.button-1, .button-2 {
+width: 150px;
+height: 32px;
+font-size: 16px;
+margin-top:40px;
+}
+
+.cn-main-page-content h1 {
+font-size: 28px !important;
+width: 90%;
+}
+
+.circle {
+width: 6px;
+height: 6px;
+}
+
+.cn-main-page-content h1::before, 
+.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 50%;
+height: 1px;
+background-color: rgba(255, 255, 255, 1);
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: -30px;
+}
+
+.cn-main-page-content h1::after {
+right: -30px;
+}
+}
