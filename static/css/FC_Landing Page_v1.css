@@ -141,11 +141,11 @@ background: rgb(255, 255, 255);
 
         /* 최소 크기 화면 (핸드폰) */
          @media (max-width: 600px) {   
-          
-          img.img {
+                    img.img {
             opacity: 0;
           }
-        }          
+        }
+          
         /* 중간 크기 화면 (태블릿) */
         @media (max-width: 900px) {
           img.img {
@@ -292,12 +292,11 @@ background: rgb(255, 255, 255);
 /* 최소 크기 화면 (핸드폰) */
 @media (max-width: 600px) {
   #fc-section2 h1 {
-    font-size: 8vw;
-    transform: scale(0.8);
+    font-size: 3w;
     position:relative;
     transition: none;
     transform: none;
-   opacity: 0; 
+    opacity: 0; 
     }
 
   #fc-section2 p{
@@ -308,7 +307,7 @@ background: rgb(255, 255, 255);
   }
 
   #fc-section2 p>a {
-      font-size: 12vh;
+      font-size: 2.5vh;
     }
 } 
 
@@ -316,17 +315,19 @@ background: rgb(255, 255, 255);
 /* 중간 크기 화면 (태블릿) */
 @media (max-width: 900px) {
   #fc-section2 h1 {
-    font-size: 6vw;
+    font-size: 5vw;
     transition: none; 
     transform: none;
 }
 
   #fc-section2 p{
-    margin: 1.5rem;
-     
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;   
   }
   #fc-section2 p>a {
-    font-size: 10vw;
+    font-size:18px;  
      }
    
 }
@@ -350,7 +351,7 @@ margin: 1.5rem;
 
 
 #fc-section2.active .why-item a {
-  font-size: 1.8vw;
+  font-size: 100;
   animation: fadeUp 0.4s 0.2s both;
  }
 
