@@ -93,25 +93,6 @@ background: rgb(255, 255, 255);
 
 
 
-@keyframes floating {
-0% {
-transform: translate(0%, -30%);    
-}
-25% {
-transform: translate(5px, calc(-20% + 25px));   
-}   
-50% {
-transform: translate(10px, calc(-20% + 15px));   
-}   
-75% {
-transform: translate(0%, calc(-20% + 25px));   
-}   
-100% {
-transform: translate(0%, -30%);
-}   
-}
-
-
 /* 
 섹션 1
 */
@@ -300,38 +281,42 @@ transform: translate(0%, -30%);
 섹션2
 */
 
- /* 최소 크기 화면 (핸드폰) */
- @media (max-width: 600px) {             
-  #fc-section2 h1.active {
-    opacity: 0 !important;
-  }
-}          
-/* 중간 크기 화면 (태블릿) */
-@media (max-width: 900px) {
-  #fc-section2 h1.active {
-    opacity: 0 !important;
-  }
-}
 
 /* 최소 크기 화면 (핸드폰) */
 @media (max-width: 600px) {
-  i {
-      font-size: 1em;
-       }
-  h1 {
-      font-size: 1em; 
-      margin: 0.5rem 0; 
+  #fc-section2 h1 {
+    font-size: 8vw; 
+    }
+
+  #fc-section2 p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
   }
+
+  #fc-section2 p>a {
+      font-size: 12vh;
+       }
+
+      
+
 }
   
 /* 중간 크기 화면 (태블릿) */
 @media (max-width: 900px) {
-  i {
-    font-size: 1em;
+  #fc-section2 h1 {
+    font-size: 6vw; 
 }
-  h1 {
-    font-size: 6.5vw; 
+
+  #fc-section2 p{
+    margin: 1.5rem;
+     
   }
+  #fc-section2 p>a {
+    font-size: 10vw;
+     }
+   
 }
 
 
@@ -342,22 +327,20 @@ transform: translate(0%, -30%);
 
 #fc-section2 p{
 width: 50%;
-margin: 0.5em auto;
-font-size: 1.65em;
 transform: scale(0.8);
 font-size: 40px;
-margin: 0.7em auto;
 width: auto;
 position:relative;
 transition: all 600ms ease;
 opacity: 0;
+margin: 1.5rem;
 }
 
 
-#fc-section2.active .why-item i {
-
-  animation: fadeUp 0.4s 0.2s both
-}
+#fc-section2.active .why-item a {
+  font-size: 4vw;
+  animation: fadeUp 0.4s 0.2s both;
+ }
 
 @keyframes fadeUp {
 	0%{transform:translateY(80px); opacity: 0;}

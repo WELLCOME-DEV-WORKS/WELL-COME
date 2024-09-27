@@ -71,10 +71,10 @@ $(document).ready(function() {
 $(".why-item").each(function(){
    let text = this;
    // 각 문자에 <i> 태그 추가
-   text.innerHTML = text.textContent.replace(/\S/g, "<i>$&</i>")
+   text.innerHTML = text.textContent.replace(/\S/g, "<a>$&</a>")
    $(this).find("i").each(function(index, item){
      $(this).addClass("num" + index);
-     let i = index / 14;
+     let a = index / 14;
      // 각 문자에 애니메이션 딜레이 추가
      $(this).css("animation-delay", (i + 0.8) + "s")
    })
