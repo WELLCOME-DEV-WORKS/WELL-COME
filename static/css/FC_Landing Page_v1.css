@@ -26,7 +26,10 @@ font-family: arial,helvetica;
 color: #fff;
 }
 
-
+/* nav */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #fff !important;
+}
 
 /* 배경 색상 */
 #fc-section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
@@ -79,12 +82,6 @@ transition-delay: 500ms;
 }
 
 
-
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span{
-background: rgb(255, 255, 255);
-}
-
 /* This is just for fun */
  .section {
     position: relative;
@@ -98,7 +95,7 @@ background: rgb(255, 255, 255);
 */
 
 
-.fc-section1-title {
+h1.fc-section1-title {
   left: 50%;
   top: 50%;
   font-weight: 1000;
@@ -138,29 +135,31 @@ background: rgb(255, 255, 255);
         flex-shrink: 0;
         box-shadow: 5px 5px 14px #0000007c;
          }
+           /* 최소 크기 화면 (핸드폰) */
+           @media (max-width: 600px) {   
+            img.img {
+                opacity: 0;
+              }
+            }
+  
+            /* 중간 크기 화면 (태블릿) */
+            @media (max-width: 900px) {
+              img.img {
+                opacity: 0;
+              }
+            }
 
-        /* 최소 크기 화면 (핸드폰) */
-         @media (max-width: 600px) {   
-                    img.img {
-            opacity: 0;
-          }
-        }
-          
-        /* 중간 크기 화면 (태블릿) */
-        @media (max-width: 900px) {
-          img.img {
-            opacity: 0;
-          }
-        }
-        
-        @media (max-width: 1100px) {
-          img.img {
-            opacity: 0;
-          }
-        }
+            @media (max-width: 1100px) {
+              img.img {
+                opacity: 0;
+              }
+            }
 
+
+      
        /* 여권 이미지별 스타일 */
-       img.passport1 {
+       
+       #fc-section1 img.passport1 {
         z-index: 2;
         left: 170px;
         top: -280px;
@@ -170,7 +169,7 @@ background: rgb(255, 255, 255);
         animation-duration: 1s;
       }
 
-      img.passport2 {
+      #fc-section1 img.passport2 {
         transform: rotate(28.515deg) translateX(40vw)  translateY(-40vh);
         z-index: 4;
         left: 140px;
@@ -180,7 +179,7 @@ background: rgb(255, 255, 255);
         animation-duration: 1s;
         }
 
-      img.passport3 {
+        #fc-section1 img.passport3 {
         transform: rotate(-8.104deg) translateX(-8vw)  translateY(7vh);
         z-index: 1;
         right: -300px;
@@ -190,7 +189,7 @@ background: rgb(255, 255, 255);
         animation-duration: 1s;
       }
 
-      img.passport4 {
+      #fc-section1 img.passport4 {
         transform: rotate(17.104deg) translateX(20vw)  translateY(94vh);
         z-index: 3;
         left: 50px;
@@ -200,7 +199,7 @@ background: rgb(255, 255, 255);
         animation-duration: 1s;
       }
 
-      img.passport5 {
+      #fc-section1 img.passport5 {
         transform: rotate(-30.104deg) translateX(10vw)  translateY(140vh);
         z-index: 2;
         left: 200px;
@@ -211,35 +210,35 @@ background: rgb(255, 255, 255);
       }
 
       /* 여권 이미지 active 작동 */
-      img.passport1.active {
+      #fc-section1 img.passport1.active {
         animation-name: moveTo10;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
       }
 
 
-      img.passport2.active {
+    #fc-section1 img.passport2.active {
         z-index: 2;
         animation-name: moveTo12;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
                     }
 
-      img.passport3.active {
+    #fc-section1 img.passport3.active {
         z-index: 1;
         animation-name: moveTo3;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
       }
 
-      img.passport4.active {
+      #fc-section1 img.passport4.active {
         z-index: 5;
         animation-name: moveTo8;
         animation-timing-function: ease-in-out;
         animation-duration: 1s;
       }
 
-      img.passport5.active {
+      #fc-section1 img.passport5.active {
         z-index: 4;
         animation-name: moveTo5;
         animation-timing-function: ease-in-out;
@@ -252,6 +251,13 @@ background: rgb(255, 255, 255);
         to {
           transform: translate(-100vw, -100vh);
           opacity: 0;
+        }
+      }
+
+      @keyframes backTo10 {
+        to {
+          transform: translate(100vw, 100vh);
+          opacity: 1;
         }
       }
 
@@ -292,7 +298,6 @@ background: rgb(255, 255, 255);
 /* 최소 크기 화면 (핸드폰) */
 @media (max-width: 600px) {
   #fc-section2 h1 {
-    font-size: 3w;
     position:relative;
     transition: none;
     transform: none;
@@ -350,9 +355,10 @@ margin: 1.5rem;
 }
 
 
-#fc-section2.active .why-item a {
+#fc-section2.active .fc-item a {
   font-size: 100;
   animation: fadeUp 0.4s 0.2s both;
+  color: #fff;
  }
 
 @keyframes fadeUp {
@@ -363,39 +369,8 @@ margin: 1.5rem;
 섹션3
 */
    
-  /* 섹션3 버튼 디자인 */
-  #fc-section3 .startBT {
-    margin-top: 40px;
-    width: 220px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: 600;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: white;
-    font-family: 'Pretendard Variable';
-    cursor: pointer;
-    border-radius: 50px;
- 
-} 
-
-#fc-section3 .startBT:hover
-, .startBT:active  {
-  background-color:#fff;
-  color: #8C1DEF;
-  font-weight: 600;
-  font-family: 'Pretendard Variable';
-}
-
-
-
  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
 
 .cn-main-page-container {
 display: flex;
