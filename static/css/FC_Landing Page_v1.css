@@ -18,6 +18,55 @@ margin:0;
 }
 
 
+#fc-arrow {
+  width: 100%;   
+  position: fixed;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    bottom: 0px;
+    padding: 10px
+}
+#fc-arrow svg{
+  display: none;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  animation-name: floating;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+}
+
+@keyframes floating {
+  0% {
+      transform: translateY(0);    
+  }
+  50% {
+      transform: translateY(-20px);   
+  }   
+  100% {
+      transform: translateY(0);
+  }   
+}
+
+
+/* 600px 이하일 때 보이도록 설정 */
+@media (max-width: 600px) {
+  #fc-arrow svg {
+    display: flex; /* 보이도록 설정 */
+  }
+}
+
+/* 900px 이하일 때 보이도록 설정 */
+@media (max-width: 900px) {
+  #fc-arrow svg {
+    display: flex; /* 보이도록 설정 */
+  }
+}
 
 
 .section{
@@ -26,12 +75,15 @@ font-family: arial,helvetica;
 color: #fff;
 }
 
-
+/* nav */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #fff !important;
+}
 
 /* 배경 색상 */
 #fc-section1 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
 #fc-section2 {background-image: linear-gradient(128deg,#40afff,#3f61ff)}
-#fc-section3 {background-image: linear-gradient(128deg,#FFCA42,#8C1DEF)}
+#fc-section3 {background-image: linear-gradient(128deg,#342929,#0F0913, #8C9599, #00101A )}
 
 /* Setting states for animations */
 #fc-section2 h1,
@@ -79,12 +131,6 @@ transition-delay: 500ms;
 }
 
 
-
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span{
-background: rgb(255, 255, 255);
-}
-
 /* This is just for fun */
  .section {
     position: relative;
@@ -93,31 +139,12 @@ background: rgb(255, 255, 255);
 
 
 
-@keyframes floating {
-0% {
-transform: translate(0%, -30%);    
-}
-25% {
-transform: translate(5px, calc(-20% + 25px));   
-}   
-50% {
-transform: translate(10px, calc(-20% + 15px));   
-}   
-75% {
-transform: translate(0%, calc(-20% + 25px));   
-}   
-100% {
-transform: translate(0%, -30%);
-}   
-}
-
-
 /* 
 섹션 1
 */
 
 
-.fc-section1-title {
+h1.fc-section1-title {
   left: 50%;
   top: 50%;
   font-weight: 1000;
@@ -157,23 +184,71 @@ transform: translate(0%, -30%);
         flex-shrink: 0;
         box-shadow: 5px 5px 14px #0000007c;
          }
+           /* 최소 크기 화면 (핸드폰) */
+           @media (max-width: 600px) {   
+            img.img {
+                opacity: 0;
+              }
+            }
+  
+            /* 중간 크기 화면 (태블릿) */
+            @media (max-width: 900px) {
+              img.img {
+                opacity: 0;
+              }
+            }
 
-        /* 최소 크기 화면 (핸드폰) */
-         @media (max-width: 600px) {   
-          
-          img.img {
-            opacity: 0;
-          }
-        }          
-        /* 중간 크기 화면 (태블릿) */
-        @media (max-width: 900px) {
-          img.img {
-            opacity: 0;
-          }
-        }
-        
+            @media (max-width: 1100px) {
+              img.img {
+                opacity: 0;
+              }
+            }
+
+
+      
        /* 여권 이미지별 스타일 */
-       img.passport1 {
+      
+       body.fp-viewing-firstPage #fc-section1 img.passport1 {
+          z-index: 2;
+        left: 170px;
+        top: -280px;
+        transform: translateX(15vw)  translateY(15vh) rotate(-8.515deg);
+        opacity: 0;      
+            }
+
+        body.fp-viewing-firstPage #fc-section1 img.passport2 {
+          transform: rotate(28.515deg) translateX(40vw)  translateY(-40vh);
+          z-index: 4;
+          left: 140px;
+          top: -200px;
+          opacity:0;
+          }
+
+        body.fp-viewing-firstPage #fc-section1 img.passport3 {
+          transform: rotate(-8.104deg) translateX(-8vw)  translateY(7vh);
+          z-index: 1;
+          right: -300px;
+          top: -10px;
+          opacity: 0;
+          }
+        body.fp-viewing-firstPage #fc-section1 img.passport4 {
+          transform: rotate(17.104deg) translateX(20vw)  translateY(94vh);
+          z-index: 3;
+          left: 50px;
+          bottom: 600px;
+          opacity: 0;
+          }
+
+        body.fp-viewing-firstPage #fc-section1 img.passport5 {
+          transform: rotate(-30.104deg) translateX(10vw)  translateY(140vh);
+          z-index: 2;
+          left: 200px;
+          bottom: 700px;
+          opacity: 0;
+              }
+
+
+     body.fp-viewing-secondPage #fc-section1 img.passport1 {
         z-index: 2;
         left: 170px;
         top: -280px;
@@ -183,7 +258,7 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
       }
 
-      img.passport2 {
+      body.fp-viewing-secondPage #fc-section1 img.passport2 {
         transform: rotate(28.515deg) translateX(40vw)  translateY(-40vh);
         z-index: 4;
         left: 140px;
@@ -193,7 +268,7 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
         }
 
-      img.passport3 {
+        body.fp-viewing-secondPage #fc-section1 img.passport3 {
         transform: rotate(-8.104deg) translateX(-8vw)  translateY(7vh);
         z-index: 1;
         right: -300px;
@@ -203,7 +278,7 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
       }
 
-      img.passport4 {
+      body.fp-viewing-secondPage #fc-section1 img.passport4 {
         transform: rotate(17.104deg) translateX(20vw)  translateY(94vh);
         z-index: 3;
         left: 50px;
@@ -213,7 +288,8 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
       }
 
-      img.passport5 {
+    
+      body.fp-viewing-secondPage #fc-section1 img.passport5 {
         transform: rotate(-30.104deg) translateX(10vw)  translateY(140vh);
         z-index: 2;
         left: 200px;
@@ -223,53 +299,26 @@ transform: translate(0%, -30%);
         animation-duration: 1s;
       }
 
-      /* 여권 이미지 active 작동 */
-      img.passport1.active {
-        animation-name: moveTo10;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-      }
-
-      img.passport2.active {
-        z-index: 2;
-        animation-name: moveTo12;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-                    }
-
-      img.passport3.active {
-        z-index: 1;
-        animation-name: moveTo3;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-      }
-
-      img.passport4.active {
-        z-index: 5;
-        animation-name: moveTo8;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-      }
-
-      img.passport5.active {
-        z-index: 4;
-        animation-name: moveTo5;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-      }
       
 
       /* 여권 애니메이션 */
-        /* @keyframes moveTo10 {
+       @keyframes moveTo10 {
         to {
           transform: translate(-100vw, -100vh);
           opacity: 0;
         }
       }
 
+      @keyframes backTo10 {
+        to {
+          transform: translate(100vw, 100vh);
+          opacity: 0;
+        }
+      }
+
       @keyframes moveTo12 {
         to {
-          transform: translateY(-100vh);
+          transform: translateY(-230vh);
           opacity: 0;
         }
       }
@@ -290,48 +339,57 @@ transform: translate(0%, -30%);
 
       @keyframes moveTo5 {
         to {
-          transform: translate(100vw, 100vh);
+          transform: translate(100vw, 300vh);
           opacity: 0;
         }
-      }  */
+      }
 
 
 /*
 섹션2
 */
 
- /* 최소 크기 화면 (핸드폰) */
- @media (max-width: 600px) {             
-  #fc-section2 h1.active {
-    opacity: 0 !important;
-  }
-}          
-/* 중간 크기 화면 (태블릿) */
-@media (max-width: 900px) {
-  #fc-section2 h1.active {
-    opacity: 0 !important;
-  }
-}
 
 /* 최소 크기 화면 (핸드폰) */
 @media (max-width: 600px) {
-  i {
-      font-size: 1em;
-       }
-  h1 {
-      font-size: 1em; 
-      margin: 0.5rem 0; 
+  #fc-section2 h1 {
+    position:relative;
+    transition: none;
+    transform: none;
+    opacity: 0; 
+    }
+
+  #fc-section2 p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
   }
-}
+
+  #fc-section2 p>a {
+      font-size: 2.5vh;
+    }
+} 
+
   
 /* 중간 크기 화면 (태블릿) */
 @media (max-width: 900px) {
-  i {
-    font-size: 1em;
+  #fc-section2 h1 {
+    font-size: 5vw;
+    transition: none; 
+    transform: none;
 }
-  h1 {
-    font-size: 6.5vw; 
+
+  #fc-section2 p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;   
   }
+  #fc-section2 p>a {
+    font-size:18px;  
+     }
+   
 }
 
 
@@ -342,22 +400,21 @@ transform: translate(0%, -30%);
 
 #fc-section2 p{
 width: 50%;
-margin: 0.5em auto;
-font-size: 1.65em;
 transform: scale(0.8);
 font-size: 40px;
-margin: 0.7em auto;
 width: auto;
 position:relative;
 transition: all 600ms ease;
 opacity: 0;
+margin: 1.5rem;
 }
 
 
-#fc-section2.active .why-item i {
-
-  animation: fadeUp 0.4s 0.2s both
-}
+#fc-section2.active .fc-item a {
+  font-size: 100;
+  animation: fadeUp 0.4s 0.2s both;
+  color: #fff;
+ }
 
 @keyframes fadeUp {
 	0%{transform:translateY(80px); opacity: 0;}
@@ -367,30 +424,283 @@ opacity: 0;
 섹션3
 */
    
-  /* 섹션3 버튼 디자인 */
-  #fc-section3 .startBT {
-    margin-top: 40px;
-    width: 220px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: 600;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: white;
-    font-family: 'Pretendard Variable';
-    cursor: pointer;
-    border-radius: 50px;
-    transform: translate3d(0, 50px, 0);
-    opacity: 0;
-    transition: opacity 700ms ease, transform 700ms ease;   
-     transition-delay: 200ms;
-} 
+ @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-#fc-section3 .startBT:hover
-, .startBT:active  {
-  background-color:#fff;
-  color: #8C1DEF;
-  font-weight: 600;
-  font-family: 'Pretendard Variable';
+
+.cn-main-page-container {
+display: flex;
+height: 100vh;
+width:90%;
+margin:0 auto;  
 }
 
+.cn-main-page-section {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+color: white;
+text-align: center;
+width: 50%; 
+
+}
+
+.cn-main-page-content {
+position: relative;
+z-index: 2;
+}
+
+.cn-main-page-left {
+
+background: url('https://cdn.imweb.me/thumbnail/20240913/ca08b6b749530.png') no-repeat center center;
+background-size: cover;
+}
+
+.cn-main-page-right {
+background: url('https://cdn.imweb.me/thumbnail/20240913/1c1a765e55a11.png') no-repeat center center;
+background-size: cover;
+}
+
+.cn-main-page-content {
+position: relative;
+z-index: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transform: translateY(15%);
+}
+
+.button-1, .button-2{
+margin-top:60px;
+width: 220px;
+height:40px;
+font-size: 20px;
+font-weight:800;
+border: 1px solid #fff; 
+background-color: transparent; 
+color: white; 
+font-family: 'Pretendard Variable'; 
+cursor: pointer;
+border-radius: 50px; 
+transform: translate3d(0, 50px, 0);
+opacity: 0;
+transition: opacity 700ms ease, transform 700ms ease;   
+ transition-delay: 200ms;
+}
+
+.button-1:hover {
+background-color: rgba(255, 255, 255, 1); 
+color:#900B0B; 
+
+}
+.button-2:hover {
+background-color: rgba(255, 255, 255, 1); 
+color:#007AFF; 
+
+}
+
+.button-1:active, .button-2:active{
+background: #DCDCDC;
+border: 1px solid #FFFFFF;
+box-shadow: inset 8px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50.5px;
+
+}
+
+.button-1:active {
+background-color: rgba(255, 255, 255, 1); 
+color:#900B0B; 
+
+}
+.button-2:active {
+background-color: rgba(255, 255, 255, 1);
+color:#007AFF; 
+
+}
+
+.cn-main-page-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.4);
+z-index: 1;
+}
+.cn-mainpage-line {
+width: 50%; 
+height: 2px; 
+background-color: rgba(255, 255, 255, 0.7); 
+border: none; 
+margin: 10px auto; 
+border-radius: 5px; 
+}
+.cn-main-page-content h1 {
+font-size: 48px !important;
+margin-bottom: 50px;
+position: relative;
+text-align: center; 
+font-family: 'Pretendard Variable';
+font-weight:600;
+}
+
+.cn-main-page-content h1::before,.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 40%; 
+height: 1px; 
+background-color: rgba(255, 255, 255, 1); 
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: 0;
+}
+
+.cn-main-page-content h1::after {
+right: 0;
+}
+
+.circle {
+width: 10px; 
+height: 10px;
+background-color: rgba(255, 255, 255, 1); 
+border-radius: 50%; 
+position: absolute;
+top: 110%;
+left: 50%; 
+transform: translateX(-50%); 
+margin-top: 20px ;
+}
+
+@media (max-width: 768px) {
+.cn-main-page-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+width:100%;
+align-items:center;
+justify-content:center;
+margin:60px auto;
+height:auto;
+
+}
+
+.cn-main-page-section {
+overflow: hidden;
+width:90%;
+
+}
+
+.cn-main-page-left, 
+.cn-main-page-right {
+background-size: cover;
+background-position: center;
+width: 100%;
+height:510px !important;
+border-radius: 5px;
+}
+
+.button-1, 
+.button-2 {
+width: 190px;
+height: 42px;
+font-size: 18px;
+}
+
+.cn-main-page-content h1 {
+font-size: 32px !important;
+width: 100% !important;
+}
+
+.circle {
+width: 8px;
+height: 8px;
+}
+
+.cn-main-page-content h1::before, 
+.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 60%;
+height: 1px;
+background-color: rgba(255, 255, 255, 1);
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: -50px;
+}
+
+.cn-main-page-content h1::after {
+right: -50px;
+}	
+}
+
+@media (max-width: 441px) {
+.cn-main-page-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+align-items: center;
+justify-content: center;
+margin: 40px auto;
+
+}
+
+.cn-main-page-section {
+overflow: hidden;
+width: 95%;
+}
+
+.cn-main-page-left, 
+.cn-main-page-right {
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 460px !important;
+border-radius: 5px;
+}
+
+
+.button-1, .button-2 {
+width: 150px;
+height: 32px;
+font-size: 16px;
+margin-top:40px;
+}
+
+.cn-main-page-content h1 {
+font-size: 28px !important;
+width: 90%;
+}
+
+.circle {
+width: 6px;
+height: 6px;
+}
+
+.cn-main-page-content h1::before, 
+.cn-main-page-content h1::after {
+content: '';
+position: absolute;
+top: 120%;
+width: 50%;
+height: 1px;
+background-color: rgba(255, 255, 255, 1);
+margin-top: 20px;
+}
+
+.cn-main-page-content h1::before {
+left: -30px;
+}
+
+.cn-main-page-content h1::after {
+right: -30px;
+}
+}
