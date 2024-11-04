@@ -14,7 +14,7 @@
       }
 
       /* 아임웹 - 하단 입력폼 제거*/
-      #addFormw20241102990ddd0dcef47 {
+      #addFormw202411041b942316738e6 {
         overflow: hidden;
         height: 0 !important;
         opacity: 0 !important;
@@ -543,13 +543,13 @@
         background-color: #fcf9f7;
       }
 
-      #addFormw2024082259f02e163f56b {
+      #addFormw202411041b942316738e6 {
         overflow: hidden;
         height: 0 !important;
         opacity: 0 !important;
       }
 
-      #w2024082259f02e163f56b ._input_form_submit {
+      #w202411041b942316738e6 ._input_form_submit {
         overflow: hidden;
         height: 0 !important;
         opacity: 0 !important;
@@ -2108,21 +2108,28 @@
       const submitLimit = localStorage.getItem('6 selectedValue')
 
       if (submitLimit && submitLimit.length >= 2) {
-        document.getElementById("input_txt_2adc34665cda5").value =
+        // 내국인/외국인
+        document.getElementById("input_txt_aa69a2b10fba2").value =
           localStorage.getItem('0 selectedValue')
-        document.getElementById("input_txt_79cacd4241db5").value =
+        //   거주 국가
+        document.getElementById("input_txt_e11c3cb717e72").value =
           localStorage.getItem('1 selectedValue')
-        document.getElementById("input_txt_D44y508KH2").value =
+        //   회사 형식
+        document.getElementById("input_txt_F0hz263616").value =
           localStorage.getItem('2 selectedValue')
-        document.getElementById("input_txt_186pTBK084").value =
+        //   설립 지역
+        document.getElementById("input_txt_FXmN53Hq84").value =
           localStorage.getItem('3 selectedValue')
-        document.getElementById("input_txt_1RBdDI3aF0").value =
+        //   법인명
+        document.getElementById("input_txt_03y2Q0ViFM").value =
           localStorage.getItem('4 selectedValue')
-        document.getElementById("input_txt_T53Ny7dP83").value =
+        //   이름
+        document.getElementById("input_txt_7dPV54q7h5").value =
           localStorage.getItem('5 selectedValue')
-        document.getElementById("input_txt_6vvJcU7o8Q").value =
+        //   연락처
+        document.getElementById("input_txt_V4q2qoUr28").value =
           localStorage.getItem('6 selectedValue')
-        SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
+        SITE_FORM.confirmInputForm('w202411041b942316738e6', 'N');
         localStorage.clear();
       }
     }
