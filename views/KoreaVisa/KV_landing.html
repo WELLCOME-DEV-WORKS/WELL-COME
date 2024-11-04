@@ -739,8 +739,451 @@
       }
     }
 
-    /*  third  */
+    /*third*/
     .kv-third-container {
+      width: 1200px;
+      height: auto;
+      margin-top: 80px;
+      padding-top: 36px;
+      background-color: #fff;
+      gap: 21px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .kv-third-title {
+      width: 996px;
+      height: 36px;
+      padding: 50px 102px;
+      font-size: 36px;
+      font-family: 'GangwonEduPower';
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .kv-third-processBox {
+      width: 980px;
+      height: auto;
+      padding: 20px 21px;
+
+      display: flex; /* 그리드 대신 플렉스박스 사용 */
+      justify-content: center; /* 가운데 정렬 */
+
+      flex-wrap: wrap; /* 줄바꿈을 허용 */
+      gap: 23px 20px; /* 상하 간격 14px, 좌우 간격 10px */
+    }
+
+    .kv-third-processCard {
+      position: relative;
+      width: 285px;
+      height: 180px;
+      background-color: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+      border: rgba(255, 255, 255, 0) solid 2px;
+      border-radius: 8px;
+      padding: 28px 21px;
+      display: flex;
+      flex-direction: column;
+      transition: border 0.2s ease-in-out;
+    }
+
+    .kv-third-processCard:hover {
+      border: #ffca42 solid 2px;
+    }
+
+    .kv-third-processCard span {
+      position: relative;
+      font-family: 'SUIT-Variable';
+      font-weight: 800;
+      font-size: 34px;
+      text-align: right;
+    }
+
+    .kv-third-processCard p {
+      position: relative;
+      font-family: 'SUIT-Variable';
+      font-size: 24px;
+      text-align: right;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .kv-third-processBox > .kv-third-processCard:nth-child(1) > div,
+    .kv-third-processBox > .kv-third-processCard:nth-child(3) > div {
+      right: 53px;
+    }
+    .kv-third-processBox > .kv-third-processCard:nth-child(2) > div {
+      right: 34px;
+    }
+    .kv-third-processBox > .kv-third-processCard:nth-child(4) > div {
+      right: 10px;
+    }
+    .kv-third-processBox > .kv-third-processCard:nth-child(5) > div {
+      right: 78px;
+    }
+
+    .kv-third-processCard > img {
+      position: absolute;
+      bottom: 22px;
+      right: 21px;
+      width: 115px;
+      height: 115px;
+    }
+
+    .kv-third-button {
+      font-family: 'BMJUA';
+      margin-top: 47px;
+      font-size: 24px;
+      width: 386px;
+      height: 62px;
+      background-color: #333333;
+      color: #ffca42;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 62px;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 20px;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    .kv-third-button:hover {
+      background-color: #ffca42;
+      color: black;
+    }
+
+    .kv-third-button:active {
+      background-color: #ffca42;
+      color: black;
+      box-shadow: inset 0px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 991px) {
+      .kv-third-container {
+        width: 100%;
+        max-width: 900px; /* Adjusted max-width for smaller screens */
+        margin-top: 40px; /* Reduced margin for better spacing */
+        gap: 15px; /* Reduced gap for smaller screens */
+        padding: 15px; /* Added padding for smaller screens */
+        margin: 0 auto;
+        margin-top: 10%;
+      }
+
+      .kv-third-title {
+        width: 100%;
+        max-width: 700px; /* Adjusted max-width for readability */
+        padding: 30px 20px; /* Reduced padding for smaller screens */
+        font-size: 32px; /* Reduced font size for smaller screens */
+        text-align: center; /* Center text on smaller screens */
+      }
+
+      .kv-third-processBox {
+        width: 100%;
+        max-width: 800px; /* Adjusted max-width for smaller screens */
+        padding: 15px; /* Reduced padding for smaller screens */
+        gap: 15px 15px; /* Adjusted gap for smaller screens */
+      }
+
+      .kv-third-processCard {
+        width: 220px; /* Reduced width for smaller screens */
+        height: 200px; /* Reduced height for smaller screens */
+        padding: 20px 15px; /* Reduced padding for smaller screens */
+      }
+
+      .kv-third-processCard > span {
+        font-size: 48px; /* Reduced font size for smaller screens */
+      }
+
+      .kv-third-processCard > p {
+        left: 40px; /* Adjusted positioning for smaller screens */
+        font-size: 20px; /* Reduced font size for smaller screens */
+      }
+
+      .kv-third-processCard > div {
+        width: 40px; /* Reduced size for smaller screens */
+        height: 40px; /* Reduced size for smaller screens */
+        top: 20px; /* Adjusted positioning for smaller screens */
+      }
+
+      .kv-third-processCard > img {
+        width: 90px; /* Reduced image size */
+        height: 90px; /* Reduced image size */
+        bottom: 10px; /* Adjusted positioning for smaller screens */
+        right: 10px; /* Adjusted positioning for smaller screens */
+      }
+
+      .kv-third-button {
+        width: 300px; /* Reduced button width */
+        height: 50px; /* Reduced button height */
+        font-size: 20px; /* Reduced font size for smaller screens */
+        line-height: 50px; /* Match line-height with button height */
+        margin-top: 20px; /* Reduced margin for better spacing */
+      }
+    }
+    @media (max-width: 768px) {
+      .kv-third-container {
+        width: 100%;
+        height: auto;
+        margin: 70px auto; /* Increase margin for larger screens */
+        padding-top: 30px; /* Increase padding */
+        background-color: #fcfbf7;
+        gap: 20px; /* Increase gap for more spacing */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px; /* Adjusted padding */
+        max-width: 600px; /* Adjusted max-width for larger screens */
+      }
+
+      .kv-third-title {
+        width: 90%; /* Full width for title */
+        height: auto;
+        padding: 20px;
+        font-size: 28px; /* Increase font size */
+        font-family: 'Tenada';
+        font-weight: 800;
+        text-align: left;
+        position: relative;
+        margin-left: 0; /* Remove negative margin for better alignment */
+      }
+
+      .kv-third-processBox {
+        width: 100%; /* Full width for process box */
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Adjusted gap */
+      }
+
+      .kv-third-processCard {
+        width: 430px; /* Full width for process cards */
+        height: 70px; /* Increase height */
+        padding: 20px;
+        margin-bottom: 15px; /* Increase margin bottom */
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        border: rgba(255, 255, 255, 0) solid 1px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: border 0.2s ease-in-out;
+        position: relative;
+      }
+
+      .kv-third-processCard > span {
+        position: absolute;
+        left: 15px; /* Adjusted left position */
+        top: 25px; /* Adjusted top position */
+        font-family: 'Tenada';
+        font-size: 24px; /* Increase font size */
+        color: #666666;
+      }
+
+      .kv-third-processCard > p {
+        margin-left: 10px; /* Adjusted margin for better alignment */
+        font-family: 'Tenada';
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
+
+      .kv-third-processCard > div {
+        display: none;
+      }
+
+      .kv-third-processCard > img {
+        width: 50px; /* Increase image size */
+        height: 50px;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+      }
+
+      .kv-third-button {
+        font-family: 'BMJUA';
+        font-size: 18px; /* Increase font size */
+        width: 280px; /* Increase width */
+        height: 50px; /* Increase height */
+        background-color: #1a1a1a;
+        color: #ffca42;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        margin: 20px auto; /* Increase margin */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      .kv-third-button::before {
+        content: '즉시 신청';
+        display: block;
+        text-align: center;
+        font-family: 'BMJUA';
+        font-size: 18px; /* Increase font size */
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .kv-third-button {
+        font-size: 0;
+      }
+
+      .kv-third-button:hover {
+        background-color: #1a1a1a;
+        color: #ffca42;
+      }
+
+      .kv-third-button:active {
+        background-color: #1a1a1a;
+        color: #ffca42;
+        box-shadow: inset 0px 6px 8px #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 497px) {
+      .kv-third-container {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        padding-top: 20px;
+        background-color: #fcfbf7;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        max-width: 358px;
+      }
+
+      .kv-third-title {
+        width: 358px;
+        height: auto;
+        padding: 20px;
+        font-size: 24px;
+        font-family: 'Tenada';
+        font-weight: 800;
+        text-align: left;
+        position: relative;
+        margin-left: -5px;
+      }
+
+      .kv-third-processBox {
+        width: 358px;
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .kv-third-processCard {
+        width: 358px;
+        height: 60px;
+        padding: 20px;
+        margin-bottom: 10px;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        border: rgba(255, 255, 255, 0) solid 1px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: border 0.2s ease-in-out;
+        position: relative;
+      }
+
+      .kv-third-processCard > span {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        font-family: 'Tenada';
+        font-size: 20px;
+        color: #666666;
+      }
+
+      .kv-third-processCard > p {
+        margin-left: 20px;
+        font-family: 'Tenada';
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      .kv-third-processCard > div {
+        display: none;
+      }
+
+      .kv-third-processCard > img {
+        width: 43px;
+        height: 43px;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+      }
+
+      .kv-third-button {
+        font-family: 'BMJUA';
+        font-size: 16px;
+        width: 265px;
+        height: 40px;
+        background-color: #1a1a1a;
+        color: #ffca42;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        margin: 15px auto;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      .kv-third-button::before {
+        content: '1분만에 견적 받아보기';
+        display: block;
+        text-align: center;
+        font-family: 'BMJUA';
+        font-size: 16px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-family: 'BMJUA';
+      }
+      .kv-third-button {
+        font-size: 0;
+      }
+      .kv-third-button:hover {
+        background-color: #1a1a1a;
+        color: #ffca42;
+      }
+
+      .kv-third-button:active {
+        background-color: #1a1a1a;
+        color: #ffca42;
+        box-shadow: inset 0px 6px 8px #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /*  fourth  */
+    .kv-fourth-container {
       width: 1200px;
       height: auto;
       margin-top: 290px;
@@ -753,7 +1196,7 @@
     }
 
     /* Title styles */
-    .kv-third-title {
+    .kv-fourth-title {
       line-height: 40px;
       font-family: 'SUIT Variable';
       font-size: 25px;
@@ -761,33 +1204,33 @@
       color: black;
       text-align: center;
     }
-    .kv-third-title span {
+    .kv-fourth-title span {
       color: #004098;
       font-weight: 900;
     }
 
-    .kv-third-subtitle {
+    .kv-fourth-subtitle {
       color: #004098;
       font-size: 45px;
       font-family: 'GangwonEduPower';
       margin-top: 15px;
     }
 
-    .kv-third-img_box {
+    .kv-fourth-img_box {
       width: 100vw;
       height: auto;
       overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
     }
 
-    .kv-third-img_box img {
+    .kv-fourth-img_box img {
       width: 100%;
       height: 100%;
       object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
     }
 
     /* Button styles */
-    .kv-third-button {
-      font-family: 'BMJUA';
+    .kv-fourth-button {
+      font-family: 'SUIT-Variable';
       font-size: 28px;
       color: #fff;
       background-color: #004098;
@@ -800,28 +1243,28 @@
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
 
-    .kv-third-button:hover {
+    .kv-fourth-button:hover {
       background: #1a1a1a;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       color: #fff;
     }
 
-    .kv-third-button:active {
+    .kv-fourth-button:active {
       background: #333333;
       box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
       color: #fff;
     }
 
-    .kv-third-container-mobile {
+    .kv-fourth-container-mobile {
       display: none;
     }
 
     @media screen and (max-width: 991px) {
-      .kv-third-container {
+      .kv-fourth-container {
         display: none;
       }
 
-      .kv-third-container-mobile {
+      .kv-fourth-container-mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -835,7 +1278,7 @@
       }
 
       /* Title styles */
-      .kv-third-title-mobile {
+      .kv-fourth-title-mobile {
         line-height: 40px;
         font-family: 'SUIT Variable';
         font-size: 21px;
@@ -844,19 +1287,19 @@
         text-align: center;
       }
 
-      .kv-third-title-mobile span {
+      .kv-fourth-title-mobile span {
         color: #004098;
         font-weight: 900;
       }
 
-      .kv-third-subtitle-mobile {
+      .kv-fourth-subtitle-mobile {
         color: #004098;
         font-size: 36px;
         font-family: 'GangwonEduPower';
         margin-top: 15px;
       }
 
-      .kv-third-button-mobile {
+      .kv-fourth-button-mobile {
         width: 100%;
         max-width: 350px;
         height: 55px;
@@ -874,25 +1317,25 @@
         transition: background-color 0.2s ease-in-out;
       }
 
-      .kv-third-button-mobile:hover {
+      .kv-fourth-button-mobile:hover {
         background: #1a1a1a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         color: #fff;
       }
 
-      .kv-third-button-mobile:active {
+      .kv-fourth-button-mobile:active {
         background: #333333;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
         color: #fff;
       }
 
-      .kv-third-img_box-mobile {
+      .kv-fourth-img_box-mobile {
         width: 100vw;
         height: auto;
         overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
       }
 
-      .kv-third-img_box-mobile img {
+      .kv-fourth-img_box-mobile img {
         width: 100%;
         height: 100%;
         object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
@@ -900,11 +1343,11 @@
       }
     }
     @media (max-width: 767px) {
-      .kv-third-container {
+      .kv-fourth-container {
         display: none;
       }
 
-      .kv-third-container-mobile {
+      .kv-fourth-container-mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -916,15 +1359,15 @@
         box-sizing: border-box; /* Ensure padding does not affect width */
       }
 
-      .kv-third-title-mobile {
+      .kv-fourth-title-mobile {
         font-size: 20px;
       }
 
-      .kv-third-subtitle-mobile {
+      .kv-fourth-subtitle-mobile {
         font-size: 30px;
       }
 
-      .kv-third-button-mobile {
+      .kv-fourth-button-mobile {
         width: 100%;
         max-width: 300px;
         height: 50px;
@@ -942,19 +1385,19 @@
         transition: background-color 0.2s ease-in-out;
       }
 
-      .kv-third-button-mobile:hover {
+      .kv-fourth-button-mobile:hover {
         background: #1a1a1a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         color: #fff;
       }
 
-      .kv-third-button-mobile:active {
+      .kv-fourth-button-mobile:active {
         background: #333333;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
         color: #fff;
       }
 
-      .kv-third-img_box-mobile {
+      .kv-fourth-img_box-mobile {
         display: flex;
         width: 100vw;
         max-width: 1036px;
@@ -962,7 +1405,7 @@
         overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
       }
 
-      .kv-third-img_box-mobile img {
+      .kv-fourth-img_box-mobile img {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -974,11 +1417,11 @@
     }
     /*mobile -3rd*/
     @media screen and (max-width: 497px) {
-      .kv-third-container {
+      .kv-fourth-container {
         display: none;
       }
 
-      .kv-third-container-mobile {
+      .kv-fourth-container-mobile {
         width: 100%;
         padding: 16px;
         background-color: #fff;
@@ -989,7 +1432,7 @@
         box-sizing: border-box;
       }
 
-      .kv-third-title-mobile {
+      .kv-fourth-title-mobile {
         line-height: 25px;
         font-family: 'SUIT Variable';
         font-size: 14px;
@@ -1015,16 +1458,16 @@
         border-radius: 5px;
       }
 
-      .kv-third-title-mobile {
+      .kv-fourth-title-mobile {
         font-size: 13px;
       }
 
-      .kv-third-subtitle-mobile {
+      .kv-fourth-subtitle-mobile {
         padding: auto;
         font-size: 20px;
       }
 
-      .kv-third-button-mobile {
+      .kv-fourth-button-mobile {
         width: 100%;
         max-width: 266px;
         height: 40px;
@@ -1037,599 +1480,29 @@
         align-items: center;
       }
 
-      .kv-third-button-mobile:hover {
+      .kv-fourth-button-mobile:hover {
         background: #1a1a1a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         color: #fff;
       }
 
-      .kv-third-button-mobile:active {
+      .kv-fourth-button-mobile:active {
         background: #333333;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
         color: #fff;
       }
 
-      .kv-third-img_box-mobile {
+      .kv-fourth-img_box-mobile {
         width: 100vw;
         height: auto;
         overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
       }
 
-      .kv-third-img_box-mobile img {
+      .kv-fourth-img_box-mobile img {
         width: 100%;
         height: 100%;
         object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
         max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
-      }
-    }
-
-    /* fourth*/
-    .kv-fourth-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      background-color: transparent;
-      padding: 40px 20px;
-      margin-top: 15%;
-    }
-    .kv-fourth-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fcab40;
-      padding: 20px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 940px;
-      height: 140px;
-      position: relative;
-    }
-
-    .kv-fourth-header p {
-      font-family: 'Tenada';
-      font-size: 36px;
-      color: black;
-      padding: 15px;
-      font-weight: 800;
-      flex: 1;
-      height: 100%;
-    }
-
-    .kv-fourth-header-image {
-      width: 300px;
-      height: auto;
-      border-radius: 50px;
-      position: absolute;
-      right: 50px;
-      top: -20%;
-      transform: translateY(-20%);
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .kv-fourth-row-text {
-      font-family: 'GangwonEduPower';
-      font-size: 28px;
-      color: black;
-      text-align: right;
-      font-weight: 900;
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      width: 40%;
-      margin-left: -3%;
-    }
-
-    .kv-fourth-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 940px;
-      width: 100%;
-      margin-top: 4%;
-      position: relative;
-    }
-
-    .kv-fourth-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .kv-fourth-row:nth-child(1) {
-      margin-left: -5%;
-      justify-content: center;
-    }
-
-    .kv-fourth-row:nth-child(2) {
-      margin-left: -20%;
-      justify-content: center;
-    }
-
-    .kv-fourth-row:nth-child(3) {
-      margin-left: 20%;
-      justify-content: center;
-    }
-
-    .kv-fourth-box {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 50px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      width: 80%;
-      max-width: 360px;
-      position: relative;
-    }
-
-    .kv-fourth-box p {
-      font-family: 'BMJUA';
-      font-size: 24px;
-      text-align: center;
-      margin: 0;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .kv-fourth-box:hover {
-      box-shadow: 0px 15px 20px rgba(51, 51, 51, 0.5);
-    }
-
-    .kv-fourth-box:hover .kv-fourth-box-image {
-      border: 2px solid #fcab40;
-    }
-
-    .kv-fourth-box::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      width: 50px;
-      height: 50px;
-      background-color: #fcab40;
-      border-radius: 50%;
-      display: none;
-      z-index: 2;
-    }
-
-    .kv-fourth-box:hover::before {
-      display: block;
-    }
-
-    .kv-fourth-box-image {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
-
-    .kv-fourth-footer {
-      margin-top: 20px;
-    }
-
-    .kv-fourth-button {
-      font-family: 'BMJUA';
-      font-size: 28px;
-      color: #fcab40;
-      background-color: black;
-      padding: 10px 20px;
-      border: none;
-      width: 370px;
-      text-align: center;
-      border-radius: 50px;
-      cursor: pointer;
-      margin-top: 50px;
-    }
-    .kv-fourth-button:hover {
-      color: #000;
-      background-color: #fcab40;
-    }
-    .kv-fourth-button:active {
-      color: #000;
-      background: #ffd7a1;
-      box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
-    }
-
-    @media screen and (max-width: 991px) {
-      .kv-fourth-container {
-        gap: 15px; /* Reduced gap for better spacing */
-        padding: 30px 15px; /* Adjusted padding for smaller screens */
-        width: 100%;
-        max-width: 900px;
-        margin: 15% auto;
-        position: relative;
-      }
-
-      .kv-fourth-header {
-        flex-direction: row; /* Stack header content vertically */
-        align-items: center; /* Center-align header content */
-        justify-content: center; /* Center-align header content */
-        height: 140px; /* Allow height to adjust to content */
-        padding: 20px 15px; /* Reduced padding */
-        width: 100%; /* Full width for smaller screens */
-        max-width: 790px;
-        text-align: center; /* Center-align text in the header */
-        position: relative; /* Position relative for flexibility */
-      }
-
-      .kv-fourth-header p {
-        font-size: 36px; /* Reduced font size for readability on smaller screens */
-        padding: 10px; /* Reduced padding */
-        margin-top: 20px;
-        text-align: left;
-      }
-
-      .kv-fourth-header-image {
-        width: 300px;
-        right: 20px;
-        top: -30px;
-        position: absolute;
-        margin-top: 20px;
-      }
-
-      .kv-fourth-grid {
-        gap: 15px; /* Reduced gap between grid items */
-        margin-top: 5%; /* Adjusted margin for spacing */
-        max-width: 100%; /* Full width for smaller screens */
-      }
-
-      .kv-fourth-row {
-        flex-direction: row; /* Stack rows vertically */
-        gap: 15px; /* Reduced gap for spacing */
-        margin-left: 0; /* Remove margin to center-align */
-        align-items: center; /* Center-align rows */
-      }
-
-      .kv-fourth-box {
-        width: 100%; /* Full width for boxes */
-        max-width: 300px; /* Constrain max-width for better fit */
-        height: auto;
-        flex-direction: row; /* Stack content vertically */
-        align-items: center; /* Center-align box content */
-        justify-content: center; /* Center-align box content */
-        gap: 10px; /* Gap between items */
-      }
-
-      .kv-fourth-box p {
-        font-size: 24px; /* Reduced font size for readability */
-        margin-top: 10px; /* Added margin for spacing */
-        margin-bottom: 10px; /* Added margin for spacing */
-      }
-
-      .kv-fourth-box-image {
-        width: 60px; /* Reduced image size */
-        height: 60px; /* Reduced image size */
-      }
-
-      .kv-fourth-footer {
-        margin-top: 30px; /* Increased margin for better spacing */
-        text-align: center; /* Center-align footer content */
-      }
-
-      .kv-fourth-button {
-        width: 100%;
-        max-width: 320px;
-        font-size: 24px;
-        margin: 0 50px;
-        height: 50px;
-      }
-    }
-
-    @media screen and (max-width: 767px) {
-      .kv-fourth-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-        margin: 80px auto;
-        width: 100%;
-        max-width: 700px;
-      }
-
-      .kv-fourth-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: calc(100% - 100px);
-        max-width: 700px;
-        height: 130px;
-        padding: 20px;
-        gap: 10px;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-header p {
-        font-size: 28px;
-        padding-left: 10px;
-        z-index: 1;
-        width: 400px;
-        line-height: 40px;
-      }
-
-      .kv-fourth-header-image {
-        width: 200px;
-        height: 90px;
-        position: absolute;
-        transform: translateY(-10px);
-        margin: 0 auto;
-        margin-top: 0px;
-        margin-right: -20px;
-        box-shadow: none;
-        z-index: 2;
-      }
-
-      /* Row text styles */
-      .kv-fourth-row-text {
-        font-size: 22px;
-        width: 120%;
-        padding: 0;
-        text-align: right;
-        margin-left: 5px;
-        letter-spacing: -0.06em;
-      }
-
-      /* Grid and row styles */
-      .kv-fourth-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: calc(100% - 35px);
-        max-width: 700px;
-        margin-top: 5%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 30px;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-row {
-        align-items: center;
-        margin-left: 0;
-        gap: 15px;
-        width: 100%;
-        flex-direction: row;
-      }
-
-      .kv-fourth-row:nth-child(1),
-      .kv-fourth-row:nth-child(2),
-      .kv-fourth-row:nth-child(3) {
-        margin-left: 0;
-        justify-content: center;
-      }
-
-      /* Box styles */
-      .kv-fourth-box {
-        max-width: 270px;
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        gap: 8px;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-box p {
-        font-size: 18px;
-      }
-
-      .kv-fourth-box-image {
-        max-width: 62px;
-        max-height: 62px;
-      }
-
-      /* Button styles */
-      .kv-fourth-button {
-        font-size: 0px;
-        width: 280px;
-        height: 50px;
-        line-height: 25px;
-        margin-top: 30px;
-      }
-      .kv-fourth-button::before {
-        content: '1분만에 견적 받아보기';
-        display: block;
-        text-align: center;
-        font-family: 'BMJUA';
-        font-size: 18px; /* Increase font size */
-        line-height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .kv-fourth-footer {
-        margin-top: 15px;
-      }
-      .kv-fourth-button:hover {
-        background-color: #1a1a1a;
-        color: #fcab40;
-      }
-      .kv-fourth-button:active {
-        background-color: #333333;
-        color: #fcab40;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    @media screen and (max-width: 497px) {
-      .kv-fourth-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        background-color: transparent;
-        padding: 40px 20px;
-        margin: 80px auto;
-        width: 100%;
-        max-width: 450px;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 380px;
-        height: 80px;
-        position: relative;
-        text-align: left;
-        padding: 5px;
-        position: relative;
-      }
-
-      .kv-fourth-header p {
-        font-family: 'Tenada';
-        font-size: 24px;
-        color: black;
-        padding: 15px;
-        font-weight: 800;
-        flex: 1;
-        height: 100%;
-        line-height: 28px;
-        margin: 0;
-      }
-
-      .kv-fourth-header-image {
-        width: 176px;
-        height: auto;
-        border-radius: 50px;
-        position: absolute;
-        right: 20px;
-        top: -15%;
-        transform: translateY(-15%);
-      }
-
-      .kv-fourth-row-text {
-        font-size: 18px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .kv-fourth-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        max-width: 400px;
-        margin-top: 5%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0;
-        gap: 10px;
-        width: 100%;
-        max-width: 355px;
-      }
-
-      .kv-fourth-row:nth-child(1) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-      }
-
-      .kv-fourth-row:nth-child(2),
-      .kv-fourth-row:nth-child(3) {
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-      }
-
-      .kv-fourth-box {
-        width: 100%;
-        max-width: 175px;
-        height: 63px;
-        padding: 10px;
-        gap: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        background: #ffffff;
-        box-shadow: 0px 5px 9.8px rgba(143, 143, 143, 0.72);
-        border-radius: 50px;
-        margin-bottom: 5px;
-        position: relative;
-      }
-
-      .kv-fourth-box p {
-        font-size: 16px;
-        text-align: center;
-        margin: 0;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .kv-fourth-box-image {
-        width: 45px;
-        height: 45px;
-      }
-
-      .kv-fourth-box:hover::before {
-        display: none;
-      }
-
-      .kv-fourth-box:hover .kv-fourth-box-image {
-        border: none;
-      }
-      .kv-fourth-footer {
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-      }
-
-      .kv-fourth-button {
-        font-size: 0px;
-        width: 100%;
-        max-width: 266px;
-        height: 40px;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .kv-fourth-button::before {
-        content: '1분만에 견적 받아보기';
-        display: block;
-        text-align: center;
-        font-family: 'BMJUA';
-        font-size: 16px; /* Increase font size */
-        line-height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .kv-fourth-button:hover {
-        background-color: #1a1a1a;
-        color: #fcab40;
-      }
-      .kv-fourth-button:active {
-        background-color: #333333;
-        color: #fcab40;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -2399,7 +2272,66 @@
     </div>
 
     <div class="kv-third-container">
-      <div class="kv-third-title">
+      <div class="kv-third-title">비자 신청 유형 선택하세요!</div>
+      <div class="kv-third-processBox">
+        <div class="kv-third-processCard">
+          <span>기업 투자 비자</span>
+          <p>Investor/Enterprise</p>
+          <img
+            src="https://cdn.imweb.me/thumbnail/20240817/69c6f7a0f4cc6.png"
+            alt=""
+          />
+        </div>
+
+        <div class="kv-third-processCard">
+          <span>취업 비자</span>
+          <p>
+            Specially Designated
+            <br />
+            Profession
+          </p>
+          <img
+            src="https://cdn.imweb.me/thumbnail/20240817/a22e9ad274ad4.png"
+            alt=""
+          />
+        </div>
+
+        <div class="kv-third-processCard">
+          <span>결혼이민</span>
+          <p>
+            Spouse of Korean
+            <br />
+            National
+          </p>
+          <img
+            src="https://cdn.imweb.me/thumbnail/20240817/64f25ee06b8cf.png"
+            alt=""
+          />
+        </div>
+
+        <div class="kv-third-processCard">
+          <span>재외동포</span>
+          <p>Overseas Korean</p>
+          <img
+            src="https://cdn.imweb.me/thumbnail/20240817/442f993adf3b7.png"
+            alt=""
+          />
+        </div>
+
+        <div class="kv-third-processCard">
+          <span>영주</span>
+          <p>permanent residence</p>
+          <img
+            src="https://cdn.imweb.me/thumbnail/20240817/66ea6cc720152.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="kv-third-button">2분만에 견적 받아보기</div>
+    </div>
+
+    <div class="kv-fourth-container">
+      <div class="kv-fourth-title">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에 관계없이 고객에게 최적의 비자 경로를
         제안합니다.
@@ -2407,21 +2339,21 @@
         한국·해외 졸업생, 우수 인재, 창업 희망자, 해외 동포 등 각자의 목표에
         맞춘
       </div>
-      <div class="kv-third-subtitle">맞춤형 비자 서비스를 만나보세요.</div>
-      <div class="kv-third-img_box">
+      <div class="kv-fourth-subtitle">맞춤형 비자 서비스를 만나보세요.</div>
+      <div class="kv-fourth-img_box">
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-        class="kv-third-button"
+        class="kv-fourth-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
       >
         즉시 신청
       </div>
     </div>
 
-    <!-- m third container-->
-    <div class="kv-third-container-mobile">
-      <div class="kv-third-title-mobile">
+    <!-- m fourth container-->
+    <div class="kv-fourth-container-mobile">
+      <div class="kv-fourth-title-mobile">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에 관계없이
         <br />
@@ -2431,14 +2363,14 @@
         <br />
         각자의 목표에 맞춘
       </div>
-      <div class="kv-third-subtitle-mobile">
+      <div class="kv-fourth-subtitle-mobile">
         맞춤형 비자 서비스를 만나보세요.
       </div>
-      <div class="kv-third-img_box-mobile">
+      <div class="kv-fourth-img_box-mobile">
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-        class="kv-third-button-mobile"
+        class="kv-fourth-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
       >
         즉시 신청
@@ -2446,8 +2378,8 @@
     </div>
 
     <!--fourth container-->
-    <div class="kv-fourth-container">
-      <div class="kv-fourth-header">
+    <div class="kv-five-container">
+      <div class="kv-five-header">
         <p>
           창업 비자,
           <br />
@@ -2456,35 +2388,35 @@
         <img
           src="https://cdn.imweb.me/thumbnail/20240820/dba2c9260bc29.png"
           alt="Header Image"
-          class="kv-fourth-header-image"
+          class="kv-five-header-image"
         />
       </div>
-      <div class="kv-fourth-grid">
-        <div class="kv-fourth-row">
-          <div class="kv-fourth-row-text">
+      <div class="kv-five-grid">
+        <div class="kv-five-row">
+          <div class="kv-five-row-text">
             법인 설립부터 비자까지 모든
             <br />
             과정을 함께 진행해요
           </div>
-          <div class="kv-fourth-box">
+          <div class="kv-five-box">
             <img
               src="https://cdn.imweb.me/thumbnail/20240820/8026ab9c651b7.png"
               alt="Icon 3"
-              class="kv-fourth-box-image"
+              class="kv-five-box-image"
             />
             <p>투자 유치 설계</p>
           </div>
         </div>
-        <div class="kv-fourth-row">
-          <div class="kv-fourth-box">
+        <div class="kv-five-row">
+          <div class="kv-five-box">
             <img
               src="https://cdn.imweb.me/thumbnail/20240820/6643e95215a03.png"
               alt="Icon 2"
-              class="kv-fourth-box-image"
+              class="kv-five-box-image"
             />
             <p>사업 계획서 자문</p>
           </div>
-          <div class="kv-fourth-box">
+          <div class="kv-five-box">
             <img
               src="https://cdn.imweb.me/thumbnail/20240820/d2100848d201c.png"
               alt="Icon 1"
@@ -2493,8 +2425,8 @@
             <p>창업 교육 연계</p>
           </div>
         </div>
-        <div class="kv-fourth-row">
-          <div class="kv-fourth-box">
+        <div class="kv-five-row">
+          <div class="kv-five-box">
             <img
               src="https://cdn.imweb.me/thumbnail/20240820/1cd8aadc64385.png"
               alt="Icon 4"
@@ -2512,9 +2444,9 @@
           </div>
         </div>
       </div>
-      <div class="kv-fourth-footer">
+      <div class="kv-five-footer">
         <button
-          class="kv-fourth-button"
+          class="kv-five-button"
           onclick="window.location.href='https://well-come.info/startupVisa-funnal'"
         >
           지금 신청하러가기
