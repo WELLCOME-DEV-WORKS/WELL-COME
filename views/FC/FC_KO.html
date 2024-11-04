@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 아임웹 - 하단 입력폼 제거*/
+      #addFormw20241102990ddd0dcef47 {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      /* 아임웹 - 하단 제출 버튼 제거*/
+      .form.text-center {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      .fc-ko-nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        z-index: 1000;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .fc-ko-hidden {
+        opacity: 0; /* 보이지 않음 */
+      }
+
+      .fc-ko-active {
+        background-color: #333333 !important;
+        color: #fcab40 !important;
+      }
+
+      @keyframes fc-ko-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-12px);
+        }
+        40% {
+          transform: translateY(0px);
+        }
+        60% {
+          transform: translateY(-8px);
+        }
+        80% {
+          transform: translateY(0px);
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .fc-ko-mo-grid-container {
+          display: none;
+        }
+        .fc-ko-grid-container {
+          width: 100%;
+          max-width: 1200px;
+          height: 60px;
+          display: grid;
+          grid-template-columns: 1fr 4fr;
+          gap: 20px;
+        }
+        .fc-ko-nav-logo,
+        .fc-ko-topMenu {
+          width: 100%;
+          height: 60px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .fc-ko-nav-logo a {
+          width: 100%;
+          height: 100%;
+
+          line-height: 50px;
+          text-decoration: none;
+
+          background-color: #333333;
+          border-radius: 0 0 8px 8px;
+
+          color: #fcab40;
+          font-family: 'Tenada' !important;
+          font-size: 28px;
+          padding-top: 10px;
+        }
+
+        .fc-ko-nav-menu-container {
+          width: 100%;
+          height: 60px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 10px;
+        }
+        .fc-ko-topMenu a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: inherit;
+          line-height: 60px;
+
+          background-color: #fcab40;
+          border-radius: 0 0 8px 8px;
+
+          font-family: 'BMJUA';
+          font-size: 24px;
+          cursor: pointer;
+          color: #1a1a1a;
+        }
+
+        .fc-ko-topMenu a:hover,
+        .fc-ko-nav-logo a:hover {
+          animation: fc-ko-bounce 0.6s ease infinite;
+        }
+
+        .fc-ko-nav-logo a:hover {
+          color: #fcab40 !important;
+        }
+
+        .nav-topMenu a:active {
+          background-color: #333333;
+          color: #fcab40;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        .fc-ko-mo-grid-container {
+          display: none;
+        }
+        .fc-ko-grid-container {
+          width: 100%;
+          max-width: 768px;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 1fr 4fr;
+          gap: 14px;
+        }
+        .fc-ko-nav-logo,
+        .fc-ko-topMenu {
+          width: 100%;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .fc-ko-nav-logo a {
+          width: 100%;
+          height: 100%;
+
+          line-height: 40px;
+          text-decoration: none;
+
+          background-color: #333333;
+          border-radius: 0 0 8px 8px;
+
+          color: #fcab40;
+          font-family: 'Tenada' !important;
+          font-size: 20px;
+          padding-top: 10px;
+        }
+        .fc-ko-nav-menu-container {
+          width: 100%;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 8px;
+        }
+
+        .fc-ko-topMenu a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: inherit;
+          line-height: 50px;
+
+          background-color: #fcab40;
+          border-radius: 0 0 8px 8px;
+
+          font-family: 'BMJUA';
+          font-size: 20px;
+          cursor: pointer;
+          color: #1a1a1a;
+        }
+
+        .fc-ko-topMenu a:hover,
+        .fc-ko-nav-logo a:hover {
+          animation: fc-ko-bounce 0.6s ease infinite;
+        }
+
+        .fc-ko-nav-logo a:hover {
+          color: #fcab40 !important;
+        }
+
+        .nav-topMenu a:active {
+          background-color: #333333;
+          color: #fcab40;
+        }
+      }
+      @media screen and (min-width: 360px) and (max-width: 768px) {
+        .move-out {
+          right: -70%;
+          transition: right 0.5s ease;
+        }
+        .move-in {
+          right: 0px; /* 화면 안으로 이동 */
+          transition: right 0.5s ease;
+        }
+        .fc-ko-grid-container {
+          display: none;
+        }
+        .fc-ko-mo-grid-container {
+          width: 100%;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+          background-color: #333333;
+        }
+        #fc-ko-nav-moLogo {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          text-align: center;
+        }
+        #fc-ko-nav-moLogo a {
+          width: 100%;
+          height: 100%;
+
+          text-decoration: none;
+          background-color: #333333;
+          color: #fcab40;
+          font-family: 'Tenada' !important;
+          font-size: 20px;
+          text-align: left;
+          line-height: 54px;
+          padding-left: 16px;
+        }
+        #fc-ko-nev-dropdown {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          text-align: center;
+        }
+        #fc-ko-nev-dropdown i {
+          font-size: 24px;
+          color: #fcab40;
+          margin-right: 16px;
+        }
+
+        #fc-ko-dropMenu-container {
+          position: fixed;
+          top: 50px;
+
+          width: 70%;
+          height: 100vh;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          background-color: #333333;
+          gap: 20px;
+          padding: 20px;
+
+          overflow: hidden;
+        }
+
+        .fc-ko-serviceTitle {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          text-align: center;
+          line-height: 50px;
+          font-family: 'TENADA';
+          font-size: 28px;
+          color: #fcab40;
+        }
+        .fc-ko-dropMenu-line {
+          width: 100%;
+          height: 3px;
+          border-radius: 3px;
+          background-color: #fcab40;
+        }
+        .fc-ko-dropMenu {
+          width: 100%;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .fc-ko-dropMenu a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: inherit;
+          line-height: 32px;
+
+          background-color: #fcab40;
+          border-radius: 8px;
+
+          font-family: 'BMJUA';
+          font-size: 20px;
+          cursor: pointer;
+          color: #1a1a1a;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(6) {
+          margin-top: 40px;
+          color: #ffca42;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(7) {
+          background-color: #ffca42;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(8) > a {
+          background-color: #ffca42;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 0.5fr 0.5fr;
+          gap: 10px;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > a {
+          height: auto;
+          text-align: right;
+          background-color: #333333;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > div:nth-child(2) {
+          text-align: right !important;
+          font-family: 'SUIT';
+          font-size: 12px;
+          font-weight: 400;
+          color: #fcab40;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > div:nth-child(3) {
+          text-align: right !important;
+          font-family: 'tenada';
+          font-size: 22px;
+          font-weight: 400;
+          color: #fcab40;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .move-out {
+          right: -98%;
+          transition: right 0.5s ease;
+        }
+        .move-in {
+          right: 0px; /* 화면 안으로 이동 */
+          transition: right 0.5s ease;
+        }
+        .fc-ko-grid-container {
+          display: none;
+        }
+        .fc-ko-mo-grid-container {
+          width: 100%;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 8px;
+          background-color: #1a1a1a;
+        }
+        #fc-ko-nav-moLogo {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          text-align: center;
+        }
+        #fc-ko-nav-moLogo a {
+          width: 100%;
+          height: 100%;
+
+          text-decoration: none;
+          background-color: #333333;
+          color: #fcab40;
+          font-family: 'Tenada' !important;
+          font-size: 20px;
+          text-align: left;
+          line-height: 54px;
+          padding-left: 16px;
+        }
+        #fc-ko-nev-dropdown {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          text-align: center;
+        }
+        #fc-ko-nev-dropdown i {
+          font-size: 24px;
+          color: #fcab40;
+          margin-right: 16px;
+        }
+
+        #fc-ko-dropMenu-container {
+          position: fixed;
+          top: 50px;
+
+          width: 98%;
+          height: 100vh;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          background-color: #333333;
+          gap: 20px;
+          padding: 20px;
+
+          overflow: hidden;
+        }
+
+        .fc-ko-serviceTitle {
+          width: 100%;
+          height: 32px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          text-align: center;
+          line-height: 50px;
+          font-family: 'TENADA';
+          font-size: 22px;
+          color: #fcab40;
+        }
+        .fc-ko-dropMenu-line {
+          width: 100%;
+          height: 3px;
+          border-radius: 3px;
+          background-color: #fcab40;
+        }
+        .fc-ko-dropMenu {
+          width: 100%;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .fc-ko-dropMenu a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: inherit;
+          line-height: 32px;
+
+          background-color: #fcab40;
+          border-radius: 8px;
+
+          font-family: 'BMJUA';
+          font-size: 18px;
+          cursor: pointer;
+          color: #1a1a1a;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(6) {
+          margin-top: 20px;
+          color: #ffca42;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(7) {
+          background-color: #ffca42;
+        }
+
+        #fc-ko-dropMenu-container > div:nth-child(8) > a {
+          background-color: #ffca42;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 0.5fr 0.5fr;
+          gap: 10px;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > a {
+          height: auto;
+          text-align: right;
+          background-color: #333333;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > div:nth-child(2) {
+          text-align: right !important;
+          font-family: 'SUIT';
+          font-size: 12px;
+          font-weight: 400;
+          color: #fcab40;
+        }
+        #fc-ko-dropMenu-container > div:nth-child(9) > div:nth-child(3) {
+          text-align: right !important;
+          font-family: 'tenada';
+          font-size: 22px;
+          font-weight: 400;
+          color: #fcab40;
+        }
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fcf9f7;
+      }
+
+      #addFormw2024082259f02e163f56b {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      #w2024082259f02e163f56b ._input_form_submit {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      .fc-ko-fullSection-container {
+        width: 100%;
+        height: 130vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .fc-ko-mainSection {
+        width: 1200px;
+        height: 100%;
+        padding: 0;
+
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+      }
+
+      .fc-ko-form-multiStep {
+        width: 100%;
+        height: auto;
+        display: none;
+        opacity: 0;
+        max-height: 0;
+
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.55);
+
+        transition: opacity 0.3s ease-in-out;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      .fc-ko-form-multiStep.active {
+        max-height: 200vh;
+        opacity: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 20px;
+      }
+
+      .fc-ko-form-title {
+        width: 100%;
+        height: auto;
+
+        margin-bottom: 10px;
+
+        font-family: 'tenada';
+        font-weight: 700;
+        font-size: 48px;
+        color: #333333;
+      }
+
+      .fc-ko-form-title > span {
+        color: #900b0b;
+      }
+
+      .fc-ko-userEduCountry {
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .fc-ko-radio-SelectBox {
+        width: 100%;
+        height: auto;
+        padding: 50px 10px;
+        border: #ffffff 1px solid;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+        background-color: #fcf9f7;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 24px;
+        font-family: 'BMJUA';
+        cursor: pointer;
+        transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+      }
+
+      .fc-ko-radio-SelectBox input[type='radio'] {
+        display: none;
+      }
+
+      .fc-ko-radio-SelectBox:hover,
+      .fc-ko-radio-SelectBox.selected {
+        background-color: #fcab40;
+        border: #fcab40 1px solid;
+        color: white;
+      }
+
+      .fc-ko-radio-SelectBox:active {
+        background-color: #333333;
+        border: #333333 1px solid;
+        color: #fcab40;
+      }
+
+      .fc-ko-userEduCountry > .fc-ko-radio-SelectBox img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 10px;
+      }
+
+      .fc-ko-userEduCountry > div:nth-child(1) > img {
+        border: 2px solid #333333;
+      }
+
+      #fc-ko-domesticEdu,
+      #fc-ko-overseasEdu {
+        width: 100%;
+        max-height: 0;
+        /* opacity: 0; */
+        display: none;
+        gap: 20px;
+
+        transition: max-height 0.8s ease-in-out;
+      }
+
+      #fc-ko-domesticEdu.active,
+      #fc-ko-overseasEdu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+
+        max-height: 100vh;
+      }
+
+      .fc-ko-activeControlBox {
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .fc-ko-formButton {
+        width: 100%;
+        height: 60px;
+        border: #ffffff 1px solid;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+        background-color: #fcf9f7;
+
+        font-size: 24px;
+        font-family: 'BMJUA';
+        cursor: pointer;
+        transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .fc-ko-formButton:hover,
+      .fc-ko-formButton.selected {
+        background-color: #fcab40;
+        border: #fcab40 1px solid;
+        color: white;
+      }
+
+      .fc-ko-formButton:active {
+        background-color: #333333;
+        border: #333333 1px solid;
+        color: #fcab40;
+      }
+
+      #fc-ko-userEduAbility > .fc-ko-activeControlBox {
+        display: flex;
+      }
+
+      .fc-ko-prevButton,
+      .fc-ko-nextButton,
+      .fc-ko-finishButton {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+        /* background-color: #FCAB40; */
+        background-color: #1a1a1a;
+        color: #fcab40;
+        /* color: black; */
+
+        font-size: 24px;
+        font-family: 'BMJUA';
+        cursor: pointer;
+        transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 20px;
+      }
+
+      .fc-ko-prevButton.deactiveted,
+      .fc-ko-nextButton.deactiveted,
+      .fc-ko-finishButton.deactiveted {
+        background-color: #999999;
+        color: white;
+        box-shadow: 0;
+      }
+
+      .fc-ko-prevButton:hover,
+      .fc-ko-nextButton:hover,
+      .fc-ko-finishButton:hover {
+        background-color: #000000;
+        color: #fcab40;
+      }
+
+      .fc-ko-prevButton:active,
+      .fc-ko-nextButton:active,
+      .fc-ko-finishButton:active {
+        background-color: #333333;
+        color: #fcab40;
+        box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.45);
+      }
+
+      .fc-ko-result-multiResult {
+        width: 100%;
+        height: auto;
+
+        display: none;
+      }
+
+      .fc-ko-warringModal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1010;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+      }
+
+      .fc-ko-warringModal-content {
+        width: 400px;
+        height: 200px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .fc-ko-warringModal-title {
+        font-family: 'BMJUA';
+        font-size: 24px;
+        color: red;
+
+        margin-bottom: 18px;
+      }
+
+      .fc-ko-warringModal-message {
+        font-family: 'BMJUA';
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 18px;
+      }
+
+      .fc-ko-warringModal-button {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #fcab40;
+        color: white;
+        font-family: 'BMJUA';
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .fc-ko-warringModal-button:hover {
+        background-color: #333333;
+        color: #fcab40;
+      }
+      .fc-ko-warringModal-button:active {
+        background-color: #fcab40;
+        color: white;
+      }
+
+      .fc-ko-intellectualPropertyRightsType {
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .fc-ko-intellectualPropertyRightsType > .fc-ko-radio-SelectBox img {
+        width: auto;
+        height: 100px;
+        margin: 30px;
+      }
+
+      .fc-ko-hiddenForm {
+        width: 100%;
+        max-height: 0;
+        display: none;
+        gap: 20px;
+
+        transition: max-height 0.8s ease-in-out;
+      }
+
+      .fc-ko-hiddenForm.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+
+        max-height: 100vh;
+      }
+
+      .fc-ko-checkbox-container {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 20px;
+      }
+
+      .fc-ko-loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+      }
+
+      .fc-ko-spinner {
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 10px solid #fcab40; /* Yellow */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #fc-ko-result-basicConditionNotMet > .fc-ko-formButton > a,
+      #fc-ko-result-applicationConditionMet > .fc-ko-formButton > a,
+      #fc-ko-result-applicationConditionNotMet > .fc-ko-formButton > a {
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+        line-height: 60px;
+      }
+
+      #fc-ko-result-applicationConditionNotMet > .fc-ko-form-title > ul {
+        font-family: 'BMJUA';
+        font-size: 28px;
+        color: #0008c1;
+        list-style: inside;
+        padding-left: 10px;
+      }
+
+      .fc-ko-scoreDisplay {
+        width: 100%;
+        height: auto;
+        font-family: 'BMJUA';
+        font-size: 32px;
+        color: #333333;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      /* 애니메이션 추가 */
+      @keyframes pulse {
+        0% {
+          transform: scale(0.99);
+        }
+        50% {
+          transform: scale(1.01);
+        }
+        100% {
+          transform: scale(0.99);
+        }
+      }
+
+      .fc-ko-formButton.pulse {
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+
+      .fc-ko-formButton.resultStrong {
+        background-color: #1a1a1a;
+      }
+      .fc-ko-formButton.resultStrong > a {
+        color: #fcab40 !important;
+      }
+      /* 탭 형태의 스타일 추가 */
+      .fc-ko-serviceButton {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        background-color: #fcab40;
+        color: #333333;
+        font-family: 'BMJUA';
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        cursor: default;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+        margin-top: 20px;
+      }
+
+      .fc-ko-serviceButton:hover {
+        background-color: #333333;
+        color: #fcab40;
+        box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.45);
+      }
+
+      .fc-ko-infInputModal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1010;
+
+        display: none;
+      }
+
+      .infoInputModal-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 30%;
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px;
+      }
+
+      .infInputModal-title {
+        font-family: 'BMJUA';
+        font-size: 24px;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+
+      .fc-ko-input-name,
+      .fc-ko-input-email,
+      .fc-ko-input-phone {
+        width: 100%;
+        height: 5vh;
+        border-radius: 10px;
+        border: #333333 1px solid;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        font-family: 'BMJUA';
+      }
+
+      .fc-ko-input-name::placeholder,
+      .fc-ko-input-email::placeholder,
+      .fc-ko-input-phone::placeholder {
+        font-family: 'BMJUA';
+        font-size: 2vh;
+      }
+
+      .fc-ko-input-name:focus,
+      .fc-ko-input-email:focus,
+      .fc-ko-input-phone:focus {
+        border: #fcab40 1px solid;
+      }
+
+      .infoInputModal-button {
+        width: 100%;
+        height: 6vh;
+
+        text-align: center;
+        line-height: 6vh;
+
+        border-radius: 10px;
+        background-color: #fcab40;
+        color: #333333;
+        font-family: 'BMJUA';
+        font-size: 2vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+      }
+
+      .infoInputModal-button:hover {
+        background-color: #333333;
+        color: #fcab40;
+      }
+
+      .infoInputModal-button:active {
+        background-color: #fcab40;
+        color: #333333;
+        box-shadow: inset 0px 4px 10px rgba(51, 51, 51, 0.25);
+      }
+
+      .fc-ko-result-multiResult > .fc-ko-scoreDisplay {
+        color: red;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .fc-ko-mainSection {
+          width: 100%;
+          height: 100vh;
+          margin-top: 80px;
+          margin-bottom: 80px;
+          padding: 20px;
+        }
+
+        .fc-ko-form-title {
+          font-size: 28px;
+        }
+
+        .fc-ko-userEduCountry {
+          display: flex;
+          flex-direction: column;
+        }
+        .fc-ko-radio-SelectBox {
+          padding: 20px 10px;
+          font-size: 18px;
+        }
+        .fc-ko-radio-SelectBox img {
+          width: 50px;
+          height: 50px;
+        }
+        .fc-ko-formButton {
+          font-size: 18px;
+          height: 40px;
+        }
+
+        .fc-ko-intellectualPropertyRightsType > .fc-ko-radio-SelectBox img {
+          width: auto;
+          height: 50px;
+          margin: 0;
+        }
+        .fc-ko-nextButton,
+        .fc-ko-prevButton,
+        .fc-ko-finishButton {
+          height: 40px;
+          font-size: 18px;
+        }
+
+        #fc-ko-result-basicConditionNotMet > .fc-ko-formButton > a,
+        #fc-ko-result-applicationConditionMet > .fc-ko-formButton > a,
+        #fc-ko-result-applicationConditionNotMet > .fc-ko-formButton > a {
+          font-size: 18px;
+          line-height: 40px;
+        }
+        #fc-ko-result-applicationConditionNotMet > .fc-ko-form-title > ul {
+          font-size: 18px;
+        }
+        .fc-ko-serviceButton {
+          font-size: 18px;
+          height: 40px;
+          line-height: 40px;
+          margin: 4px 0;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #s20240823f74506817b06b {
+        width: 100vw !important;
+      }
+      @media screen and (min-width: 1200px) {
+        .fc-ko-footer-section {
+          width: 100%;
+          height: auto;
+
+          padding: 20px;
+          background-color: #333333;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fc-ko-footer {
+          width: 1200px;
+          height: auto;
+
+          padding: 20px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+
+          font-family: 'SUIT';
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        .fc-ko-footer-logo {
+          font-family: 'TENADA';
+          font-size: 42px;
+          color: #fcab40;
+          margin-bottom: 20px;
+        }
+
+        .fc-ko-line {
+          width: 100%;
+          height: 1px;
+          background-color: white;
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        .fc-ko-footer-section {
+          width: 100%;
+          height: auto;
+
+          padding: 20px;
+          background-color: #333333;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fc-ko-footer {
+          width: 768px;
+          height: auto;
+
+          padding: 20px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+
+          font-family: 'SUIT';
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        .fc-ko-footer-logo {
+          font-family: 'TENADA';
+          font-size: 42px;
+          color: #fcab40;
+          margin-bottom: 20px;
+        }
+
+        .fc-ko-line {
+          width: 100%;
+          height: 1px;
+          background-color: white;
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (min-width: 360px) and (max-width: 768px) {
+        .fc-ko-footer-section {
+          width: 100%;
+          height: auto;
+
+          padding: 20px;
+          background-color: #333333;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fc-ko-footer {
+          width: 360px;
+          height: auto;
+
+          padding: 20px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+
+          font-family: 'SUIT';
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        .fc-ko-footer-logo {
+          font-family: 'TENADA';
+          font-size: 32px;
+          color: #fcab40;
+          margin-bottom: 20px;
+        }
+
+        .fc-ko-line {
+          width: 100%;
+          height: 1px;
+          background-color: white;
+          margin-bottom: 10px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .fc-ko-footer-section {
+          width: 100%;
+          height: auto;
+
+          padding: 20px;
+          background-color: #333333;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fc-ko-footer {
+          width: 100%;
+          height: auto;
+
+          padding: 20px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+
+          font-family: 'SUIT';
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        .fc-ko-footer-logo {
+          font-family: 'TENADA';
+          font-size: 32px;
+          color: #fcab40;
+          margin-bottom: 20px;
+        }
+
+        .fc-ko-line {
+          width: 100%;
+          height: 1px;
+          background-color: white;
+          margin-bottom: 8px;
+        }
+      }
+
+      #\:2\.container {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      .language-select {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #ffca42;
+        color: #1a1a1a;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'BMJUA';
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 1000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Add space between Translate text and dropdown */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      /* Adjust select box style */
+      .language-select select {
+        appearance: none; /* Remove default styling */
+        background-color: #fff; /* Set background color */
+        color: #1a1a1a; /* Set text color */
+        border: none; /* Remove border */
+        font-family: 'BMJUA';
+        font-size: 14px;
+        padding: 5px 10px; /* Padding inside the select box */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+        cursor: pointer; /* Change cursor to pointer */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      /* Add a custom arrow for the select box */
+      .language-select select::after {
+        content: '▼'; /* Custom arrow character */
+        color: #1a1a1a;
+        font-size: 12px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; /* Make sure the arrow doesn't interfere with clicks */
+      }
+
+      #\:2\.container {
+        overflow: hidden;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      .language-select {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #ffca42;
+        color: #1a1a1a;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'BMJUA';
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 1000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Add space between Translate text and dropdown */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      /* Adjust select box style */
+      .language-select select {
+        appearance: none; /* Remove default styling */
+        background-color: #fff; /* Set background color */
+        color: #1a1a1a; /* Set text color */
+        border: none; /* Remove border */
+        font-family: 'BMJUA';
+        font-size: 14px;
+        padding: 5px 10px; /* Padding inside the select box */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+        cursor: pointer; /* Change cursor to pointer */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      /* Add a custom arrow for the select box */
+      .language-select select::after {
+        content: '▼'; /* Custom arrow character */
+        color: #1a1a1a;
+        font-size: 12px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; /* Make sure the arrow doesn't interfere with clicks */
+      }
+      #goog-gt-tt {
+        display: none !important;
+      }
+
+      .language-select:hover {
+        background-color: #1a1a1a;
+        color: #ffca42;
+      }
+      .fc-ko-dropdown {
+        width: 100%;
+        font-size: 24px; /* 드롭다운 안의 텍스트 크기 */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none; /* 기본 브라우저 스타일 제거 */
+        -moz-appearance: none; /* 파이어폭스에서 기본 스타일 제거 */
+        -webkit-appearance: none; /* 크롬/사파리에서 기본 스타일 제거 */
+        background-color: #fff;
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.25);
+      }
+
+      @media screen and (max-width: 1200px) {
+        .fc-ko-dropdown {
+          padding: 20px 10px;
+          font-size: 18px;
+        }
+      }
+
+      /* 드롭다운 선택지 호버 시 색상 변경 */
+      .fc-ko-dropdown option:hover {
+        background-color: #ffebb7;
+      }
+
+      /* 선택지 선택 시 색상 변화 */
+      .fc-ko-dropdown option:checked {
+        background-color: #e0e0e0;
+        color: #333;
+      }
+
+      /* 드롭다운 전체 호버 시 테두리 색상 변화 */
+      .fc-ko-dropdown:hover {
+        border-color: inherit; /* 기본 테두리 색상 유지 */
+      }
+    </style>
+     <div class="fc-ko-nav-container"></div>
+        <div class="fc-ko-mo-grid-container">
+          <div id="fc-ko-nav-moLogo">
+            <a href="https://well-come.info/cn">WELL-COME</a>
+          </div>
+        </div>
+      </div>
+      <div class="fc-ko-fullSection-container">
+        <div class="fc-ko-mainSection">
+          <div class="fc-ko-multiDisplaySection-form">
+            <!-- 폼 섹션 시작 -->
+            <section class="fc-ko-form-multiStep active" id="fc-ko-userEduAbility">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">내국인/외국인을 선택해주세요</div>
+              <div class="fc-ko-userEduCountry">
+                <div class="fc-ko-radio-SelectBox" data-edu="내국인">
+                  <input type="radio" name="education_level" value="내국인" />
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20240822/17ae2878ffff8.png"
+                  />
+                  한국인
+                </div>
+                <div class="fc-ko-radio-SelectBox" data-edu="외국인">
+                  <input type="radio" name="education_level" value="외국인" />
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20240822/736184391d2cb.png"
+                  />
+                  외국인
+                </div>
+              </div>
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section class="fc-ko-form-multiStep" id="fc-ko-">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">거주지역</div>
+              <div class="fc-ko-radio-SelectBox" data-value="한국 거주">
+                <input type="radio" name="education_level" value="한국 거주" />
+                한국</div>
+              <div class="fc-ko-radio-SelectBox" data-value="해외 거주">
+                <input type="radio" name="education_level" value="해외 거주" />
+                해외</div>
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section class="fc-ko-form-multiStep" id="fc-ko-intellectualPropertyRights">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">설립할 회사유형을 선택해주세요</div>
+              <div class="fc-ko-radio-SelectBox" data-value="주식회사">
+                <input type="radio" name="education_level" value="주식회사" />
+                주식회사</div>
+              <div class="fc-ko-radio-SelectBox" data-value="유한책임회사">
+                <input type="radio" name="education_level" value="유한책임회사" />
+                유한책임회사
+              </div>
+              <div class="fc-ko-radio-SelectBox" data-value="유한회사">
+                <input type="radio" name="education_level" value="유한회사" />
+                유한회사</div>
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section
+              class="fc-ko-form-multiStep"
+              id="fc-ko-intellectualPropertyRights-sub"
+            >
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">회사설립지역을 선택해주세요</div>
+        
+                <select name="intellectual_property" class="fc-ko-dropdown" id="regionSelect">
+				  <option value="">시/도 선택</option>
+				  <option value="서울특별시">서울시</option>
+				  <option value="인천광역시">인천시</option>
+				  <option value="경기도">경기도</option>
+				  <option value="강원특별자치도">강원도 </option>
+				  <option value="충청북도">충청북도 </option>
+				  <option value="충청남도">충청남도 </option>
+				  <option value="전라북도">전라북도 </option>
+				  <option value="전라남도">전라남도 </option>
+				  <option value="경상북도">경상북도</option>
+				  <option value="경상남도">경상남도</option>
+				  <option value="부산광역시">부산시</option>
+				  <option value="대구광역시">대구시</option>
+				  <option value="울산광역시">울산시</option>
+				  <option value="광주광역시">광주시</option>
+				  <option value="대전광역시">대전시</option>
+				  <option value="세종특별자치시">세종시</option>
+				  <option value="제주특별자치도">제주시</option>
+				</select>
+
+				<select class="fc-ko-dropdown" id="subRegionSelect">
+				  <option value="">시/구 선택</option>
+				</select>
+          
+             
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section class="fc-ko-form-multiStep" id="fc-ko-isCorporationEstablished">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">설립 회사명 입력</div>
+              <input type="text" class="fc-ko-formButton" placeholder="법인명 입력" />
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section class="fc-ko-form-multiStep" id="fc-ko-isCorporationEstablished-sub">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">대표자 성함을 입력해주세요</div>
+              <input type="text" class="fc-ko-formButton" placeholder="성함" />
+  
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-nextButton deactiveted">다음</div>
+              </div>
+            </section>
+  
+            <section class="fc-ko-form-multiStep" id="fc-ko-isCorporationEstablished-sub">
+              <div class="fc-ko-scoreDisplay" id="scoreDisplay"></div>
+              <div class="fc-ko-form-title">연락처를 기입해 주십시오</div>
+              <input type="text" class="fc-ko-formButton" placeholder="연락처 입력" />
+  
+              <div class="fc-ko-activeControlBox">
+                <div class="fc-ko-prevButton">이전</div>
+                <div class="fc-ko-finishButton deactiveted" onclick="submitInfo()">제출</div>
+              </div>
+            </section>
+            </div>
+          </div>
+        </div>
+     
+  
+      <div class="fc-ko-warringModal">
+        <div class="fc-ko-warringModal-content">
+          <div class="fc-ko-warringModal-title">경고</div>
+          <div class="fc-ko-warringModal-message"></div>
+          <div class="fc-ko-warringModal-button">확인</div>
+        </div>
+      </div>
+   </div>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const nextButtons = document.querySelectorAll(".fc-ko-nextButton");
+      const prevButtons = document.querySelectorAll(".fc-ko-prevButton");
+      const steps = document.querySelectorAll(".fc-ko-form-multiStep");
+
+      let currentStep = 0;
+
+      // 초기 단계에서 로컬 스토리지 초기화
+      if (currentStep === 0) {
+        localStorage.clear();
+      }
+
+      // 주어진 인덱스에 해당하는 단계만 보이도록 설정
+      function showStep(index) {
+        steps.forEach((step, i) => {
+          step.classList.toggle("active", i === index);
+        });
+      }
+
+      // 경고 팝업을 표시하는 함수
+      function warringPopup(message) {
+        const warringModal = document.querySelector(".fc-ko-warringModal");
+        const warringMessage = document.querySelector(
+          ".fc-ko-warringModal-message"
+        );
+        const warringButton = document.querySelector(".fc-ko-warringModal-button");
+
+        warringMessage.textContent = message;
+        warringModal.style.display = "flex";
+        warringButton.addEventListener("click", () => {
+          warringModal.style.display = "none";
+        });
+      }
+
+      // 현재 단계에 대한 유효성 검사
+      function validateStep() {
+        const validationRules = [
+          {
+            step: 0,
+            message: "선택지를 선택해주세요.",
+            selector: 'input[name="education_level"]:checked', // 라디오 버튼 체크 확인
+          },
+          {
+            step: 1,
+            message: "선택지를 선택해주세요.",
+            selector: "#fc-ko-userKoreanTestLevel .fc-ko-formButton.selected",
+          },
+          {
+            step: 2,
+            message: "선택지를 선택해주세요.",
+            selector: "#fc-ko-intellectualPropertyRights .fc-ko-formButton.selected",
+          },
+          {
+            step: 3,
+            message: "선택지를 선택해주세요.",
+            selector: "#fc-ko-patent .fc-ko-formButton.selected",
+          },
+          {
+            step: 4,
+            message: "설립 회사명을 입력해주세요.",
+            selector: "#fc-ko-isCorporationEstablished .fc-ko-formButton.selected",
+          },
+          {
+            step: 5,
+            message: "대표자 성함을 입력해주세요.",
+            selector: "#fc-ko-isCorporationEstablished-sub .fc-ko-formButton.selected",
+          },
+          {
+            step: 6,
+            message: "연락처를 입력해주세요.",
+            selector: "#fc-ko-isCorporationEstablished-sub .fc-ko-formButton.selected",
+          },
+        ];
+
+        const rule = validationRules[currentStep];
+        const storedValue = localStorage.getItem(`${currentStep} selectedValue`)
+        // 카드 기반 유효성 검사 및 입력 필드 검사 통합
+        if (!storedValue) {
+          console.log('유효성 체크');
+          warringPopup(rule.message); // 경고 메시지 표시
+          return false; // 유효성 검사 실패
+        }
+        return true; // 유효성 검사 통과
+      }
+
+
+
+      // 설립 지역 데이터 리스트
+
+      // 카드 클릭 이벤트 추가
+      const radioSelectBoxes = document.querySelectorAll('.fc-ko-radio-SelectBox');
+      radioSelectBoxes.forEach(box => {
+        box.addEventListener('click', handleCardClick); // 카드 클릭 시 이벤트 핸들러 추가
+      });
+
+      // 카드 클릭 이벤트 핸들러
+      function handleCardClick(event) {
+        const selectedRadioValue = event.currentTarget.querySelector('input[type="radio"]');
+        highlightSelectedCard(event.currentTarget); // 카드 강조 처리
+        if (selectedRadioValue) {
+          saveSelectedValue(selectedRadioValue.value); // 로컬 스토리지에 값 저장
+        }
+      }
+
+      // 카드 강조 처리 함수
+      function highlightSelectedCard(clickedCard) {
+        // 모든 카드에서 'selected' 클래스 제거
+        radioSelectBoxes.forEach(box => {
+          box.classList.remove('selected');
+        });
+
+        // 클릭된 카드에 'selected' 클래스 추가
+        clickedCard.classList.add('selected');
+      }
+
+      // 로컬 스토리지에 값 저장 함수
+      function saveSelectedValue(value) {
+        saveToLocalStorage(`${currentStep} selectedValue`, value);
+      }
+
+      // 로컬 스토리지에 값 저장
+      function saveToLocalStorage(key, value) {
+        localStorage.setItem(key, value);
+        console.log(localStorage); // 저장된 로컬 스토리지 확인
+      }
+
+      // 다음 단계로 이동하는 함수
+      const goToNextStep = () => {
+        const currentStepElement = steps[currentStep];
+
+        if (!validateStep()) {
+          return; // 유효성 검사 실패 시 종료
+        }
+
+        currentStepElement.classList.remove("active");
+
+
+        currentStep += 1; // 다음 단계로 이동
+
+        if (currentStep < steps.length) {
+          steps[currentStep].classList.add("active");
+        }
+
+
+      }
+
+
+
+      // input text 추가 이벤트
+      const textSelectBoxes = document.querySelectorAll('.fc-ko-formButton');
+      textSelectBoxes.forEach((input) => {
+        input.addEventListener('input', (e) => {
+          const value = e.target.value;
+          const placeholder = input.placeholder;
+
+          saveToLocalStorage(`${currentStep} selectedValue`, value);
+
+          console.log(`Saved ${placeholder}: ${value}`); // 저장된 값 확인용
+        });
+      });
+
+      // 다음 버튼 클릭 시 goToNextStep 호출
+      nextButtons.forEach((button) => {
+        button.addEventListener("click", goToNextStep);
+
+      });
+
+      // 이전 버튼 클릭 시 이전 단계로 이동
+      prevButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        });
+      });
+
+      // 초기 단계 표시
+      showStep(currentStep);
+
+
+
+      // 하위 주소 로직
+      let areaList = {
+    "서울특별시": {
+        "name": "서울특별시",
+        "subRegions": {
+            "강남구": "강남구",
+            "강북구": "강북구",
+            "강서구": "강서구",
+            "관악구": "관악구",
+            "광진구": "광진구",
+            "구로구": "구로구",
+            "금천구": "금천구",
+            "노원구": "노원구",
+            "도봉구": "도봉구",
+            "동대문구": "동대문구",
+            "동작구": "동작구",
+            "마포구": "마포구",
+            "서대문구": "서대문구",
+            "서초구": "서초구",
+            "성동구": "성동구",
+            "성북구": "성북구",
+            "송파구": "송파구",
+            "양천구": "양천구",
+            "영등포구": "영등포구",
+            "용산구": "용산구",
+            "은평구": "은평구",
+            "종로구": "종로구",
+            "중구": "중구",
+            "중랑구": "중랑구"
+        }
+    },
+
+    "경기도": {
+        "name": "경기도",
+        "subRegions": {
+            "고양시": "고양시",
+            "과천시": "과천시",
+            "광명시": "광명시",
+            "구리시": "구리시",
+            "군포시": "군포시",
+            "김포시": "김포시",
+            "남양주시": "남양주시",
+            "동두천시": "동두천시",
+            "부천시": "부천시",
+            "성남시": "성남시",
+            "수원시": "수원시",
+            "시흥시": "시흥시",
+            "안산시": "안산시",
+            "안성시": "안성시",
+            "안양시": "안양시",
+            "양주시": "양주시",
+            "이천시": "이천시",
+            "오산시": "오산시",
+            "용인시": "용인시",
+            "의왕시": "의왕시",
+            "의정부시": "의정부시",
+            "파주시": "파주시",
+            "평택시": "평택시",
+            "포천시": "포천시",
+            "하남시": "하남시",
+            "화성시": "화성시"
+        }
+    },
+    "인천광역시": {
+        "name": "인천광역시",
+        "subRegions": {
+           "없음": "없음"
+        }
+    },
+
+    "강원특별자치도": {
+        "name": "강원특별자치도",
+        "subRegions": {
+            "강릉시": "강릉시",
+            "동해시": "동해시",
+            "삼척시": "삼척시",
+            "속초시": "속초시",
+            "원주시": "원주시",
+            "춘천시": "춘천시",
+            "태백시": "태백시"
+        }
+    },
+    "충청북도": {
+        "name": "충청북도",
+        "subRegions": {
+            "제천시": "제천시",
+            "청주시": "청주시",
+            "충주": "충주"
+        }
+    },
+    "충청남도": {
+        "name": "충청남도",
+        "subRegions": {
+            "계룡시": "계룡시",
+            "공주시": "공주시",
+            "논산시": "논산시",
+            "당진시": "당진시",
+            "보령시": "보령시",
+            "서산시": "서산시",
+            "아산시": "아산시",
+            "천안시": "천안시"
+        }
+    },
+    "전라북도": {
+        "name": "전라북도",
+        "subRegions": {
+            "군산시": "군산시",
+            "김제시": "김제시",
+            "남원시": "남원시",
+            "익산시": "익산시",
+            "전주시": "전주시",
+            "정읍시": "정읍시"
+        }
+    },
+    
+    "전라남도": {
+        "name": "전라남도",
+        "subRegions": {
+            "광양시": "광양시",
+            "여수시": "여수시",
+            "목포시": "목포시",
+            "순천시": "순천시"
+        }
+    },
+    "경상북도": {
+        "name": "경상북도",
+        "subRegions": {
+            "경산시": "경산시",
+            "경주": "경주",
+            "구미시": "구미시",
+            "김천시": "김천시",
+            "문경시": "문경시",
+            "상주": "상주",
+            "안동시": "안동시",
+            "영주": "영주",
+            "영천시": "영천시",
+            "포항시": "포항시"
+        }
+    },
+    "경상남도": {
+        "name": "경상남도",
+        "subRegions": {
+            "김해시": "김해시",
+            "밀양시": "밀양시",
+            "사천시": "사천시",
+            "양산시": "양산시",
+            "진주시": "진주시",
+            "창원시": "창원시",
+            "통영시": "통영시"
+        }
+    },
+    "부산광역시": {
+        "name": "부산광역시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "대구광역시": {
+        "name": "대구광역시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "울산광역시": {
+        "name": "울산광역시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "광주광역시": {
+        "name": "광주광역시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "대전광역시": {
+        "name": "대전광역시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "세종특별자치시": {
+        "name": "세종특별자치시",
+        "subRegions": {
+            "없음": "없음"
+        }
+    },
+    "제주특별자치도": {
+        "name": "제주특별자치도",
+        "subRegions": {
+            "서귀포시": "서귀포시",
+            "제주시": "제주시"
+        }
+    }
+};
+
+      const updateSubRegion = () => {
+        let regionSelect = document.getElementById("regionSelect");
+        let selectedRegionValue = regionSelect.value;
+        let subRegionSelect = document.getElementById("subRegionSelect");
+        let selectedRegionIndex = regionSelect.selectedIndex;
+        let selectedRegion = regionSelect.options[selectedRegionIndex].value; // value 사용
+        console.log('regionSelect =>', regionSelect);
+        console.log('selectedRegion =>', selectedRegion);
+
+
+        // 하위 지역 초기화
+        subRegionSelect.innerHTML = '<option value="">시/구 선택</option>';
+
+        if (selectedRegion) {
+          let subRegions = areaList[selectedRegion]?.subRegions; // subRegions 가져오기
+          console.log('subRegions =>', subRegions);
+
+          // 하위 지역 추가
+          for (let subRegion in subRegions) {
+            let option = document.createElement("option");
+            option.value = subRegion; // 하위 지역의 원래 이름
+            option.textContent = subRegions[subRegion]; // 하위 지역의 한국어 이름
+            subRegionSelect.appendChild(option);
+          }
+
+          // 하위 지역 선택 시 이벤트 처리
+          subRegionSelect.onchange = () => {
+            console.log('하위지역');
+            let selectedSubRegion = subRegionSelect.value;
+            console.log('Selected sub-region saved to localStorage:', selectedSubRegion);
+          };
+
+          saveRegionValue(); // 지역 값 저장 함수 호출
+        }
+      };
+
+      const regionSelect = document.getElementById("regionSelect");
+      regionSelect.addEventListener("change", updateSubRegion);
+
+      const saveRegionValue = () => {
+        const regionSelect = document.getElementById("regionSelect");
+        const subRegionSelect = document.getElementById("subRegionSelect");
+
+        let selectedRegionIndex = regionSelect.selectedIndex;
+        let selectedRegion = regionSelect.options[selectedRegionIndex].value; // 선택된 시/도
+
+        subRegionSelect.onchange = () => {
+          let selectedSubRegion = subRegionSelect.value; // 선택된 시/구
+
+          console.log('selectedRegion =>', selectedRegion);
+          console.log('selectedSubRegion =>', selectedRegion);
+
+          // 주소1(시/도)와 주소2(시/구)를 합칩니다.
+          let fullAddress = selectedRegion + ' ' + selectedSubRegion;
+          console.log('fullAddress', fullAddress);
+
+          // 로컬 스토리지에 저장
+          saveSelectedValue(fullAddress);
+
+          console.log('Selected full address saved to localStorage:', fullAddress);
+        };
+
+      }
+    });
+
+    function submitInfo() {
+      console.log('submitInfo');
+      const submitLimit = localStorage.getItem('6 selectedValue')
+
+      if (submitLimit && submitLimit.length >= 2) {
+        document.getElementById("input_txt_2adc34665cda5").value =
+          localStorage.getItem('0 selectedValue')
+        document.getElementById("input_txt_79cacd4241db5").value =
+          localStorage.getItem('1 selectedValue')
+        document.getElementById("input_txt_D44y508KH2").value =
+          localStorage.getItem('2 selectedValue')
+        document.getElementById("input_txt_186pTBK084").value =
+          localStorage.getItem('3 selectedValue')
+        document.getElementById("input_txt_1RBdDI3aF0").value =
+          localStorage.getItem('4 selectedValue')
+        document.getElementById("input_txt_T53Ny7dP83").value =
+          localStorage.getItem('5 selectedValue')
+        document.getElementById("input_txt_6vvJcU7o8Q").value =
+          localStorage.getItem('6 selectedValue')
+        SITE_FORM.confirmInputForm('w202409197a6d11485bedb', 'N');
+        localStorage.clear();
+      }
+    }
+
+
+  </script>
+  </body>
+</html>
