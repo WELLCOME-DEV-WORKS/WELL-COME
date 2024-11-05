@@ -779,25 +779,55 @@
       position: relative;
       width: 285px;
       height: 180px;
-      background-color: #fff;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
-      border: rgba(255, 255, 255, 0) solid 2px;
       border-radius: 8px;
-      padding: 28px 21px;
+      padding: 21px 21px;
       display: flex;
       flex-direction: column;
       transition: border 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .kv-third-processCard-mobile {
+      display: none;
     }
 
     .kv-third-processCard.type1 {
-      background-image: url('https://cdn.imweb.me/thumbnail/20241104/bfab94e6111b1.png');
-      background-size: 115%;
-      background-position: bottom 0px left 0px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+      background-size: 120%;
+      background-repeat: no-repeat;
+    }
+
+    .kv-third-processCard.type2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+      background-size: 120%;
+      background-repeat: no-repeat;
+    }
+    .kv-third-processCard.type3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+      background-size: 120%;
+      background-repeat: no-repeat;
+    }
+    .kv-third-processCard.type4 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+      background-size: 120%;
+      background-repeat: no-repeat;
+    }
+    .kv-third-processCard.type5 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+      background-size: 120%;
       background-repeat: no-repeat;
     }
 
     .kv-third-processCard:hover {
-      border: #ffca42 solid 2px;
+      border: #ffffff solid 5px;
+      box-shadow: inset 0 0 0 10em #ffffff46;
+      color: #000;
     }
 
     .kv-third-processCard span {
@@ -833,23 +863,15 @@
       right: 78px;
     }
 
-    .kv-third-processCard > img {
-      position: absolute;
-      bottom: 22px;
-      right: 21px;
-      width: 115px;
-      height: 115px;
-    }
-
     .kv-third-button {
       font-family: 'BMJUA';
       margin-top: 47px;
       font-size: 24px;
       width: 386px;
       height: 62px;
-      background-color: #333333;
-      color: #ffca42;
-      border-radius: 8px;
+      background-color: #004098;
+      color: #fff;
+      border-radius: 50px;
       text-align: center;
       line-height: 62px;
       cursor: pointer;
@@ -859,68 +881,54 @@
     }
 
     .kv-third-button:hover {
-      background-color: #ffca42;
-      color: black;
+      background-color: #1a1a1a;
+      color: #fff;
     }
 
     .kv-third-button:active {
-      background-color: #ffca42;
-      color: black;
+      background-color: #1a1a1a;
+      color: #fff;
       box-shadow: inset 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     @media screen and (max-width: 991px) {
       .kv-third-container {
         width: 100%;
-        max-width: 900px; /* Adjusted max-width for smaller screens */
-        margin-top: 40px; /* Reduced margin for better spacing */
-        gap: 15px; /* Reduced gap for smaller screens */
-        padding: 15px; /* Added padding for smaller screens */
+        max-width: 900px;
+        margin-top: 40px;
+        gap: 15px;
+        padding: 15px;
         margin: 0 auto;
         margin-top: 10%;
       }
 
       .kv-third-title {
         width: 100%;
-        max-width: 700px; /* Adjusted max-width for readability */
-        padding: 30px 20px; /* Reduced padding for smaller screens */
-        font-size: 32px; /* Reduced font size for smaller screens */
-        text-align: center; /* Center text on smaller screens */
+        max-width: 800px;
+        padding: 15px 0;
+        font-size: 32px;
+        text-align: left;
       }
 
       .kv-third-processBox {
         width: 100%;
-        max-width: 800px; /* Adjusted max-width for smaller screens */
-        padding: 15px; /* Reduced padding for smaller screens */
-        gap: 15px 15px; /* Adjusted gap for smaller screens */
+        max-width: 800px;
+        padding: 15px;
+        gap: 15px 15px;
       }
 
       .kv-third-processCard {
-        width: 220px; /* Reduced width for smaller screens */
-        height: 200px; /* Reduced height for smaller screens */
+        width: 210px; /* Reduced width for smaller screens */
+        height: 120px; /* Reduced height for smaller screens */
         padding: 20px 15px; /* Reduced padding for smaller screens */
       }
 
       .kv-third-processCard > span {
-        font-size: 48px; /* Reduced font size for smaller screens */
+        font-size: 28px; /* Reduced font size for smaller screens */
       }
 
       .kv-third-processCard > p {
-        left: 40px; /* Adjusted positioning for smaller screens */
         font-size: 20px; /* Reduced font size for smaller screens */
-      }
-
-      .kv-third-processCard > div {
-        width: 40px; /* Reduced size for smaller screens */
-        height: 40px; /* Reduced size for smaller screens */
-        top: 20px; /* Adjusted positioning for smaller screens */
-      }
-
-      .kv-third-processCard > img {
-        width: 90px; /* Reduced image size */
-        height: 90px; /* Reduced image size */
-        bottom: 10px; /* Adjusted positioning for smaller screens */
-        right: 10px; /* Adjusted positioning for smaller screens */
       }
 
       .kv-third-button {
@@ -934,10 +942,11 @@
     @media (max-width: 768px) {
       .kv-third-container {
         width: 100%;
+        max-width: 768px;
         height: auto;
         margin: 70px auto; /* Increase margin for larger screens */
         padding-top: 30px; /* Increase padding */
-        background-color: #fcfbf7;
+        background-color: #ffffff;
         gap: 20px; /* Increase gap for more spacing */
         display: flex;
         flex-direction: column;
@@ -948,11 +957,10 @@
       }
 
       .kv-third-title {
-        width: 90%; /* Full width for title */
+        width: 85%; /* Full width for title */
         height: auto;
         padding: 20px;
         font-size: 28px; /* Increase font size */
-        font-family: 'Tenada';
         font-weight: 800;
         text-align: left;
         position: relative;
@@ -970,58 +978,110 @@
         gap: 15px; /* Adjusted gap */
       }
 
-      .kv-third-processCard {
-        width: 430px; /* Full width for process cards */
+      .kv-third-processCard-mobile {
+        font-family: 'SUIT-Variable';
+        width: 430px;
         height: 70px; /* Increase height */
         padding: 20px;
         margin-bottom: 15px; /* Increase margin bottom */
-        background: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
-        border: rgba(255, 255, 255, 0) solid 1px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         transition: border 0.2s ease-in-out;
         position: relative;
+        justify-content: center;
       }
-
-      .kv-third-processCard > span {
-        position: absolute;
-        left: 15px; /* Adjusted left position */
-        top: 25px; /* Adjusted top position */
-        font-family: 'Tenada';
-        font-size: 24px; /* Increase font size */
-        color: #666666;
-      }
-
-      .kv-third-processCard > p {
-        margin-left: 10px; /* Adjusted margin for better alignment */
-        font-family: 'Tenada';
-        font-size: 24px;
-        margin-bottom: 25px;
-      }
-
-      .kv-third-processCard > div {
+      .kv-third-processCard {
         display: none;
       }
 
-      .kv-third-processCard > img {
-        width: 50px; /* Increase image size */
-        height: 50px;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
+      .kv-third-processCard-mobile > span {
+        font-weight: 800;
+        width: 100%;
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .kv-third-processCard-mobile > p {
+        font-weight: 600;
+        width: 100%;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        margin: 3px 0 0 0;
+      }
+
+      .kv-third-processCard-mobile.type1 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+        background-size: 108%;
+        background-repeat: no-repeat;
+        background-position: 35% 63%;
+      }
+
+      .kv-third-processCard-mobile.type2 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+        background-size: 108%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .kv-third-processCard-mobile.type3 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+        background-size: 108%;
+        background-repeat: no-repeat;
+        background-position: 35% 35%;
+      }
+      .kv-third-processCard-mobile.type4 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+        background-size: 108%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .kv-third-processCard-mobile.type5 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+        background-size: 108%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .kv-third-processCard-mobile:hover {
+        border: #ffffff solid 5px;
+        box-shadow: inset 0 0 0 10em #ffffff46;
+        color: #000;
       }
 
       .kv-third-button {
-        font-family: 'BMJUA';
+        font-family: 'SUIT-Variable';
         font-size: 18px; /* Increase font size */
         width: 280px; /* Increase width */
         height: 50px; /* Increase height */
-        background-color: #1a1a1a;
-        color: #ffca42;
-        border-radius: 5px;
+        background-color: #004098;
+        color: #fff;
+        border-radius: 50px;
         text-align: center;
         line-height: 50px;
         cursor: pointer;
@@ -1030,30 +1090,14 @@
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       }
 
-      .kv-third-button::before {
-        content: '즉시 신청';
-        display: block;
-        text-align: center;
-        font-family: 'BMJUA';
-        font-size: 18px; /* Increase font size */
-        line-height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .kv-third-button {
-        font-size: 0;
-      }
-
       .kv-third-button:hover {
         background-color: #1a1a1a;
-        color: #ffca42;
+        color: #fff;
       }
 
       .kv-third-button:active {
         background-color: #1a1a1a;
-        color: #ffca42;
+        color: #fff;
         box-shadow: inset 0px 6px 8px #000000;
         display: flex;
         align-items: center;
@@ -1067,7 +1111,7 @@
         height: auto;
         margin: 20px auto;
         padding-top: 20px;
-        background-color: #fcfbf7;
+        background-color: #fff;
         gap: 15px;
         display: flex;
         flex-direction: column;
@@ -1082,7 +1126,6 @@
         height: auto;
         padding: 20px;
         font-size: 24px;
-        font-family: 'Tenada';
         font-weight: 800;
         text-align: left;
         position: relative;
@@ -1094,100 +1137,63 @@
         height: auto;
         padding: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
       }
 
-      .kv-third-processCard {
-        width: 358px;
-        height: 60px;
+      .kv-third-processCard-mobile {
+        width: 100%;
+        height: 45px;
         padding: 20px;
         margin-bottom: 10px;
         background: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
-        border: rgba(255, 255, 255, 0) solid 1px;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
         transition: border 0.2s ease-in-out;
         position: relative;
       }
 
-      .kv-third-processCard > span {
-        position: absolute;
-        left: 10px;
-        top: 20px;
-        font-family: 'Tenada';
+      .kv-third-processCard-mobile > span {
+        font-size: 25px;
+        color: #fff;
+      }
+
+      .kv-third-processCard-mobile > p {
         font-size: 20px;
-        color: #666666;
-      }
-
-      .kv-third-processCard > p {
-        margin-left: 20px;
-        font-family: 'Tenada';
-        font-size: 20px;
-        margin-bottom: 25px;
-      }
-
-      .kv-third-processCard > div {
-        display: none;
-      }
-
-      .kv-third-processCard > img {
-        width: 43px;
-        height: 43px;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
+        margin: 3px 0 0 0;
       }
 
       .kv-third-button {
-        font-family: 'BMJUA';
         font-size: 16px;
-        width: 265px;
+        width: 100%;
+        max-width: 266px;
         height: 40px;
-        background-color: #1a1a1a;
-        color: #ffca42;
-        border-radius: 5px;
-        text-align: center;
-        line-height: 50px;
+        background-color: #004098;
+        color: #fff;
         cursor: pointer;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         margin: 15px auto;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       }
 
-      .kv-third-button::before {
-        content: '1분만에 견적 받아보기';
-        display: block;
-        text-align: center;
-        font-family: 'BMJUA';
-        font-size: 16px;
-        line-height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-family: 'BMJUA';
-      }
-      .kv-third-button {
-        font-size: 0;
-      }
       .kv-third-button:hover {
         background-color: #1a1a1a;
-        color: #ffca42;
+        color: #fff;
       }
 
       .kv-third-button:active {
         background-color: #1a1a1a;
-        color: #ffca42;
+        color: #fff;
         box-shadow: inset 0px 6px 8px #000000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
     }
 
@@ -2264,6 +2270,7 @@
       </div>
     </div>
 
+    <!-- second section -->
     <div class="kv-second-container">
       <div class="kv-second-box">
         <div class="img_box">
@@ -2280,59 +2287,90 @@
       </div>
     </div>
 
+    <!-- third section -->
     <div class="kv-third-container">
       <div class="kv-third-title">비자 신청 유형 선택하세요!</div>
       <div class="kv-third-processBox">
-        <div class="kv-third-processCard type1">
+        <div
+          class="kv-third-processCard type1"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
+          <span>기업 투자 비자</span>
+          <p>Investor/Enterprise</p>
+        </div>
+        <div
+          class="kv-third-processCard-mobile type1"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
           <span>기업 투자 비자</span>
           <p>Investor/Enterprise</p>
         </div>
 
-        <div class="kv-third-processCard type2">
+        <div
+          class="kv-third-processCard type2"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
           <span>취업 비자</span>
-          <p>
-            Specially Designated
-            <br />
-            Profession
-          </p>
-          <img
-            src="https://cdn.imweb.me/thumbnail/20241104/4ef447a73f95f.png"
-            alt=""
-          />
+          <p>Specially Designated Profession</p>
+        </div>
+        <div
+          class="kv-third-processCard-mobile type2"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
+          <span>취업 비자</span>
+          <p>Specially Designated Profession</p>
         </div>
 
-        <div class="kv-third-processCard type3">
+        <div
+          class="kv-third-processCard type3"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
           <span>결혼이민</span>
           <p>
             Spouse of Korean
             <br />
             National
           </p>
-          <img
-            src="https://cdn.imweb.me/thumbnail/20241104/edc471d128873.png"
-            alt=""
-          />
+        </div>
+        <div
+          class="kv-third-processCard-mobile type3"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
+          <span>결혼이민</span>
+          <p>Spouse of Korean National</p>
         </div>
 
-        <div class="kv-third-processCard type4">
+        <div
+          class="kv-third-processCard type4"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
           <span>재외동포</span>
           <p>Overseas Korean</p>
-          <img
-            src="https://cdn.imweb.me/thumbnail/20241104/022162a9b9d35.png"
-            alt=""
-          />
+        </div>
+        <div
+          class="kv-third-processCard-mobile type4"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
+          <span>재외동포</span>
+          <p>Overseas Korean</p>
         </div>
 
-        <div class="kv-third-processCard type5">
+        <div
+          class="kv-third-processCard type5"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
           <span>영주</span>
           <p>permanent residence</p>
-          <img
-            src="https://cdn.imweb.me/thumbnail/20241104/c658059908182.png"
-            alt=""
-          />
+        </div>
+        <div
+          class="kv-third-processCard-mobile type5"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        >
+          <span>영주</span>
+          <p>permanent residence</p>
         </div>
       </div>
-      <div class="kv-third-button">2분만에 견적 받아보기</div>
+      <div class="kv-third-button">취득할 수 있는 비자 확인하기</div>
     </div>
 
     <div class="kv-fourth-container">
