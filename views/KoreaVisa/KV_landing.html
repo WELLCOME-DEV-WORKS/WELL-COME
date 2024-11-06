@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--  swiper Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 폰트 -->
+    <links
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
   </head>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
-    rel="stylesheet"
-  />
 
   <style>
     @font-face {
@@ -45,7 +48,6 @@
       justify-content: center !important;
       align-items: center !important;
     }
-
 
     /*web*/
     .kv-first-container {
@@ -98,7 +100,7 @@
     .kv-slogan-main-button {
       margin: 0 0 0 0;
       width: 386px;
-      height: 65px;
+      height: 50px;
       background-color: #004098;
       font-family: 'SUIT Variable';
       font-size: 28px;
@@ -144,30 +146,6 @@
       box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
     }
 
-    .kv-slogan-sub-button {
-      width: 400px;
-      height: 52px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 7px;
-      cursor: pointer;
-    }
-
-    .kv-slogan-sub-button img {
-      height: 52px;
-      width: 52px;
-    }
-
-    .kv-slogan-sub-button span {
-      padding-top: 0px;
-      font-family: 'GangwonEduPower';
-      font-size: 16px;
-      font-weight: 600;
-      color: black;
-      text-decoration: underline;
-    }
-
     .kv-first-container-mobile {
       display: none;
     }
@@ -191,24 +169,9 @@
 
       .kv-slogan-main-button {
         width: 300px; /* Reduced width for smaller screens */
-        height: 55px; /* Adjusted height for smaller screens */
+        height: 50px; /* Adjusted height for smaller screens */
         font-size: 24px; /* Reduced font size for better readability */
         line-height: 55px; /* Adjusted line-height for better alignment */
-      }
-
-      .kv-slogan-sub-button {
-        width: 350px; /* Reduced width for smaller screens */
-        height: 45px; /* Adjusted height for smaller screens */
-        gap: 5px; /* Reduced gap between elements */
-      }
-
-      .kv-slogan-sub-button span {
-        font-size: 14px; /* Reduced font size for better readability */
-      }
-
-      .kv-slogan-sub-button img {
-        height: 40px; /* Reduced icon size */
-        width: 40px; /* Reduced icon size */
       }
     }
 
@@ -261,7 +224,7 @@
       .kv-slogan-main-button {
         width: 100%; /* Make button width responsive */
         max-width: 300px; /* Constrain max-width for better usability on smaller screens */
-        height: 55px; /* Adjusted height for better touch area */
+        height: 50px; /* Adjusted height for better touch area */
         background-color: #004098;
         font-family: 'BMJUA';
         font-size: 20px; /* Adjusted font size for readability */
@@ -297,31 +260,6 @@
         background-color: #333333;
         color: #fff;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-      }
-
-      .kv-slogan-sub-button {
-        width: 100%; /* Make button width responsive */
-        max-width: 300px; /* Constrain max-width for better usability */
-        height: 45px; /* Adjusted height for better touch area */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px; /* Increased gap for better spacing */
-        cursor: pointer;
-        margin-top: 10px; /* Added margin for spacing */
-      }
-
-      .kv-slogan-sub-button img {
-        height: 45px; /* Adjusted icon size for smaller button */
-        width: 45px; /* Adjusted icon size for smaller button */
-      }
-
-      .kv-slogan-sub-button span {
-        font-family: 'GangwonEduPower';
-        font-size: 16px; /* Adjusted font size for better readability */
-        font-weight: 600;
-        color: black;
-        text-decoration: underline;
       }
     }
 
@@ -422,34 +360,6 @@
         color: #000;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
       }
-
-      .kv-slogan-sub-button-mobile {
-        width: 200px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
-        cursor: pointer;
-      }
-
-      .kv-slogan-sub-button-mobile img {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-      }
-
-      .kv-slogan-sub-button-mobile span {
-        font-size: 12px;
-        color: #000;
-        font-weight: 400;
-        font-family: 'GangwonEduPower';
-        text-decoration: underline;
-      }
-      .kv-slogan-sub-button-mobile span:active {
-        color: #fff;
-      }
     }
     /* second container*/
 
@@ -481,7 +391,7 @@
     .kv-second-button {
       color: #fff;
       width: 385px;
-      height: 65px;
+      height: 50px;
       margin-top: 88px;
       background-color: #004098;
       font-family: 'SUIT Variable';
@@ -490,9 +400,12 @@
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 50px;
       text-align: center;
-      line-height: 65px;
+      line-height: 50px;
       cursor: pointer;
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      display: flex;
+      align-self: center;
+      justify-content: center;
     }
 
     .kv-second-button:hover {
@@ -541,7 +454,7 @@
       .kv-second-button {
         width: 100%; /* Full width for button */
         max-width: 350px; /* Increased max-width for better fit */
-        height: 55px; /* Increased height for better touch area */
+        height: 50px; /* Increased height for better touch area */
         font-size: 24px; /* Increased font size for readability */
         line-height: 55px; /* Adjusted line-height to match button height */
         margin-top: 60px; /* Adjusted margin for better spacing */
@@ -665,7 +578,7 @@
         width: 100%; /* Full width for button */
         max-width: 300px; /* Constrain max-width for better fit */
         height: 50px; /* Adjusted height for better touch area */
-        font-size: 16px; /* Increased font size for readability */
+        font-size: 18px; /* Increased font size for readability */
         line-height: 50px; /* Adjusted line-height to match button height */
         margin-top: 50px; /* Reduced margin for better spacing */
         text-align: center; /* Center-align text */
@@ -869,16 +782,18 @@
       margin-top: 47px;
       font-size: 24px;
       width: 386px;
-      height: 62px;
+      height: 50px;
       background-color: #004098;
       color: #fff;
       border-radius: 50px;
       text-align: center;
-      line-height: 62px;
       cursor: pointer;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       margin-bottom: 20px;
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .kv-third-button:hover {
@@ -1170,7 +1085,7 @@
       }
 
       .kv-third-button {
-        font-size: 16px;
+        font-size: 18px;
         width: 100%;
         max-width: 266px;
         height: 40px;
@@ -1248,12 +1163,15 @@
     .kv-fourth-button {
       font-family: 'SUIT-Variable';
       font-size: 28px;
+      width: 380px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #fff;
       background-color: #004098;
-      padding: 12px 24px;
       border-radius: 50px;
       cursor: pointer;
-      width: 380px;
       text-align: center;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -1318,7 +1236,7 @@
       .kv-fourth-button-mobile {
         width: 100%;
         max-width: 350px;
-        height: 55px;
+        height: 50px;
         font-size: 24px;
         line-height: 55px;
         margin-top: 60px;
@@ -1387,7 +1305,7 @@
         width: 100%;
         max-width: 300px;
         height: 50px;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 50px;
         margin-top: 50px;
         text-align: center;
@@ -1439,7 +1357,7 @@
 
       .kv-fourth-container-mobile {
         width: 100%;
-        padding: 16px;
+        padding: 18px;
         background-color: #fff;
         display: flex;
         flex-direction: column;
@@ -1523,17 +1441,82 @@
     }
 
     /* kv-sixth */
+
     .kv-sixth-container {
+      width: 1200px;
+      height: auto;
+      margin-top: 80px;
+      padding-top: 36px;
       background-color: #fff;
+      gap: 21px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      color: #fff;
-      text-align: center;
-      padding: 132px 0 82px;
-      font: 24px SUIT Variable, sans-serif ;
+      justify-content: center;
+      align-items: center;
     }
-    
+
+    .kv-sixth-title {
+      width: 1050px;
+      height: 36px;
+      padding: 30px 0;
+      font-size: 25px;
+      font-family: 'SUIT-Variable';
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .kv-sixth-processBox {
+      height: auto;
+      width: 100%;
+      max-width: 1055px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px 30px; /* 상하 간격 14px, 좌우 간격 10px */
+      margin: auto;
+    }
+
+    .kv-sixth-processCard {
+      font-family: 'GangwonEduPower';
+      width: 251px;
+      height: 250px;
+      transition: border 0.2s ease-in-out;
+      color: #fff;
+      font-size: 24px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .kv-sixth-processCard.type1 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .kv-sixth-processCard.type2 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .kv-sixth-processCard.type3 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .kv-sixth-processCard.type4 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .kv-sixth-processCard.type5 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
     @media (max-width: 768px) {
       .kv-sixth-box {
         width: 100%; /* Full width for process box */
@@ -1546,7 +1529,6 @@
         gap: 15px; /* Adjusted gap */
       }
 
-      
       .kv-sixth-box {
         width: 100%;
         height: auto;
@@ -1576,18 +1558,6 @@
         max-width: 600px; /* Adjusted max-width for larger screens */
       }
 
-      .kv-sixth-title {
-        width: 90%; /* Full width for title */
-        height: auto;
-        padding: 20px;
-        font-size: 28px; /* Increase font size */
-        font-family: 'Tenada';
-        font-weight: 800;
-        text-align: left;
-        position: relative;
-        margin-left: 0; /* Remove negative margin for better alignment */
-      }
-
       .kv-sixth-img_box {
         width: 200px; /* Full width for process cards */
         height: 70px; /* Increase height */
@@ -1605,7 +1575,6 @@
       }
     }
 
-    
     @media (max-width: 991px) {
       .kv-sixth-title {
         max-width: 100%;
@@ -1635,7 +1604,7 @@
 
       .kv-sixth-btn-box {
         max-width: 100%;
-        padding:20px;
+        padding: 20px;
         /* margin-top: 20px; */
       }
 
@@ -1644,20 +1613,19 @@
         padding: 19px 20px;
       }
     }
-    
+
     .kv-sixth-title {
       color: #000;
       font-weight: 600;
       align-self: center;
       z-index: 10;
     }
-    
-    
-    .kv-sixth-title span {
+
+    .kv-sixth-title h3 {
       font-weight: 900;
       color: #004098;
     }
-    
+
     .kv-sixth-box {
       align-self: center;
       display: flex;
@@ -1670,31 +1638,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    
-    
-    .kv-sixth-img_box {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      aspect-ratio: 0.74;
-      white-space: nowrap;
-      padding: 147px 70px;
-    }
-    
-    
-    .kv-sixth-img_box img {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .kv-sixth-img_box-content {
-      position: relative;
-    }
-    
+
     .kv-sixth-btn-box {
       background-color: #fff;
       border-radius: 50%;
@@ -1705,8 +1649,7 @@
       font-weight: 700;
       padding: 85px 80px 0;
     }
-    
-    
+
     .kv-sixth-btn {
       border-radius: 44px;
       background-color: #004098;
@@ -1719,10 +1662,6 @@
       text-decoration: none;
       display: inline-block;
     }
-    
-
-
-    
   </style>
 
   <body>
@@ -1910,46 +1849,77 @@
     </div>
 
     <!--sixth container-->
-    <section class="kv-sixth-container">
+    <div class="kv-sixth-container">
       <h2 class="kv-sixth-title">
-        <span>WELL-COME Visa</span>는   <br />
-        모든 유형의 비자를 이해할 뿐만 아니라, 비자 신청의 모든 영역을 다루고 있습니다
+        <span>WELL-COME VISA</span>
+        는
+        <br />
+        모든 유형의 비자를 이해할 뿐만 아니라, 비자 신청의 모든 영역을 다루고
+        있습니다.
       </h2>
-      <!-- <div class="separator"></div> -->
-      <div class="kv-sixth-box">
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/9758c7cad5736748aa4f86a6f3454a9eed6f62e3504778d9bda8b1f2a6036420?apiKey=e0c395b96452442183c02ce725ff7111&" alt="OASIS 창업수업 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">
-            OASIS <br /> 창업수업
+
+      <article class="kv-sixth-processBox swiper">
+        <div class="swiper-wrapper">
+          <div class="kv-sixth-processCard type1 swiper-slide">
+            <h3>
+              OASIS
+              <br />
+              창업수업
+            </h3>
           </div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/7a93e2a63538d32fe677f302a22f82696b17af16cf11ca76a7a43bbfbf59bb35?apiKey=e0c395b96452442183c02ce725ff7111&" alt="지적 재산 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">지적 재산</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/707b6adfaf8cec14840ec2350920c9b6a4ef2b76e8e3a9abe266fca700ccb797?apiKey=e0c395b96452442183c02ce725ff7111&" alt="우수인재 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">우수인재</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/a66243eebde8f3dfdfd5b15cde7f66373fe5058aef9934dee461d8dbb878256f?apiKey=e0c395b96452442183c02ce725ff7111&" alt="특허 신청 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">특허 신청</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/23ca056ac6dbe7f290f617b0e13e63c19173f6af7ebb3e89aeefdb5504301890?apiKey=e0c395b96452442183c02ce725ff7111&" alt="추가 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">
-            and <br /> MORE
+          <div class="kv-sixth-processCard type2 swiper-slide">
+            <h3>지적 재산</h3>
           </div>
-        </article>
-      </div>
+          <div class="kv-sixth-processCard type3 swiper-slide">
+            <h3>우수 인재</h3>
+          </div>
+          <div class="kv-sixth-processCard type4 swiper-slide">
+            <h3>특허 신청</h3>
+          </div>
+          <div class="kv-sixth-processCard type5 swiper-slide">
+            <h3>
+              and
+              <br />
+              MORE
+            </h3>
+          </div>
+        </div>
+      </article>
+
       <div class="kv-sixth-btn-box">
         <a href="#" class="kv-sixth-btn" role="button">
           한국비자 관련 모든 것 알아보기
         </a>
       </div>
-    </section>
-     
+    </div>
 
-    
-    
+    <!-- 제이쿼리 cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- swiper cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.kv-sixth-processBox', {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true, // 무한 슬라이드 설정
+          effect: 'flip', // FlipEffect 사용
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    </script>
+  </body>
 </html>
