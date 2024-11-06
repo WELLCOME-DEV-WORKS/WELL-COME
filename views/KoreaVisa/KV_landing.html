@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--  swiper Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 폰트 -->
+    <links
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
   </head>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
-    rel="stylesheet"
-  />
 
   <style>
     @font-face {
@@ -45,7 +48,6 @@
       justify-content: center !important;
       align-items: center !important;
     }
-
 
     /*web*/
     .kv-first-container {
@@ -95,10 +97,11 @@
       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
     }
 
-    .kv-slogan-main-button {
+    .kv-button {
+      color: #fff;
       margin: 0 0 0 0;
       width: 386px;
-      height: 65px;
+      height: 50px;
       background-color: #004098;
       font-family: 'SUIT Variable';
       font-size: 28px;
@@ -111,9 +114,13 @@
       position: relative;
       overflow: hidden;
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
     }
 
-    .kv-slogan-main-button .text {
+    .kv-button .text {
       font-family: 'SUIT Variable' !important;
       color: #fff;
       position: absolute;
@@ -125,47 +132,24 @@
       transition: opacity 0.6s ease-in-out;
     }
 
-    .kv-slogan-main-button .text.fade-out {
+    .kv-button .text.fade-out {
       opacity: 0;
     }
 
-    .kv-slogan-main-button .text.fade-in {
+    .kv-button .text.fade-in {
       opacity: 1;
     }
 
-    .kv-slogan-main-button:hover {
+    .kv-button:hover {
       background-color: #1a1a1a;
       color: #fff;
+      transform: scale(1.1);
     }
 
-    .kv-slogan-main-button:active {
+    .kv-button:active {
       background-color: #333333;
       color: #fff;
       box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-    }
-
-    .kv-slogan-sub-button {
-      width: 400px;
-      height: 52px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 7px;
-      cursor: pointer;
-    }
-
-    .kv-slogan-sub-button img {
-      height: 52px;
-      width: 52px;
-    }
-
-    .kv-slogan-sub-button span {
-      padding-top: 0px;
-      font-family: 'GangwonEduPower';
-      font-size: 16px;
-      font-weight: 600;
-      color: black;
-      text-decoration: underline;
     }
 
     .kv-first-container-mobile {
@@ -189,26 +173,11 @@
         text-align: center; /* Centered text for better visual appearance */
       }
 
-      .kv-slogan-main-button {
+      .kv-button {
         width: 300px; /* Reduced width for smaller screens */
-        height: 55px; /* Adjusted height for smaller screens */
+        height: 50px; /* Adjusted height for smaller screens */
         font-size: 24px; /* Reduced font size for better readability */
         line-height: 55px; /* Adjusted line-height for better alignment */
-      }
-
-      .kv-slogan-sub-button {
-        width: 350px; /* Reduced width for smaller screens */
-        height: 45px; /* Adjusted height for smaller screens */
-        gap: 5px; /* Reduced gap between elements */
-      }
-
-      .kv-slogan-sub-button span {
-        font-size: 14px; /* Reduced font size for better readability */
-      }
-
-      .kv-slogan-sub-button img {
-        height: 40px; /* Reduced icon size */
-        width: 40px; /* Reduced icon size */
       }
     }
 
@@ -258,10 +227,10 @@
         transition: transform 1s ease-in-out, opacity 1s ease-in-out;
       }
 
-      .kv-slogan-main-button {
+      .kv-button {
         width: 100%; /* Make button width responsive */
         max-width: 300px; /* Constrain max-width for better usability on smaller screens */
-        height: 55px; /* Adjusted height for better touch area */
+        height: 50px; /* Adjusted height for better touch area */
         background-color: #004098;
         font-family: 'BMJUA';
         font-size: 20px; /* Adjusted font size for readability */
@@ -277,7 +246,7 @@
         margin-bottom: 15px; /* Added margin for spacing */
       }
 
-      .kv-slogan-main-button .text {
+      .kv-button .text {
         font-family: 'BMJUA' !important;
         position: absolute;
         width: 100%;
@@ -288,40 +257,15 @@
         transition: opacity 0.6s ease-in-out;
       }
 
-      .kv-slogan-main-button:hover {
+      .kv-button:hover {
         background-color: #1a1a1a;
         color: #fff;
       }
 
-      .kv-slogan-main-button:active {
+      .kv-button:active {
         background-color: #333333;
         color: #fff;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-      }
-
-      .kv-slogan-sub-button {
-        width: 100%; /* Make button width responsive */
-        max-width: 300px; /* Constrain max-width for better usability */
-        height: 45px; /* Adjusted height for better touch area */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px; /* Increased gap for better spacing */
-        cursor: pointer;
-        margin-top: 10px; /* Added margin for spacing */
-      }
-
-      .kv-slogan-sub-button img {
-        height: 45px; /* Adjusted icon size for smaller button */
-        width: 45px; /* Adjusted icon size for smaller button */
-      }
-
-      .kv-slogan-sub-button span {
-        font-family: 'GangwonEduPower';
-        font-size: 16px; /* Adjusted font size for better readability */
-        font-weight: 600;
-        color: black;
-        text-decoration: underline;
       }
     }
 
@@ -387,7 +331,7 @@
         display: inline-block;
       }
 
-      .kv-slogan-main-button-mobile {
+      .kv-button-mobile {
         width: 266px;
         height: 45px;
         background-color: #004098;
@@ -403,7 +347,7 @@
         margin-bottom: 10px;
       }
 
-      .kv-slogan-main-button-mobile .text {
+      .kv-button-mobile .text {
         color: #fff;
         position: absolute;
         width: 100%;
@@ -417,38 +361,10 @@
         font-weight: 400;
       }
 
-      .kv-slogan-main-button-mobile .text:active {
+      .kv-button-mobile .text:active {
         background-color: #004098;
         color: #000;
         box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
-      }
-
-      .kv-slogan-sub-button-mobile {
-        width: 200px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
-        cursor: pointer;
-      }
-
-      .kv-slogan-sub-button-mobile img {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-      }
-
-      .kv-slogan-sub-button-mobile span {
-        font-size: 12px;
-        color: #000;
-        font-weight: 400;
-        font-family: 'GangwonEduPower';
-        text-decoration: underline;
-      }
-      .kv-slogan-sub-button-mobile span:active {
-        color: #fff;
       }
     }
     /* second container*/
@@ -476,34 +392,6 @@
     .kv-second-box .img_box img {
       width: 100%;
       height: 100%;
-    }
-
-    .kv-second-button {
-      color: #fff;
-      width: 385px;
-      height: 65px;
-      margin-top: 88px;
-      background-color: #004098;
-      font-family: 'SUIT Variable';
-      font-size: 24px;
-      font-weight: 400;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 50px;
-      text-align: center;
-      line-height: 65px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    }
-
-    .kv-second-button:hover {
-      background-color: #1a1a1a;
-      color: #fff;
-    }
-
-    .kv-second-button:active {
-      background-color: #333333;
-      color: #fff;
-      box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
     }
 
     @media screen and (max-width: 991px) {
@@ -537,35 +425,6 @@
         margin-bottom: 15px; /* Increased bottom margin for spacing */
         text-align: center; /* Center-align text */
       }
-
-      .kv-second-button {
-        width: 100%; /* Full width for button */
-        max-width: 350px; /* Increased max-width for better fit */
-        height: 55px; /* Increased height for better touch area */
-        font-size: 24px; /* Increased font size for readability */
-        line-height: 55px; /* Adjusted line-height to match button height */
-        margin-top: 60px; /* Adjusted margin for better spacing */
-        text-align: center; /* Center-align text */
-        display: flex; /* Flexbox for consistent alignment */
-        justify-content: center; /* Center-align items */
-        align-items: center; /* Center-align items */
-        background-color: #004098; /* Button background color */
-        color: #fff; /* Button text color */
-        cursor: pointer; /* Cursor pointer for interactivity */
-        border-radius: 50px; /* Rounded corners for button */
-        transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
-      }
-
-      .kv-second-button:hover {
-        background-color: #1a1a1a; /* Slightly darker color on hover */
-        color: #fff; /* Text color on hover */
-      }
-
-      .kv-second-button:active {
-        background-color: #1a1a1a; /* Darker color on active */
-        color: #fff; /* Text color on active */
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
-      }
     }
 
     @media screen and (max-width: 767px) {
@@ -597,35 +456,6 @@
         margin-top: 15px; /* Increased top margin for spacing */
         margin-bottom: 10px; /* Increased bottom margin for spacing */
         text-align: center; /* Center-align text */
-      }
-
-      .kv-second-button {
-        width: 100%; /* Full width for button */
-        max-width: 300px; /* Constrain max-width for better fit */
-        height: 50px; /* Adjusted height for better touch area */
-        font-size: 18px; /* Increased font size for readability */
-        line-height: 50px; /* Adjusted line-height to match button height */
-        margin-top: 50px; /* Reduced margin for better spacing */
-        text-align: center; /* Center-align text */
-        display: flex; /* Flexbox for consistent alignment */
-        justify-content: center; /* Center-align items */
-        align-items: center; /* Center-align items */
-        background-color: #004098; /* Button background color */
-        color: #fff; /* Button text color */
-        cursor: pointer; /* Cursor pointer for interactivity */
-        border-radius: 50px; /* Rounded corners for button */
-        transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
-      }
-
-      .kv-second-button:hover {
-        background-color: #1a1a1a; /* Slightly darker color on hover */
-        color: #fff; /* Text color on hover */
-      }
-
-      .kv-second-button:active {
-        background-color: #1a1a1a; /* Darker color on active */
-        color: #fff; /* Text color on active */
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
       }
     }
 
@@ -660,35 +490,6 @@
         margin-bottom: 10px; /* Increased bottom margin for spacing */
         text-align: center; /* Center-align text */
       }
-
-      .kv-second-button {
-        width: 100%; /* Full width for button */
-        max-width: 300px; /* Constrain max-width for better fit */
-        height: 50px; /* Adjusted height for better touch area */
-        font-size: 16px; /* Increased font size for readability */
-        line-height: 50px; /* Adjusted line-height to match button height */
-        margin-top: 50px; /* Reduced margin for better spacing */
-        text-align: center; /* Center-align text */
-        display: flex; /* Flexbox for consistent alignment */
-        justify-content: center; /* Center-align items */
-        align-items: center; /* Center-align items */
-        background-color: #004098; /* Button background color */
-        color: #fff; /* Button text color */
-        cursor: pointer; /* Cursor pointer for interactivity */
-        border-radius: 50px; /* Rounded corners for button */
-        transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
-      }
-
-      .kv-second-button:hover {
-        background-color: #1a1a1a; /* Slightly darker color on hover */
-        color: #fff; /* Text color on hover */
-      }
-
-      .kv-second-button:active {
-        background-color: #1a1a1a; /* Darker color on active */
-        color: #fff; /* Text color on active */
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
-      }
     }
 
     @media screen and (max-width: 497px) {
@@ -714,29 +515,6 @@
         font-size: 20px; /* Reduce font size */
         margin-top: 10px;
         margin-bottom: 5px; /* Adjust margin */
-      }
-
-      .kv-second-button {
-        width: 100%;
-        max-width: 266px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 50px;
-        margin-top: 64px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .kv-second-button:hover {
-        background-color: #fcab40;
-        color: #000;
-      }
-      .kv-second-button:active {
-        background-color: #fcab40;
-        color: #000;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -863,36 +641,6 @@
     .kv-third-processBox > .kv-third-processCard:nth-child(5) > div {
       right: 78px;
     }
-
-
-    .kv-third-button {
-      font-family: 'BMJUA';
-      margin-top: 47px;
-      font-size: 24px;
-      width: 386px;
-      height: 62px;
-      background-color: #004098;
-      color: #fff;
-      border-radius: 50px;
-      text-align: center;
-      line-height: 62px;
-      cursor: pointer;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin-bottom: 20px;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    }
-
-    .kv-third-button:hover {
-      background-color: #1a1a1a;
-      color: #fff;
-    }
-
-    .kv-third-button:active {
-      background-color: #1a1a1a;
-      color: #fff;
-      box-shadow: inset 0px 8px 8px rgba(0, 0, 0, 0.25);
-    }
-
 
     @media screen and (max-width: 991px) {
       .kv-third-container {
@@ -1132,34 +880,6 @@
         font-size: 20px;
         margin: 3px 0 0 0;
       }
-
-      .kv-third-button {
-        font-size: 16px;
-        width: 100%;
-        max-width: 266px;
-        height: 40px;
-        background-color: #004098;
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        margin: 15px auto;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-      }
-
-      .kv-third-button:hover {
-        background-color: #1a1a1a;
-        color: #fff;
-      }
-
-      .kv-third-button:active {
-        background-color: #1a1a1a;
-        color: #fff;
-        box-shadow: inset 0px 6px 8px #000000;
-      }
     }
 
     /*  fourth  */
@@ -1208,35 +928,6 @@
       object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
     }
 
-
-    /* Button styles */
-    .kv-fourth-button {
-      font-family: 'SUIT-Variable';
-      font-size: 28px;
-      color: #fff;
-      background-color: #004098;
-      padding: 12px 24px;
-      border-radius: 50px;
-      cursor: pointer;
-      width: 380px;
-      text-align: center;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    }
-
-    .kv-fourth-button:hover {
-      background: #1a1a1a;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      color: #fff;
-    }
-
-    .kv-fourth-button:active {
-      background: #333333;
-      box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-      color: #fff;
-    }
-
-
     .kv-fourth-container-mobile {
       display: none;
     }
@@ -1281,37 +972,6 @@
         margin-top: 15px;
       }
 
-
-      .kv-fourth-button-mobile {
-        width: 100%;
-        max-width: 350px;
-        height: 55px;
-        font-size: 24px;
-        line-height: 55px;
-        margin-top: 60px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #004098;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 50px;
-        transition: background-color 0.2s ease-in-out;
-      }
-
-      .kv-fourth-button-mobile:hover {
-        background: #1a1a1a;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        color: #fff;
-      }
-
-      .kv-fourth-button-mobile:active {
-        background: #333333;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-        color: #fff;
-      }
-
       .kv-fourth-img_box-mobile {
         width: 100vw;
         height: auto;
@@ -1350,38 +1010,6 @@
         font-size: 30px;
       }
 
-
-      .kv-fourth-button-mobile {
-        width: 100%;
-        max-width: 300px;
-        height: 50px;
-        font-size: 16px;
-        line-height: 50px;
-        margin-top: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #004098;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 50px;
-        transition: background-color 0.2s ease-in-out;
-      }
-
-      .kv-fourth-button-mobile:hover {
-        background: #1a1a1a;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        color: #fff;
-      }
-
-      .kv-fourth-button-mobile:active {
-        background: #333333;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-        color: #fff;
-      }
-
-
       .kv-fourth-img_box-mobile {
         display: flex;
         width: 100vw;
@@ -1408,7 +1036,7 @@
 
       .kv-fourth-container-mobile {
         width: 100%;
-        padding: 16px;
+        padding: 18px;
         background-color: #fff;
         display: flex;
         flex-direction: column;
@@ -1440,7 +1068,7 @@
         cursor: pointer;
         background: #fcab40;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
+        border-radius: 50px;
       }
 
       .kv-fourth-title-mobile {
@@ -1467,206 +1095,318 @@
     }
 
     /* kv-sixth */
+    .kv-sixth-container-mobile {
+      display: none;
+    }
+
     .kv-sixth-container {
+      width: 1200px;
+      height: auto;
+      margin-top: 80px;
+      padding-top: 36px;
       background-color: #fff;
+      gap: 21px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      color: #fff;
-      text-align: center;
-      padding: 132px 0 82px;
-      font: 24px SUIT Variable, sans-serif ;
-    }
-    
-    @media (max-width: 768px) {
-      .kv-sixth-box {
-        width: 100%; /* Full width for process box */
-        height: auto;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px; /* Adjusted gap */
-      }
-
-      
-      .kv-sixth-box {
-        width: 100%;
-        height: auto;
-        margin: 70px auto; /* Increase margin for larger screens */
-        padding-top: 30px; /* Increase padding */
-        background-color: #fcfbf7;
-        gap: 20px; /* Increase gap for more spacing */
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: center;
-        align-items: center;
-        padding: 15px; /* Adjusted padding */
-        max-width: 600px; /* Adjusted max-width for larger screens */
-      }
-      .kv-sixth-container {
-        width: 100%;
-        height: auto;
-        margin: 70px auto; /* Increase margin for larger screens */
-        padding-top: 30px; /* Increase padding */
-        background-color: #fcfbf7;
-        gap: 20px; /* Increase gap for more spacing */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 15px; /* Adjusted padding */
-        max-width: 600px; /* Adjusted max-width for larger screens */
-      }
-
-      .kv-sixth-title {
-        width: 90%; /* Full width for title */
-        height: auto;
-        padding: 20px;
-        font-size: 28px; /* Increase font size */
-        font-family: 'Tenada';
-        font-weight: 800;
-        text-align: left;
-        position: relative;
-        margin-left: 0; /* Remove negative margin for better alignment */
-      }
-
-      .kv-sixth-img_box {
-        width: 200px; /* Full width for process cards */
-        height: 70px; /* Increase height */
-        padding: 20px;
-        margin-bottom: 15px; /* Increase margin bottom */
-        background: #ffffff;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 8px;
-        border: rgba(255, 255, 255, 0) solid 1px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        transition: border 0.2s ease-in-out;
-        position: relative;
-      }
-    }
-
-    
-    @media (max-width: 991px) {
-      .kv-sixth-title {
-        max-width: 100%;
-      }
-
-      .kv-sixth-container {
-        padding-top: 100px;
-        width: 100%; /* Full width for process box */
-        height: auto;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px; /* Adjusted gap */
-      }
-
-      .kv-sixth-box {
-        flex-direction: column;
-        max-width: 100%;
-      }
-
-      .kv-sixth-img_box {
-        white-space: initial;
-        padding: 100px 20px;
-      }
-
-      .kv-sixth-btn-box {
-        max-width: 100%;
-        padding:20px;
-        /* margin-top: 20px; */
-      }
-
-      .kv-sixth-btn {
-        margin-bottom: 10px;
-        padding: 19px 20px;
-      }
-    }
-    
-    .kv-sixth-title {
-      color: #000;
-      font-weight: 600;
-      align-self: center;
-      z-index: 10;
-    }
-    
-    
-    .kv-sixth-title span {
-      font-weight: 900;
-      color: #004098;
-    }
-    
-    .kv-sixth-box {
-      align-self: center;
-      display: flex;
-      /* margin-top: -51px; */
-      width: 100%;
-      max-width: 1391px;
-      gap: 20px;
-      font-family: GangwonEduPower, sans-serif;
-      font-weight: 400;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    
-    .kv-sixth-img_box {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      aspect-ratio: 0.74;
-      white-space: nowrap;
-      padding: 147px 70px;
-    }
-    
-    
-    .kv-sixth-img_box img {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .kv-sixth-img_box-content {
-      position: relative;
-    }
-    
-    .kv-sixth-btn-box {
-      background-color: #fff;
-      border-radius: 50%;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      font-weight: 700;
-      padding: 85px 80px 0;
     }
-    
-    
-    .kv-sixth-btn {
-      border-radius: 44px;
-      background-color: #004098;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      z-index: 10;
-      width: 386px;
-      max-width: 100%;
-      padding: 19px 47px;
+
+    .kv-sixth-title {
+      font-size: 25px;
+      font-family: 'SUIT-Variable';
+      font-weight: 600;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .kv-sixth-title span {
+      color: #004097;
+      font-weight: 900;
+    }
+
+    .kv-sixth-processBox {
+      height: auto;
+      width: 100%;
+      max-width: 1055px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+
+    .kv-sixth-processCard {
+      font-family: 'GangwonEduPower';
+      width: 251px;
+      height: 250px;
+      transition: border 0.2s ease-in-out;
       color: #fff;
-      text-decoration: none;
-      display: inline-block;
+      font-size: 24px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
     }
-    
 
+    .kv-sixth-processCard.type1 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .kv-sixth-processCard.type2 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
 
-    
+    .kv-sixth-processCard.type3 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .kv-sixth-processCard.type4 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .kv-sixth-processCard.type5 {
+      background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 991px) {
+      .kv-sixth-container {
+        display: none;
+      }
+
+      .kv-first-container-mobile {
+        width: 100%;
+        margin-top: 150px;
+        padding: 0 15px;
+      }
+
+      .kv-sixth-title-mobile {
+        line-height: 40px;
+        font-family: 'SUIT Variable';
+        font-size: 21px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+      }
+
+      .kv-sixth-button-mobile {
+        width: 100%;
+        max-width: 350px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 55px;
+        margin-top: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #004098;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .kv-sixth-title-mobile span {
+        color: #004097;
+        font-weight: 900;
+      }
+
+      .kv-sixth-processBox-mobile {
+        height: auto;
+        width: 100%;
+        max-width: 1055px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 60px;
+      }
+
+      .kv-sixth-processCard-mobile {
+        font-family: 'GangwonEduPower';
+        width: 251px;
+        height: 250px;
+        transition: border 0.2s ease-in-out;
+        color: #fff;
+        font-size: 24px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .kv-sixth-processCard-mobile.type1 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .kv-sixth-processCard-mobile.type2 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .kv-sixth-processCard-mobile.type3 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .kv-sixth-processCard-mobile.type4 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .kv-sixth-processCard-mobile.type5 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .kv-first-container-mobile {
+        width: 100%;
+        margin-top: 150px;
+        gap: 50px;
+        padding: 0 15px;
+      }
+
+      .kv-sixth-title-mobile {
+        line-height: 40px;
+        font-family: 'SUIT Variable';
+        font-size: 21px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+      }
+
+      .kv-sixth-button-mobile {
+        width: 100%;
+        max-width: 350px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 55px;
+        margin-top: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #004098;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: background-color 0.2s ease-in-out;
+      }
+    }
+
+    @media screen and (max-width: 497px) {
+      .kv-first-container {
+        display: none;
+      }
+      .kv-first-container-mobile {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        background-color: #fff;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 80px auto;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .kv-slogan-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .sloganText2-mobile,
+      .sloganText-mobile {
+        text-align: center;
+        font-size: 28px;
+        color: #000;
+        font-family: 'GangwonEduPower';
+        position: relative;
+      }
+
+      .sloganText-mobile span {
+        font-size: 28px;
+        font-family: 'GangwonEduPower' !important;
+        color: #004098;
+        position: relative;
+        display: inline-block;
+      }
+
+      .sloganText2-mobile .sloganText1 {
+        font-size: 28px;
+        color: #000000;
+        font-family: 'GangwonEduPower';
+        position: relative;
+        display: inline-block;
+        text-decoration: underline #d9d9d9;
+        text-underline-offset: 10px;
+      }
+
+      .sloganText2-mobile span {
+        font-size: 28px;
+        color: #004098;
+        font-family: 'GangwonEduPower';
+        position: relative;
+        display: inline-block;
+      }
+
+      .kv-button-mobile {
+        width: 266px;
+        height: 45px;
+        background-color: #004098;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .kv-button-mobile .text {
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.6s ease-in-out;
+        font-family: 'SUIT Variable';
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .kv-button-mobile .text:active {
+        background-color: #004098;
+        color: #000;
+        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
+      }
+    }
   </style>
 
   <body>
@@ -1676,11 +1416,11 @@
         <span class="sloganText1">First Step</span>
         <span class="sloganText2">Visa!</span>
       </div>
-      <div class="kv-slogan-main-button">
+      <div class="kv-button">
         <div
           class="text fade-in"
           id="mainText"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
         >
           한국비자 신청하기
         </div>
@@ -1696,8 +1436,8 @@
         </div>
       </div>
       <div
-        class="kv-slogan-main-button-mobile"
-        onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        class="kv-button-mobile"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         <div class="text">한국비자 신청하기</div>
       </div>
@@ -1713,8 +1453,8 @@
         </div>
       </div>
       <div
-        class="kv-second-button"
-        onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+        class="kv-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         바로 한국비자 신청하기
       </div>
@@ -1726,14 +1466,14 @@
       <div class="kv-third-processBox">
         <div
           class="kv-third-processCard type1"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>기업 투자 비자</span>
           <p>Investor/Enterprise</p>
         </div>
         <div
           class="kv-third-processCard-mobile type1"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>기업 투자 비자</span>
           <p>Investor/Enterprise</p>
@@ -1741,14 +1481,14 @@
 
         <div
           class="kv-third-processCard type2"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>취업 비자</span>
           <p>Specially Designated Profession</p>
         </div>
         <div
           class="kv-third-processCard-mobile type2"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>취업 비자</span>
           <p>Specially Designated Profession</p>
@@ -1756,7 +1496,7 @@
 
         <div
           class="kv-third-processCard type3"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>결혼이민</span>
           <p>
@@ -1767,7 +1507,7 @@
         </div>
         <div
           class="kv-third-processCard-mobile type3"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>결혼이민</span>
           <p>Spouse of Korean National</p>
@@ -1775,14 +1515,14 @@
 
         <div
           class="kv-third-processCard type4"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>재외동포</span>
           <p>Overseas Korean</p>
         </div>
         <div
           class="kv-third-processCard-mobile type4"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>재외동포</span>
           <p>Overseas Korean</p>
@@ -1790,14 +1530,14 @@
 
         <div
           class="kv-third-processCard type5"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>영주</span>
           <p>permanent residence</p>
         </div>
         <div
           class="kv-third-processCard-mobile type5"
-          onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank')"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
         >
           <span>영주</span>
           <p>permanent residence</p>
@@ -1820,10 +1560,8 @@
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-
         class="kv-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
-
       >
         즉시 신청
       </div>
@@ -1848,290 +1586,297 @@
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-
         class="kv-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
-
       >
         즉시 신청
       </div>
     </div>
 
-
     <!-- fifth container -->
-    
+
     <div class="kv-fifth-container">
       <h2 class="kv-fifth-title">
-          WELL-COME Visa 다양한 비자 서비스를 제공하여 고객의 다양한 요구를 충족합니다
+        WELL-COME Visa 다양한 비자 서비스를 제공하여 고객의 다양한 요구를
+        충족합니다
       </h2>
-  
+
       <!-- Circle Icons with Blue Tones and Hover Effect -->
       <div class="kv-fifth-box">
-          <div class="kv-fifth-circle" style="background-color: #001b3a;">개인 비자</div>
-          <div class="kv-fifth-circle" style="background-color: #002457;">가족 이민</div>
-          <div class="kv-fifth-circle" style="background-color: #003070;">국제 결혼</div>
-          <div class="kv-fifth-circle" style="background-color: #003a8a;">해외 투자</div>
-          <div class="kv-fifth-circle" style="background-color: #002457;">한국 취업</div>
+        <div class="kv-fifth-circle" style="background-color: #001b3a">
+          개인 비자
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #002457">
+          가족 이민
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #003070">
+          국제 결혼
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #003a8a">
+          해외 투자
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #002457">
+          한국 취업
+        </div>
       </div>
-  
+
       <p class="kv-fifth-description">
-          한국에서의 꿈, 새로운 삶을 시작하세요.<br>
-          WELL-COME Visa가 맞춤형 서비스로 당신의 목표를 위해 함께합니다.
+        한국에서의 꿈, 새로운 삶을 시작하세요.
+        <br />
+        WELL-COME Visa가 맞춤형 서비스로 당신의 목표를 위해 함께합니다.
       </p>
-  
+
       <!-- Button -->
       <div class="kv-fifth-btn-box">
-          <button class="kv-fifth-btn" 
-                  onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');">
-              &nbsp;새로운 가능성을 발견하세요&nbsp;
-          </button>
-      </div>
-  </div>
-  
-  <style>
-
-  
-  .kv-fifth-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    padding: 20px;
-    font-family: 'BMJUA', Arial, sans-serif;
-}
-
-.kv-fifth-title {
-    font-size: clamp(24px, 1.4vw, 52px);
-    font-weight: 700;
-    text-align: center;
-    color: #333;
-}
-
-.kv-fifth-box {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.kv-fifth-circle {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(24px, 1.2vw, 48px);
-    color: #ffffff;
-    transition: transform 0.3s ease;
-}
-
-.kv-fifth-circle:hover {
-    transform: scale(1.1);
-}
-
-.kv-fifth-description {
-    text-align: center;
-    margin-top: 30px;
-    font-size: clamp(18px, 1.2vw, 28px);
-    color: #333;
-    max-width: 800px;
-    line-height: 1.5;
-}
-
-.kv-fifth-btn-box {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.kv-fifth-btn {
-    font-family: 'BMJUA', Arial, sans-serif;
-    font-size: 22px;
-    width: 100%;
-    /* max-width: 300px; */
-    background-color: #002457;
-    color: #ffffff;
-    border: none;
-    padding: 15px 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.kv-fifth-btn:hover {
-    background-color: #003070;
-    transform: scale(1.05);
-}
-
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    .kv-fifth-title {
-        font-size: clamp(20px, 2.5vw, 40px);
-    }
-
-    .kv-fifth-box{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    
-  .kv-fifth-circle {
-    width: 12vh;
-    height: 12vh;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: clamp(16px, 1.2vw, 48px);
-      /* font-size: clamp(20px, 2vw, 40px); */
-      color: #ffffff;
-      transition: transform 0.3s ease;
-}
-
-    .kv-fifth-btn {
-        font-size: 16px;
-    }
-}
-
-
-</style>
-
-
-
-    <!--sixth container-->
-    <section class="kv-sixth-container">
-      <h2 class="kv-sixth-title">
-        <span>WELL-COME Visa</span>는   <br />
-        모든 유형의 비자를 이해할 뿐만 아니라, 비자 신청의 모든 영역을 다루고 있습니다
-      </h2>
-      <!-- <div class="separator"></div> -->
-      <div class="kv-sixth-box">
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/9758c7cad5736748aa4f86a6f3454a9eed6f62e3504778d9bda8b1f2a6036420?apiKey=e0c395b96452442183c02ce725ff7111&" alt="OASIS 창업수업 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">
-            OASIS <br /> 창업수업
-          </div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/7a93e2a63538d32fe677f302a22f82696b17af16cf11ca76a7a43bbfbf59bb35?apiKey=e0c395b96452442183c02ce725ff7111&" alt="지적 재산 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">지적 재산</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/707b6adfaf8cec14840ec2350920c9b6a4ef2b76e8e3a9abe266fca700ccb797?apiKey=e0c395b96452442183c02ce725ff7111&" alt="우수인재 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">우수인재</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/a66243eebde8f3dfdfd5b15cde7f66373fe5058aef9934dee461d8dbb878256f?apiKey=e0c395b96452442183c02ce725ff7111&" alt="특허 신청 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">특허 신청</div>
-        </article>
-        <article class="kv-sixth-img_box">
-          <img src="https://cdn.builder.io/api/v1/image/assets/e0c395b96452442183c02ce725ff7111/23ca056ac6dbe7f290f617b0e13e63c19173f6af7ebb3e89aeefdb5504301890?apiKey=e0c395b96452442183c02ce725ff7111&" alt="추가 서비스 이미지" />
-          <div class="kv-sixth-img_box-content">
-            and <br /> MORE
-          </div>
-        </article>
-      </div>
-      <div class="kv-sixth-btn-box">
-        <a href="#" class="kv-sixth-btn" role="button">
-          한국비자 관련 모든 것 알아보기
-        </a>
-      </div>
-    </section>
-    <section class="kv-seventh-container">
-      <article class="kv-seventh-mobile-box">
-        <img src="https://cdn.imweb.me/thumbnail/20241106/2bef43d560e10.png">
-      </article>
-      <article class="kv-seventh-desktop-box">
-        <img src="https://cdn.imweb.me/thumbnail/20241106/b7f82040c8d41.png" alt="">
-      </article>
-      <div class="kv-fifth-btn-box">
-        <button class="kv-second-button" 
-                onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');">
-            &nbsp;새로운 가능성을 발견하세요&nbsp;
+        <button
+          class="kv-fifth-btn"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
+        >
+          새로운 가능성을 발견하세요.
         </button>
       </div>
-    </section>
+    </div>
 
     <style>
-      .kv-seventh-container{
-        margin-top: 10%;
+      .kv-fifth-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        padding: 20px;
+        font-family: 'BMJUA', Arial, sans-serif;
       }
 
-      .kv-seventh-mobile-box {
-          display: none;
+      .kv-fifth-title {
+        font-size: clamp(24px, 1.4vw, 52px);
+        font-weight: 700;
+        text-align: center;
+        color: #333;
+      }
+
+      .kv-fifth-box {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .kv-fifth-circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(24px, 1.2vw, 48px);
+        color: #ffffff;
+        transition: transform 0.3s ease;
+      }
+
+      .kv-fifth-circle:hover {
+        transform: scale(1.1);
+      }
+
+      .kv-fifth-description {
+        text-align: center;
+        margin-top: 30px;
+        font-size: clamp(18px, 1.2vw, 28px);
+        color: #333;
+        max-width: 800px;
+        line-height: 1.5;
+      }
+
+      .kv-fifth-btn-box {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .kv-fifth-btn {
+        margin: 0 0 0 0;
+        width: 386px;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 28px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      .kv-fifth-btn:hover {
+        background-color: #000000;
+        transform: scale(1.05);
+      }
+
+      /* 반응형 스타일 */
+      @media (max-width: 768px) {
+        .kv-fifth-title {
+          font-size: clamp(20px, 2.5vw, 40px);
         }
 
-      @media screen and (max-width: 767px) {
-        .kv-seventh-mobile-box {
+        .kv-fifth-box {
           display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
         }
 
-        .kv-seventh-desktop-box{
-          display: none;
+        .kv-fifth-circle {
+          width: 12vh;
+          height: 12vh;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: clamp(16px, 1.2vw, 48px);
+          /* font-size: clamp(20px, 2vw, 40px); */
+          color: #ffffff;
+          transition: transform 0.3s ease;
+        }
+
+        .kv-fifth-btn {
+          font-size: 16px;
         }
       }
     </style>
 
+    <!--sixth container-->
+    <div class="kv-sixth-container">
+      <h2 class="kv-sixth-title">
+        <span>WELL-COME VISA</span>
+        는
+        <br />
+        모든 유형의 비자를 이해할 뿐만 아니라, 비자 신청의 모든 영역을 다루고
+        있습니다.
+      </h2>
 
-<section class="kv-eighth-container">
-  <h1 class="kv-title-blue">
-    WELL-COME을 선택한 이유?
-  </h1>
-  <article class="kv-eighth-mobile-box">
-    <img src="https://cdn.imweb.me/thumbnail/20241106/21d465269b4da.png">
-  </article>
-  <article class="kv-eighth-desktop-box">
-    <img src="https://cdn.imweb.me/thumbnail/20241106/56f6df93f28d2.png" alt="">
-  </article>
-  <div class="kv-fifth-btn-box">
-    <button class="kv-fourth-button-mobile" 
-            onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');">
-        &nbsp;새로운 가능성을 발견하세요&nbsp;
-    </button>
-    <button class="kv-fourth-button" 
-            onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');">
-        &nbsp;새로운 가능성을 발견하세요&nbsp;
-    </button>
-  </div>
-</section>
+      <article class="kv-sixth-processBox swiper">
+        <div class="kv-sixth swiper-wrapper">
+          <div class="kv-sixth-processCard type1 swiper-slide">
+            <h3>
+              OASIS
+              <br />
+              창업수업
+            </h3>
+          </div>
+          <div class="kv-sixth-processCard type2 swiper-slide">
+            <h3>지적 재산</h3>
+          </div>
+          <div class="kv-sixth-processCard type3 swiper-slide">
+            <h3>우수 인재</h3>
+          </div>
+          <div class="kv-sixth-processCard type4 swiper-slide">
+            <h3>특허 신청</h3>
+          </div>
+          <div
+            class="kv-sixth-processCard type5 swiper-slide"
+            data-swiper-parallax="-100"
+          >
+            <h3>
+              and
+              <br />
+              MORE
+            </h3>
+          </div>
+        </div>
+      </article>
 
-<style>
-  .kv-eighth-container{
-    margin-top: 10%;
-  }
+      <div
+        class="kv-sixth-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+      >
+        한국비자 관련 모든 것 알아보기
+      </div>
+    </div>
 
-  .kv-title-blue {
-    background: linear-gradient(90deg, #004098  0%, #000000 100%);
-    -webkit-background-clip: text; /* 웹킷 기반 브라우저에서 텍스트에 그라디언트를 적용 */
-    background-clip: text; /* 텍스트에 그라디언트를 적용 */
-    color: transparent; /* 텍스트 색상을 투명하게 설정 */
-    display: inline-block; /* 텍스트가 인라인 블록으로 표시되도록 설정 */
-    text-shadow: 0px 4px 3.5px rgba(0, 0, 0, 0.25); /* 텍스트 그림자 설정 */
-    font-size: 2rem;
-}
+    <div class="kv-sixth-container-mobile">
+      <h2 class="kv-sixth-title-mobile">
+        <span>WELL-COME VISA</span>
+        는
+        <br />
+        모든 유형의 비자를 이해할 뿐만 아니라,
+        <br />
+        비자 신청의 모든 영역을 다루고 있습니다.
+      </h2>
 
+      <article class="kv-sixth-processBox kv-sixth-processBox-mobile swiper">
+        <div class="kv-sixth-mobile swiper-wrapper">
+          <div class="kv-sixth-processCard-mobile type1 swiper-slide">
+            <h3>
+              OASIS
+              <br />
+              창업수업
+            </h3>
+          </div>
+          <div class="kv-sixth-processCard-mobile type2 swiper-slide">
+            <h3>지적 재산</h3>
+          </div>
+          <div class="kv-sixth-processCard-mobile type3 swiper-slide">
+            <h3>우수 인재</h3>
+          </div>
+          <div class="kv-sixth-processCard-mobile type4 swiper-slide">
+            <h3>특허 신청</h3>
+          </div>
+          <div
+            class="kv-sixth-processCard-mobile type5 swiper-slide"
+            data-swiper-parallax="-100"
+          >
+            <h3>
+              and
+              <br />
+              MORE
+            </h3>
+          </div>
+        </div>
+      </article>
 
-  .kv-eighth-mobile-box {
-      display: none;
-    }
+      <div
+        class="kv-sixth-button-mobile"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+      >
+        한국비자 관련 모든 것 알아보기
+      </div>
+    </div>
 
-  @media screen and (max-width: 767px) {
-    .kv-eighth-mobile-box {
-      display: flex;
-    }
+    <!-- 제이쿼리 cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
-    .kv-eighth-desktop-box{
-      display: none;
-    }
-  }
-</style>
+    <!-- swiper cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-     
-    
-    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.kv-sixth-processBox', {
+          slidesPerView: 3, // 여러 슬라이드를 보이게 설정
+          centeredSlides: true, // 가운데 슬라이드 중심
+          loop: true, // 무한 슬라이드
+          effect: 'coverflow', // Coverflow 효과 설정
+          parallax: true, // Parallax 효과 활성화
+          coverflowEffect: {
+            rotate: 50, // 회전 각도
+            stretch: 0, // 슬라이드 간 거리
+            depth: 130, // 슬라이드 깊이감
+            modifier: 1, // 효과 강도
+            slideShadows: true, // 슬라이드 그림자 추가
+            scale: 1,
+          },
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+          // breakpoints 설정은 필요 시 추가 가능
+        });
+      });
+    </script>
+  </body>
 </html>
