@@ -36,7 +36,6 @@ body {
 **********/
 /* 웹 */
 .kv-container {
-  width: 100vw;
   height: auto;
   margin-top: 290px;
   background-color: #fff;
