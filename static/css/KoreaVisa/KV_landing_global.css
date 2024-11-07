@@ -1,0 +1,102 @@
+/********* 
+폰트 
+**********/
+@font-face {
+  font-family: 'GangwonEduPower';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPower.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* SUIT 폰트 */
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css');
+
+/********* 
+공통 컨테이너
+**********/
+/* 웹 */
+.kv-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 290px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* 반응형 */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/********* 
+메인 색상
+**********/
+.main-color {
+  color: #004098;
+}
+
+/********* 
+버튼 디자인 
+**********/
+/* 웹 */
+.kv-button {
+  width: 386px;
+  height: 50px;
+  background-color: #004098;
+  color: #fff;
+  font-family: 'SUIT Variable';
+  font-size: 28px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-top: 120px;
+}
+
+.kv-button:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.kv-button:active {
+  background-color: #333333;
+  color: #fff;
+  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+}
+/* 모바일 */
+
+/* body {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #fff !important;
+}
+
+#s20240819369b1b06ceed7 > main {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+} */
