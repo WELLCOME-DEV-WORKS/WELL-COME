@@ -10,6 +10,133 @@
       href="../../static/css/KoreaVisa/KV_landing_global.css"
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/ Reset.css" />
+    <style>
+      .kv-fifth-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        padding: 20px;
+        font-family: 'BMJUA', Arial, sans-serif;
+      }
+
+      .kv-fifth-title {
+        font-size: clamp(24px, 1.4vw, 52px);
+        font-weight: 700;
+        text-align: center;
+        color: #333;
+      }
+
+      .kv-fifth-box {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .kv-fifth-circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(24px, 1.2vw, 48px);
+        color: #ffffff;
+        transition: transform 0.3s ease;
+      }
+
+      .kv-fifth-circle:hover {
+        transform: scale(1.1);
+      }
+
+      .kv-fifth-description {
+        text-align: center;
+        margin-top: 30px;
+        font-size: clamp(18px, 1.2vw, 28px);
+        color: #333;
+        max-width: 800px;
+        line-height: 1.5;
+      }
+
+      .kv-fifth-btn-box {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      /* 반응형 스타일 */
+      @media (max-width: 768px) {
+        .kv-fifth-title {
+          font-size: clamp(20px, 2.5vw, 40px);
+        }
+
+        .kv-fifth-box {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+        }
+
+        .kv-fifth-circle {
+          width: 12vh;
+          height: 12vh;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: clamp(16px, 1.2vw, 48px);
+          /* font-size: clamp(20px, 2vw, 40px); */
+          color: #ffffff;
+          transition: transform 0.3s ease;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- fifth container -->
+
+    <div class="kv-container">
+      <h2 class="kv-fifth-title">
+        WELL-COME Visa 다양한 비자 서비스를 제공하여 고객의 다양한 요구를
+        충족합니다
+      </h2>
+
+      <!-- Circle Icons with Blue Tones and Hover Effect -->
+      <div class="kv-fifth-box">
+        <div class="kv-fifth-circle" style="background-color: #001b3a">
+          개인 비자
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #002457">
+          가족 이민
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #003070">
+          국제 결혼
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #003a8a">
+          해외 투자
+        </div>
+        <div class="kv-fifth-circle" style="background-color: #002457">
+          한국 취업
+        </div>
+      </div>
+
+      <p class="kv-fifth-description">
+        한국에서의 꿈, 새로운 삶을 시작하세요.
+        <br />
+        WELL-COME Visa가 맞춤형 서비스로 당신의 목표를 위해 함께합니다.
+      </p>
+
+      <!-- Button -->
+      <div class="kv-fifth-btn-box">
+        <div
+          class="kv-button"
+          onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
+        >
+          새로운 가능성을 발견하세요.
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
