@@ -22,19 +22,6 @@
         display: none;
       }
 
-      .kv-sixth-container {
-        width: 1200px;
-        height: auto;
-        margin-top: 80px;
-        padding-top: 36px;
-        background-color: #fff;
-        gap: 21px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
       .kv-sixth-title {
         font-size: 25px;
         font-family: 'SUIT-Variable';
@@ -65,11 +52,11 @@
 
       .kv-sixth-processCard {
         font-family: 'GangwonEduPower';
-        width: 251px !important;
-        height: 250px !important;
+        width: 330px !important;
+        height: 330px !important;
         transition: border 0.2s ease-in-out;
         color: #fff;
-        font-size: 24px;
+        font-size: 32px;
         display: flex !important;
         text-align: center !important;
         justify-content: center !important;
@@ -77,35 +64,55 @@
       }
 
       .kv-sixth-processCard.type1 {
-        background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+        background-image: linear-gradient(
+            rgba(94, 94, 94, 0.5),
+            rgba(94, 94, 94, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
         background-size: 100%;
         background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type2 {
-        background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+        background-image: linear-gradient(
+            rgba(94, 94, 94, 0.5),
+            rgba(94, 94, 94, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
         background-size: 100%;
         background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type3 {
-        background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+        background-image: linear-gradient(
+            rgba(94, 94, 94, 0.5),
+            rgba(94, 94, 94, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
         background-size: 100%;
         background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type4 {
-        background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+        background-image: linear-gradient(
+            rgba(94, 94, 94, 0.5),
+            rgba(94, 94, 94, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
         background-size: 100%;
         background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type5 {
-        background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+        background-image: linear-gradient(
+            rgba(94, 94, 94, 0.5),
+            rgba(94, 94, 94, 0.5)
+          ),
+          url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
         background-size: 100%;
         background-repeat: no-repeat;
       }
 
       @media screen and (max-width: 991px) {
-        .kv-sixth-container {
+        .kv-container {
           display: none;
         }
 
@@ -159,29 +166,49 @@
         }
 
         .kv-sixth-processCard-mobile.type1 {
-          background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+          background-image: linear-gradient(
+              rgba(94, 94, 94, 0.5),
+              rgba(94, 94, 94, 0.5)
+            ),
+            url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
           background-size: 100%;
           background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type2 {
-          background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+          background-image: linear-gradient(
+              rgba(94, 94, 94, 0.5),
+              rgba(94, 94, 94, 0.5)
+            ),
+            url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
           background-size: 100%;
           background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type3 {
-          background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+          background-image: linear-gradient(
+              rgba(94, 94, 94, 0.5),
+              rgba(94, 94, 94, 0.5)
+            ),
+            url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
           background-size: 100%;
           background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type4 {
-          background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+          background-image: linear-gradient(
+              rgba(94, 94, 94, 0.5),
+              rgba(94, 94, 94, 0.5)
+            ),
+            url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
           background-size: 100%;
           background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type5 {
-          background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+          background-image: linear-gradient(
+              rgba(94, 94, 94, 0.5),
+              rgba(94, 94, 94, 0.5)
+            ),
+            url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
           background-size: 100%;
           background-repeat: no-repeat;
         }
@@ -239,15 +266,12 @@
           <div class="kv-sixth-processCard type4 swiper-slide">
             <span>특허 신청</span>
           </div>
-          <div
-            class="kv-sixth-processCard type5 swiper-slide"
-            data-swiper-parallax="-100"
-          >
-            <h3>
+          <div class="kv-sixth-processCard type5 swiper-slide">
+            <span>
               and
               <br />
               MORE
-            </h3>
+            </span>
           </div>
         </div>
       </article>
@@ -273,30 +297,27 @@
       <article class="kv-sixth-processBox kv-sixth-processBox-mobile swiper">
         <div class="kv-sixth-mobile swiper-wrapper">
           <div class="kv-sixth-processCard-mobile type1 swiper-slide">
-            <h3>
+            <span>
               OASIS
               <br />
               창업수업
-            </h3>
+            </span>
           </div>
           <div class="kv-sixth-processCard-mobile type2 swiper-slide">
-            <h3>지적 재산</h3>
+            <span>지적 재산</span>
           </div>
           <div class="kv-sixth-processCard-mobile type3 swiper-slide">
-            <h3>우수 인재</h3>
+            <span>우수 인재</span>
           </div>
           <div class="kv-sixth-processCard-mobile type4 swiper-slide">
-            <h3>특허 신청</h3>
+            <span>특허 신청</span>
           </div>
-          <div
-            class="kv-sixth-processCard-mobile type5 swiper-slide"
-            data-swiper-parallax="-100"
-          >
-            <h3>
+          <div class="kv-sixth-processCard-mobile type5 swiper-slide">
+            <span>
               and
               <br />
               MORE
-            </h3>
+            </span>
           </div>
         </div>
       </article>
