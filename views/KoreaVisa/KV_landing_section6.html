@@ -10,6 +10,348 @@
       href="../../static/css/KoreaVisa/KV_landing_global.css"
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/ Reset.css" />
+        <!--  swiper Carousel -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+    <style>
+      /* kv-sixth */
+      .kv-sixth-container-mobile {
+        display: none;
+      }
+
+      .kv-sixth-container {
+        width: 1200px;
+        height: auto;
+        margin-top: 80px;
+        padding-top: 36px;
+        background-color: #fff;
+        gap: 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .kv-sixth-title {
+        font-size: 25px;
+        font-family: 'SUIT-Variable';
+        font-weight: 600;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      .kv-sixth-title span {
+        color: #004097;
+        font-weight: 900;
+      }
+
+     .kv-sixth.swiper-wrapper{
+      display: flex;
+}
+
+      .kv-sixth-processBox {
+        height: auto;
+        width: 100%;
+        max-width: 1055px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 60px;
+      }
+
+      .kv-sixth-processCard {
+        font-family: 'GangwonEduPower';
+        width: 251px !important;
+        height: 250px !important;
+        transition: border 0.2s ease-in-out;
+        color: #fff;
+        font-size: 24px;
+        display: flex !important;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .kv-sixth-processCard.type1 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .kv-sixth-processCard.type2 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .kv-sixth-processCard.type3 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .kv-sixth-processCard.type4 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .kv-sixth-processCard.type5 {
+        background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      @media screen and (max-width: 991px) {
+        .kv-sixth-container {
+          display: none;
+        }
+
+        .kv-sixth-container-mobile {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .kv-first-container-mobile {
+          width: 100%;
+          margin-top: 150px;
+          padding: 0 15px;
+        }
+
+        .kv-sixth-title-mobile {
+          line-height: 40px;
+          font-family: 'SUIT Variable';
+          font-size: 21px;
+          font-weight: 600;
+          color: black;
+          text-align: center;
+        }
+
+        .kv-sixth-title-mobile span {
+          color: #004097;
+          font-weight: 900;
+        }
+
+        .kv-sixth-processBox-mobile {
+          height: auto;
+          width: 100%;
+          max-width: 1055px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+          margin-bottom: 60px;
+        }
+
+        .kv-sixth-processCard-mobile {
+          font-family: 'GangwonEduPower';
+          width: 251px;
+          height: 250px;
+          transition: border 0.2s ease-in-out;
+          color: #fff;
+          font-size: 24px;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .kv-sixth-processCard-mobile.type1 {
+          background-image: url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+        .kv-sixth-processCard-mobile.type2 {
+          background-image: url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+
+        .kv-sixth-processCard-mobile.type3 {
+          background-image: url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+
+        .kv-sixth-processCard-mobile.type4 {
+          background-image: url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+        .kv-sixth-processCard-mobile.type5 {
+          background-image: url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-sixth-container-mobile {
+          width: 100%;
+          margin-top: 150px;
+          padding: 0 15px;
+        }
+
+        .kv-sixth-title-mobile {
+          line-height: 40px;
+          font-family: 'SUIT Variable';
+          font-size: 21px;
+          font-weight: 600;
+          color: black;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-container {
+          display: none;
+        }
+      }
+    </style>
+
   </head>
-  <body></body>
+  <body><div class="kv-container">
+    <h2 class="kv-sixth-title">
+      <span>WELL-COME VISA</span>
+      는
+      <br />
+      모든 유형의 비자를 이해할 뿐만 아니라, 비자 신청의 모든 영역을 다루고
+      있습니다.
+    </h2>
+
+    <article class="kv-sixth-processBox swiper">
+      <div class="kv-sixth swiper-wrapper">
+        <div class="kv-sixth-processCard type1 swiper-slide">
+          <span>
+            OASIS
+            <br />
+            창업수업
+          </sapn>
+        </div>
+        <div class="kv-sixth-processCard type2 swiper-slide">
+          <span>지적 재산</span>
+        </div>
+        <div class="kv-sixth-processCard type3 swiper-slide">
+          <span>우수 인재</span>
+        </div>
+        <div class="kv-sixth-processCard type4 swiper-slide">
+          <span>특허 신청</span>
+        </div>
+        <div
+          class="kv-sixth-processCard type5 swiper-slide"
+          data-swiper-parallax="-100"
+        >
+          <h3>
+            and
+            <br />
+            MORE
+          </h3>
+        </div>
+      </div>
+    </article>
+
+    <div
+      class="kv-button"
+      onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+    >
+      한국비자 관련 모든 것 알아보기
+    </div>
+  </div>
+
+  <div class="kv-sixth-container-mobile">
+    <h2 class="kv-sixth-title-mobile">
+      <span>WELL-COME VISA</span>
+      는
+      <br />
+      모든 유형의 비자를 이해할 뿐만 아니라,
+      <br />
+      비자 신청의 모든 영역을 다루고 있습니다.
+    </h2>
+
+    <article class="kv-sixth-processBox kv-sixth-processBox-mobile swiper">
+      <div class="kv-sixth-mobile swiper-wrapper">
+        <div class="kv-sixth-processCard-mobile type1 swiper-slide">
+          <h3>
+            OASIS
+            <br />
+            창업수업
+          </h3>
+        </div>
+        <div class="kv-sixth-processCard-mobile type2 swiper-slide">
+          <h3>지적 재산</h3>
+        </div>
+        <div class="kv-sixth-processCard-mobile type3 swiper-slide">
+          <h3>우수 인재</h3>
+        </div>
+        <div class="kv-sixth-processCard-mobile type4 swiper-slide">
+          <h3>특허 신청</h3>
+        </div>
+        <div
+          class="kv-sixth-processCard-mobile type5 swiper-slide"
+          data-swiper-parallax="-100"
+        >
+          <h3>
+            and
+            <br />
+            MORE
+          </h3>
+        </div>
+      </div>
+    </article>
+
+    <div
+      class="kv-button"
+      onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+    >
+      한국비자 관련 모든 것 알아보기
+    </div>
+  </div> <!-- 제이쿼리 cdn -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- swiper cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Swiper('.kv-sixth-processBox', {
+        slidesPerView: 3, // 여러 슬라이드를 보이게 설정
+        centeredSlides: true, // 가운데 슬라이드 중심
+        loop: true, // 무한 슬라이드
+        effect: 'coverflow', // Coverflow 효과 설정
+        parallax: true, // Parallax 효과 활성화
+        coverflowEffect: {
+          rotate: 50, // 회전 각도
+          stretch: 0, // 슬라이드 간 거리
+          depth: 130, // 슬라이드 깊이감
+          modifier: 1, // 효과 강도
+          slideShadows: true, // 슬라이드 그림자 추가
+          scale: 1,
+        },
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          497: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    });
+  </script>
+</body>
 </html>
