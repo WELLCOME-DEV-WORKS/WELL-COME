@@ -16,226 +16,6 @@
     href="../../static/css/KoreaVisa/ Reset.css"
     />
   </head>
-
-  <style>
-
-
-
-    
-
-    /*  fourth  */
-    .kv-fourth-container {
-      width: 1200px;
-      height: auto;
-      margin-top: 290px;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    /* Title styles */
-    .kv-fourth-title {
-      line-height: 40px;
-      font-family: 'SUIT Variable';
-      font-size: 25px;
-      font-weight: 600;
-      color: black;
-      text-align: center;
-    }
-    .kv-fourth-title span {
-      color: #004098;
-      font-weight: 900;
-    }
-
-    .kv-fourth-subtitle {
-      color: #004098;
-      font-size: 45px;
-      font-family: 'GangwonEduPower';
-      margin-top: 15px;
-    }
-
-    .kv-fourth-img_box {
-      width: 100vw;
-      height: auto;
-      overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
-    }
-
-    .kv-fourth-img_box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-    }
-
-    .kv-fourth-container-mobile {
-      display: none;
-    }
-
-    @media screen and (max-width: 991px) {
-      .kv-fourth-container {
-        display: none;
-      }
-
-      .kv-fourth-container-mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Increased width but not full to maintain some spacing */
-        padding: 30px; /* Increased padding for more spacing */
-        height: auto;
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
-        margin: 0 auto;
-        margin-top: 15%;
-      }
-
-      /* Title styles */
-      .kv-fourth-title-mobile {
-        line-height: 40px;
-        font-family: 'SUIT Variable';
-        font-size: 21px;
-        font-weight: 600;
-        color: black;
-        text-align: center;
-      }
-
-      .kv-fourth-title-mobile span {
-        color: #004098;
-        font-weight: 900;
-      }
-
-      .kv-fourth-subtitle-mobile {
-        color: #004098;
-        font-size: 36px;
-        font-family: 'GangwonEduPower';
-        margin-top: 15px;
-      }
-
-      .kv-fourth-img_box-mobile {
-        width: 100vw;
-        height: auto;
-        overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
-      }
-
-      .kv-fourth-img_box-mobile img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-        max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
-      }
-    }
-    @media (max-width: 767px) {
-      .kv-fourth-container {
-        display: none;
-      }
-
-      .kv-fourth-container-mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Full width for mobile */
-        padding: 20px; /* Reduced padding for smaller screens */
-        margin-top: 100px; /* Adjusted margin for balanced spacing */
-        height: auto;
-        box-sizing: border-box; /* Ensure padding does not affect width */
-      }
-
-      .kv-fourth-title-mobile {
-        font-size: 20px;
-      }
-
-      .kv-fourth-subtitle-mobile {
-        font-size: 30px;
-      }
-
-      .kv-fourth-img_box-mobile {
-        display: flex;
-        width: 100vw;
-        max-width: 1036px;
-        height: auto;
-        overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
-      }
-
-      .kv-fourth-img_box-mobile img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-        max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
-      }
-    }
-    /*mobile -3rd*/
-    @media screen and (max-width: 497px) {
-      .kv-fourth-container {
-        display: none;
-      }
-
-      .kv-fourth-container-mobile {
-        width: 100%;
-        padding: 18px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10%;
-        box-sizing: border-box;
-      }
-
-      .kv-fourth-title-mobile {
-        line-height: 25px;
-        font-family: 'SUIT Variable';
-        font-size: 14px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-      }
-
-      .kv-button-mobile {
-        width: 100%;
-        max-width: 250px;
-        height: 50px;
-        font-family: 'BMJUA';
-        font-size: 18px;
-        color: #fff;
-        border-radius: 10px;
-        text-align: center;
-        line-height: 50px;
-        margin-top: 20px;
-        cursor: pointer;
-        background: #fcab40;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50px;
-      }
-
-      .kv-fourth-title-mobile {
-        font-size: 13px;
-      }
-
-      .kv-fourth-subtitle-mobile {
-        padding: auto;
-        font-size: 20px;
-      }
-
-      .kv-fourth-img_box-mobile {
-        width: 100vw;
-        height: auto;
-        overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
-      }
-
-      .kv-fourth-img_box-mobile img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-        max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
-      }
-    }
-  </style>
-
 <!-- kv-first-container style -->
 <style>
   /*web*/
@@ -270,7 +50,7 @@
       display: none;
     }
 
-    /* @media screen and (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       .kv-first-container-mobile {
         display: none;
       }
@@ -281,30 +61,22 @@
       }
 
       .kv-slogan {
-        font-size: 54px; 
+        font-size: 60px; 
         width: 100%; 
-        text-align: center; 
+        line-height: 70px;
       }
 
-      .kv-button {
-        width: 300px;
-        height: 50px; 
-        font-size: 24px; 
-        line-height: 55px; 
-      }
-    } */
+    } 
 
     @media screen and (max-width: 767px) {
       .kv-first-container-mobile {
         display: none;
       }
-      .kv-first-container {
+      .kv-container {
         width: 100%; /* Make container width responsive */
         max-width: 600px; /* Constrain max-width for better fit on larger mobile devices */
         height: auto;
         margin: 80px auto; /* Adjusted margin for more balanced spacing */
-        background-color: #fff;
-        gap: 50px; /* Reduced gap for better spacing on smaller screens */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -314,9 +86,10 @@
       }
 
       .kv-slogan {
+        line-height: 59px;
         color: black;
         font-family: 'GangwonEduPower';
-        font-size: 48px; /* Adjusted font size for readability */
+        font-size: 40px; /* Adjusted font size for readability */
         width: 90%; /* Make width responsive */
         text-transform: uppercase;
         word-wrap: break-word;
@@ -325,7 +98,6 @@
       }
 
       .kv-slogan span {
-        font-family: 'GangwonEduPower' !important;
         color: #000000;
         position: relative;
         display: inline-block;
@@ -333,61 +105,26 @@
       }
 
       .kv-slogan .sloganText2 {
-        font-family: 'GangwonEduPower' !important;
         color: #004098;
         position: relative;
         display: inline-block;
         transition: transform 1s ease-in-out, opacity 1s ease-in-out;
       }
 
-      .kv-button {
-        width: 100%; /* Make button width responsive */
-        max-width: 300px; /* Constrain max-width for better usability on smaller screens */
-        height: 50px; /* Adjusted height for better touch area */
-        background-color: #004098;
-        font-family: 'BMJUA';
-        font-size: 20px; /* Adjusted font size for readability */
-        font-weight: 400;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50px;
-        text-align: center;
-        line-height: 55px; /* Adjusted line-height to match button height */
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        margin-bottom: 15px; /* Added margin for spacing */
-      }
-
-
-
-      .kv-button:hover {
-        background-color: #1a1a1a;
-        color: #fff;
-      }
-
-      .kv-button:active {
-        background-color: #333333;
-        color: #fff;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
-      }
     }
 
     @media screen and (max-width: 497px) {
-      .kv-first-container {
+      .kv-container {
         display: none;
       }
       .kv-first-container-mobile {
         width: 100%;
         max-width: 600px;
         height: auto;
-        background-color: #fff;
-        gap: 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
         margin: 80px auto;
         box-sizing: border-box;
         position: relative;
@@ -398,29 +135,27 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 20px;
+        line-height: 40px;
       }
       .sloganText2-mobile,
       .sloganText-mobile {
         text-align: center;
-        font-size: 28px;
+        font-size: 24px;
         color: #000;
         font-family: 'GangwonEduPower';
         position: relative;
       }
 
       .sloganText-mobile span {
-        font-size: 28px;
-        font-family: 'GangwonEduPower' !important;
+        font-size: 24px;
         color: #004098;
         position: relative;
         display: inline-block;
       }
 
       .sloganText2-mobile .sloganText1 {
-        font-size: 28px;
+        font-size: 24px;
         color: #000000;
-        font-family: 'GangwonEduPower';
         position: relative;
         display: inline-block;
         text-decoration: underline #d9d9d9;
@@ -428,48 +163,12 @@
       }
 
       .sloganText2-mobile span {
-        font-size: 28px;
+        font-size: 24px;
         color: #004098;
-        font-family: 'GangwonEduPower';
         position: relative;
         display: inline-block;
       }
 
-      .kv-button-mobile {
-        width: 266px;
-        height: 45px;
-        background-color: #004098;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50px;
-        text-align: center;
-        line-height: 65px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      .kv-button-mobile .text {
-        color: #fff;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: opacity 0.6s ease-in-out;
-        font-family: 'SUIT Variable';
-        font-size: 20px;
-        font-weight: 400;
-      }
-
-      .kv-button-mobile .text:active {
-        background-color: #004098;
-        color: #000;
-        box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
-      }
     }
 </style>
 
@@ -661,7 +360,7 @@
 </style>
 
     <!-- second section -->
-    <div class="kv-second-container">
+    <div class="kv-container">
       <div class="kv-second-box">
         <div class="img_box">
           <img
@@ -1044,7 +743,7 @@
     </style>
 
     <!-- third section -->
-    <div class="kv-third-container">
+    <div class="kv-container">
       <div class="kv-third-title">비자 신청 유형 선택하세요!</div>
       <div class="kv-third-processBox">
         <div
@@ -1129,7 +828,7 @@
       <div class="kv-button">취득할 수 있는 비자 확인하기</div>
     </div>
 
-    <div class="kv-fourth-container">
+    <div class="kv-container">
       <div class="kv-fourth-title">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에 관계없이 고객에게 최적의 비자 경로를
@@ -1150,6 +849,208 @@
       </div>
     </div>
 
+
+    <style>
+
+
+
+    
+
+      /*  fourth  */
+      .kv-fourth-container {
+        width: 1200px;
+        height: auto;
+        margin-top: 290px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+  
+      /* Title styles */
+      .kv-fourth-title {
+        line-height: 40px;
+        font-family: 'SUIT Variable';
+        font-size: 25px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+      }
+      .kv-fourth-title span {
+        color: #004098;
+        font-weight: 900;
+      }
+  
+      .kv-fourth-subtitle {
+        color: #004098;
+        font-size: 45px;
+        font-family: 'GangwonEduPower';
+        margin-top: 15px;
+      }
+  
+      .kv-fourth-img_box {
+        width: 100vw;
+        height: auto;
+        overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
+      }
+  
+      .kv-fourth-img_box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
+      }
+  
+      .kv-fourth-container-mobile {
+        display: none;
+      }
+  
+      @media screen and (max-width: 991px) {
+        .kv-fourth-container {
+          display: none;
+        }
+  
+        .kv-fourth-container-mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%; /* Increased width but not full to maintain some spacing */
+          padding: 30px; /* Increased padding for more spacing */
+          height: auto;
+          box-sizing: border-box; /* Ensures padding doesn't affect width */
+          margin: 0 auto;
+          margin-top: 15%;
+        }
+  
+        /* Title styles */
+        .kv-fourth-title-mobile {
+          line-height: 40px;
+          font-family: 'SUIT Variable';
+          font-size: 21px;
+          font-weight: 600;
+          color: black;
+          text-align: center;
+        }
+  
+        .kv-fourth-title-mobile span {
+          color: #004098;
+          font-weight: 900;
+        }
+  
+        .kv-fourth-subtitle-mobile {
+          color: #004098;
+          font-size: 36px;
+          font-family: 'GangwonEduPower';
+          margin-top: 15px;
+        }
+  
+        .kv-fourth-img_box-mobile {
+          width: 100vw;
+          height: auto;
+          overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
+        }
+  
+        .kv-fourth-img_box-mobile img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
+          max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
+        }
+      }
+      @media (max-width: 767px) {
+        .kv-fourth-container {
+          display: none;
+        }
+  
+        .kv-fourth-container-mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%; /* Full width for mobile */
+          padding: 20px; /* Reduced padding for smaller screens */
+          margin-top: 100px; /* Adjusted margin for balanced spacing */
+          height: auto;
+          box-sizing: border-box; /* Ensure padding does not affect width */
+        }
+  
+        .kv-fourth-title-mobile {
+          font-size: 20px;
+        }
+  
+        .kv-fourth-subtitle-mobile {
+          font-size: 30px;
+        }
+  
+        .kv-fourth-img_box-mobile {
+          display: flex;
+          width: 100vw;
+          max-width: 1036px;
+          height: auto;
+          overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
+        }
+  
+        .kv-fourth-img_box-mobile img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
+          max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
+        }
+      }
+      /*mobile -3rd*/
+      @media screen and (max-width: 497px) {
+        .kv-fourth-container {
+          display: none;
+        }
+  
+        .kv-fourth-container-mobile {
+          width: 100%;
+          padding: 18px;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10%;
+          box-sizing: border-box;
+        }
+  
+        .kv-fourth-title-mobile {
+          line-height: 25px;
+          font-family: 'SUIT Variable';
+          font-size: 14px;
+          font-weight: bold;
+          color: black;
+          text-align: center;
+        }
+  
+        .kv-fourth-title-mobile {
+          font-size: 13px;
+        }
+  
+        .kv-fourth-subtitle-mobile {
+          padding: auto;
+          font-size: 20px;
+        }
+  
+        .kv-fourth-img_box-mobile {
+          width: 100vw;
+          height: auto;
+          overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
+        }
+  
+        .kv-fourth-img_box-mobile img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
+          max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
+        }
+      }
+    </style>
     <!-- fourth container-->
     <div class="kv-fourth-container-mobile">
       <div class="kv-fourth-title-mobile">
@@ -1178,7 +1079,7 @@
 
     <!-- fifth container -->
 
-    <div class="kv-fifth-container">
+    <div class="kv-container">
       <h2 class="kv-fifth-title">
         WELL-COME Visa 다양한 비자 서비스를 제공하여 고객의 다양한 요구를
         충족합니다
@@ -1477,10 +1378,9 @@
       }
 
       @media screen and (max-width: 767px) {
-        .kv-first-container-mobile {
+        .kv-sixth-container-mobile {
           width: 100%;
           margin-top: 150px;
-          gap: 50px;
           padding: 0 15px;
         }
 
@@ -1495,14 +1395,14 @@
       }
 
       @media screen and (max-width: 497px) {
-        .kv-first-container {
+        .kv-container {
           display: none;
         }
       }
     </style>
 
     <!--sixth container-->
-    <div class="kv-sixth-container">
+    <div class="kv-container">
       <h2 class="kv-sixth-title">
         <span>WELL-COME VISA</span>
         는
