@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 공통 css -->
+    <link
+      rel="stylesheet"
+      href="../../static/css/KoreaVisa/KV_landing_global.css"
+    />
+    <link rel="stylesheet" href="../../static/css/KoreaVisa/ Reset.css" />
+    <style>
+      /* second container*/
+
+      .kv-second-container {
+        width: 1200px;
+        height: auto;
+        margin-top: 203px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .kv-second-box {
+        width: 1036px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .kv-second-box .img_box img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 991px) {
+        .kv-second-container {
+          width: 90%; /* Increased width but not full to maintain some spacing */
+          padding: 30px; /* Increased padding for more spacing */
+          height: auto;
+          box-sizing: border-box; /* Ensures padding doesn't affect width */
+          margin: 0 auto;
+          margin-top: 15%;
+        }
+
+        .kv-second-box {
+          width: 100%; /* Full width for container */
+          padding: 25px; /* Increased padding for better spacing */
+          margin-top: 40px; /* Adjusted margin for spacing */
+          display: flex; /* Use flexbox for responsive layout */
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center-align items */
+        }
+
+        .kv-second-box .img-box {
+          width: 180px; /* Increased image box size for larger screens */
+          height: 180px; /* Increased image box size */
+          margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        .kv-second-box-text {
+          font-size: 26px; /* Increased font size for readability */
+          margin-top: 20px; /* Increased top margin for spacing */
+          margin-bottom: 15px; /* Increased bottom margin for spacing */
+          text-align: center; /* Center-align text */
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-second-container {
+          width: 100%; /* Full width for mobile */
+          padding: 20px; /* Reduced padding for smaller screens */
+          margin-top: 100px; /* Adjusted margin for balanced spacing */
+          height: auto;
+          box-sizing: border-box; /* Ensure padding does not affect width */
+        }
+
+        .kv-second-box {
+          width: 100%; /* Full width for mobile */
+          padding: 20px; /* Increased padding for better spacing */
+          margin-top: 30px; /* Adjusted margin for spacing */
+          display: flex; /* Use flexbox for responsive layout */
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center-align items */
+        }
+
+        .kv-second-box .img-box {
+          width: 150px; /* Increased image box size */
+          height: 150px; /* Increased image box size */
+          margin-bottom: 15px; /* Added margin for spacing */
+        }
+
+        .kv-second-box-text {
+          font-size: 24px; /* Increased font size for readability */
+          margin-top: 15px; /* Increased top margin for spacing */
+          margin-bottom: 10px; /* Increased bottom margin for spacing */
+          text-align: center; /* Center-align text */
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-second-container {
+          width: 100%; /* Full width for mobile */
+
+          padding: 20px; /* Added padding for better spacing */
+          margin-top: 100px; /* Adjusted margin for more balanced spacing */
+          height: auto;
+          box-sizing: border-box; /* Ensure padding does not affect width */
+        }
+
+        .kv-second-box {
+          width: 100%; /* Full width for mobile */
+          padding: 20px; /* Increased padding for better spacing */
+          margin-top: 30px; /* Adjusted margin for spacing */
+          display: flex; /* Use flexbox for responsive layout */
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center-align items */
+        }
+
+        .kv-second-box .img-box {
+          width: 150px; /* Increased image box size */
+          height: 150px; /* Increased image box size */
+          margin-bottom: 15px; /* Added margin for spacing */
+        }
+
+        .kv-second-box-text {
+          font-size: 24px; /* Increased font size for readability */
+          margin-top: 15px; /* Increased top margin for spacing */
+          margin-bottom: 10px; /* Increased bottom margin for spacing */
+          text-align: center; /* Center-align text */
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-second-container {
+          width: 100%;
+          padding: 10px;
+          margin-top: 128px;
+          height: auto;
+          box-sizing: border-box;
+        }
+
+        .kv-second-box {
+          width: 100%;
+          padding: 10px;
+          margin-top: 24px;
+        }
+        .kv-second-box .img box {
+          width: 100px;
+          height: 100px;
+        }
+
+        .kv-second-box-text {
+          font-size: 20px; /* Reduce font size */
+          margin-top: 10px;
+          margin-bottom: 5px; /* Adjust margin */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- second section -->
+    <div class="kv-container">
+      <div class="kv-second-box">
+        <div class="img_box">
+          <img
+            src="https://cdn.imweb.me/thumbnail/20241104/24d4af361fef1.png"
+          />
+        </div>
+      </div>
+      <div
+        class="kv-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+      >
+        바로 한국비자 신청하기
+      </div>
+    </div>
+  </body>
+</html>
