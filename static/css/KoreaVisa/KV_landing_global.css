@@ -66,7 +66,7 @@ body {
 **********/
 /* 웹 */
 .kv-button {
-  width: 386px;
+  width: 16em;
   height: 50px;
   background-color: #004098;
   color: #fff;
@@ -98,7 +98,6 @@ body {
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-button {
-    width: 300px;
     font-size: 24px;
     line-height: 55px;
     margin-top: 80px;
@@ -107,7 +106,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .kv-button {
-    width: 280px;
     height: 45px;
     font-size: 20px;
     line-height: 55px;
