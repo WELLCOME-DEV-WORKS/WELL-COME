@@ -18,20 +18,25 @@
         width: 100%;
         max-width: 1440px;
         padding: 20px;
-        font-family: 'BMJUA', Arial, sans-serif;
       }
 
       .kv-fifth-title {
+        font-family: 'SUIT-Variable';
         font-size: clamp(24px, 1.4vw, 52px);
-        font-weight: 700;
+        font-weight: 600;
         text-align: center;
-        color: #333;
+        color: #000;
+        margin-bottom: 80px;
+      }
+
+      .kv-fifth-title span {
+        font-weight: 900;
       }
 
       .kv-fifth-box {
+        font-family: 'GangwonEduPower';
         display: flex;
         gap: 20px;
-        margin-top: 30px;
       }
 
       .kv-fifth-circle {
@@ -51,17 +56,29 @@
       }
 
       .kv-fifth-description {
+        width: 100vw;
+        background-color: #feffef;
+        color: #004098;
+        font-family: 'YESMyoungjo';
         text-align: center;
-        margin-top: 30px;
-        font-size: clamp(18px, 1.2vw, 28px);
-        color: #333;
-        max-width: 800px;
+        margin-top: 80px;
+        padding: 40px;
+        font-size: clamp(24px, 1.2vw, 28px);
         line-height: 1.5;
+        font-weight: 500;
+      }
+
+      .kv-fifth-description span {
+        font-family: 'GangwonEduPower';
       }
 
       .kv-fifth-btn-box {
         text-align: center;
         margin: 50px 0;
+      }
+
+      .kv-button.kv-fifth {
+        margin-top: 65px;
       }
 
       /* 반응형 스타일 */
@@ -98,43 +115,42 @@
     <!-- fifth container -->
 
     <div class="kv-container">
-      <h2 class="kv-fifth-title">
-        WELL-COME Visa 다양한 비자 서비스를 제공하여 고객의 다양한 요구를
-        충족합니다
-      </h2>
+      <div class="kv-fifth-title">
+        <span>WELL-COME VISA</span>
+        는 다양한 비자 서비스를 제공하여 고객의 다양한 요구를 충족합니다.
+      </div>
 
       <!-- Circle Icons with Blue Tones and Hover Effect -->
       <div class="kv-fifth-box">
-        <div class="kv-fifth-circle" style="background-color: #001b3a">
+        <div class="kv-fifth-circle" style="background-color: #183262">
           개인 비자
         </div>
-        <div class="kv-fifth-circle" style="background-color: #002457">
+        <div class="kv-fifth-circle" style="background-color: #004098">
           가족 이민
         </div>
-        <div class="kv-fifth-circle" style="background-color: #003070">
+        <div class="kv-fifth-circle" style="background-color: #2357ba">
           국제 결혼
         </div>
-        <div class="kv-fifth-circle" style="background-color: #003a8a">
+        <div class="kv-fifth-circle" style="background-color: #4b80d0">
           해외 투자
         </div>
-        <div class="kv-fifth-circle" style="background-color: #002457">
+        <div class="kv-fifth-circle" style="background-color: #a3c7ff">
           한국 취업
         </div>
       </div>
 
-      <p class="kv-fifth-description">
+      <div class="kv-fifth-description">
         한국에서의 꿈, 새로운 삶을 시작하세요.
         <br />
-        WELL-COME Visa가 맞춤형 서비스로 당신의 목표를 위해 함께합니다.
-      </p>
-
-      <!-- Button -->
+        <span>WELL-COME VISA</span>
+        가 맞춤형 서비스로 당신의 목표를 위해 함께합니다.
+      </div>
 
       <div
-        class="kv-button"
+        class="kv-button kv-fifth"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
       >
-        새로운 가능성을 발견하세요.
+        새로운 가능성을 발견하세요!
       </div>
     </div>
   </body>
