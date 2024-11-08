@@ -92,15 +92,14 @@ body {
   margin-top: 120px;
 }
 .kv-button:hover {
-  background-color: #1a1a1a;
-  color: #fff;
-  transform: scale(1.1);
+  background-color: #a3c7ff;
+  color: #fefff5;
 }
 
 .kv-button:active {
-  background-color: #333333;
-  color: #fff;
-  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+  background-color: #a3c7ff;
+  color: #004098;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 /* 반응형 */
 @media screen and (max-width: 991px) {
