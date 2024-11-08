@@ -13,7 +13,10 @@
 
     <style>
       /*web*/
-      .kv-first-container-mobile {
+      .kv-first-container-mobile,
+      .kv-sixth-container-mobile,
+      .kv-seventh-mobile-box,
+      .kv-eighth-mobile-box {
         display: none;
       }
 
@@ -45,10 +48,14 @@
       }
 
       @media screen and (max-width: 991px) {
-        .kv-first-container-mobile {
-          display: none;
+        .kv-first-container-mobile,
+        .kv-sixth-container-mobile,
+        .kv-seventh-mobile-box,
+        .kv-eighth-mobile-box {
+          display: none; /* 991px 이하에서 숨김 */
         }
         .kv-container {
+          display: flex;
           width: 100%;
           margin-top: 150px;
           padding: 0 15px;
@@ -62,6 +69,12 @@
       }
 
       @media screen and (max-width: 767px) {
+        .kv-first-container-mobile,
+        .kv-sixth-container-mobile,
+        .kv-seventh-mobile-box,
+        .kv-eighth-mobile-box {
+          display: flex; /* 767px 이하에서 보이기 */
+        }
         .kv-first-container-mobile {
           display: none;
         }
@@ -108,6 +121,13 @@
       @media screen and (max-width: 497px) {
         .kv-container {
           display: none;
+        }
+
+        .kv-first-container-mobile,
+        .kv-sixth-container-mobile,
+        .kv-seventh-mobile-box,
+        .kv-eighth-mobile-box {
+          display: flex; /* 497px 이하에서 보이기 */
         }
         .kv-first-container-mobile {
           width: 100%;
