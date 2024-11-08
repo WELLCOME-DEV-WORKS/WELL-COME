@@ -1,9 +1,17 @@
 /********* 
 폰트 
 **********/
-@font-face {
+/* @font-face {
   font-family: 'GangwonEduPower';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPower.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'GangwonEduPower';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff')
     format('woff');
   font-weight: normal;
   font-style: normal;
@@ -37,6 +45,12 @@ body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+}
+
+@media (max-width: 1024px) and (min-width: 767px) {
+  body {
+    zoom: 0 !important;
+  }
 }
 
 /********* 
