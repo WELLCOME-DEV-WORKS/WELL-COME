@@ -11,17 +11,9 @@
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/ Reset.css" />
     <style>
-      /* second container*/
 
-      .kv-second-container {
-        width: 1200px;
-        height: auto;
-        margin-top: 203px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .kv-container-mobile {
+        display: none;
       }
 
       .kv-second-box {
@@ -39,14 +31,6 @@
       }
 
       @media screen and (max-width: 991px) {
-        .kv-second-container {
-          width: 90%; /* Increased width but not full to maintain some spacing */
-          padding: 30px; /* Increased padding for more spacing */
-          height: auto;
-          box-sizing: border-box; /* Ensures padding doesn't affect width */
-          margin: 0 auto;
-          margin-top: 15%;
-        }
 
         .kv-second-box {
           width: 100%; /* Full width for container */
@@ -72,46 +56,6 @@
       }
 
       @media screen and (max-width: 767px) {
-        .kv-second-container {
-          width: 100%; /* Full width for mobile */
-          padding: 20px; /* Reduced padding for smaller screens */
-          margin-top: 100px; /* Adjusted margin for balanced spacing */
-          height: auto;
-          box-sizing: border-box; /* Ensure padding does not affect width */
-        }
-
-        .kv-second-box {
-          width: 100%; /* Full width for mobile */
-          padding: 20px; /* Increased padding for better spacing */
-          margin-top: 30px; /* Adjusted margin for spacing */
-          display: flex; /* Use flexbox for responsive layout */
-          flex-direction: column; /* Stack items vertically */
-          align-items: center; /* Center-align items */
-        }
-
-        .kv-second-box .img-box {
-          width: 150px; /* Increased image box size */
-          height: 150px; /* Increased image box size */
-          margin-bottom: 15px; /* Added margin for spacing */
-        }
-
-        .kv-second-box-text {
-          font-size: 24px; /* Increased font size for readability */
-          margin-top: 15px; /* Increased top margin for spacing */
-          margin-bottom: 10px; /* Increased bottom margin for spacing */
-          text-align: center; /* Center-align text */
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        .kv-second-container {
-          width: 100%; /* Full width for mobile */
-
-          padding: 20px; /* Added padding for better spacing */
-          margin-top: 100px; /* Adjusted margin for more balanced spacing */
-          height: auto;
-          box-sizing: border-box; /* Ensure padding does not affect width */
-        }
 
         .kv-second-box {
           width: 100%; /* Full width for mobile */
@@ -137,14 +81,13 @@
       }
 
       @media screen and (max-width: 497px) {
-        .kv-second-container {
-          width: 100%;
-          padding: 10px;
-          margin-top: 128px;
-          height: auto;
-          box-sizing: border-box;
+        .kv-container {
+          display: none !important;
         }
 
+        .kv-container-mobile {
+        display: flex;
+      }
         .kv-second-box {
           width: 100%;
           padding: 10px;
@@ -179,6 +122,20 @@
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         바로 한국비자 받기
+      </div>
+    </div>
+    <div class="kv-container-mobile">
+      <div class="kv-second-box">
+        <div class="img_box">
+          <img
+            src="https://cdn.imweb.me/thumbnail/20241108/649edf252dbcc.png">
+        </div>
+      </div>
+      <div
+        class="kv-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+      >
+        바로 한국비자 신청하기
       </div>
     </div>
   </body>
