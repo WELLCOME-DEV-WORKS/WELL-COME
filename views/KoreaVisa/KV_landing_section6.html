@@ -24,11 +24,11 @@
 
       .kv-sixth-title {
         font-size: 25px;
-        font-family: 'SUIT-Variable';
-        font-weight: 600;
+        font-family: 'SUIT Variable';
+        font-weight: 500;
         text-align: center;
         line-height: 40px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
 
       .kv-button.kv-sixth {
@@ -36,12 +36,16 @@
       }
 
       .kv-sixth-title span {
+        font-family: 'SUIT Variable';
         color: #004097;
         font-weight: 900;
       }
 
       .kv-sixth.swiper-wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 다섯 칸 */
+        gap: 1.5rem;
+        width: 100%;
       }
 
       .kv-sixth-processBox {
@@ -57,8 +61,8 @@
 
       .kv-sixth-processCard {
         font-family: 'GangwonEduPower';
-        width: 330px !important;
-        height: 330px !important;
+        width: 100%;
+        height: 230px;
         transition: border 0.2s ease-in-out;
         color: #fff;
         font-size: 32px;
@@ -66,6 +70,7 @@
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
+        margin-right: 20px;
       }
 
       .kv-sixth-processCard.type1 {
@@ -344,7 +349,7 @@
     <!-- swiper cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
       document.addEventListener('DOMContentLoaded', function () {
         new Swiper('.kv-sixth-processBox', {
           slidesPerView: 3, // 여러 슬라이드를 보이게 설정
@@ -380,6 +385,6 @@
           },
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
