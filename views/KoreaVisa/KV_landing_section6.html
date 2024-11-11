@@ -59,11 +59,14 @@
         margin-bottom: 60px;
       }
 
+      .kv-sixth-processCard span {
+        z-index: 1;
+      }
       .kv-sixth-processCard {
         font-family: 'GangwonEduPower';
-        width: 100%;
-        height: 230px;
-        transition: border 0.2s ease-in-out;
+        width: 100% !important;
+        height: 230px !important;
+        transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
         color: #fff;
         font-size: 32px;
         display: flex !important;
@@ -71,6 +74,11 @@
         justify-content: center !important;
         align-items: center !important;
         margin-right: 20px;
+      }
+
+      .active-slide {
+        transform: scale(1.1);
+        filter: contrast(160%);
       }
 
       .kv-sixth-processCard.type1 {
@@ -386,5 +394,24 @@
         });
       });
     </script> -->
+
+    <script>
+      const slides = document.querySelectorAll('.kv-sixth-processCard');
+      let currentIndex = 0;
+
+      function animateSlides() {
+        // 모든 슬라이드의 활성 클래스 제거
+        slides.forEach((slide) => slide.classList.remove('active-slide'));
+
+        // 현재 인덱스의 슬라이드에 활성 클래스 추가
+        slides[currentIndex].classList.add('active-slide');
+
+        // 다음 인덱스로 이동, 마지막 인덱스 이후에는 0으로 돌아가서 반복
+        currentIndex = (currentIndex + 1) % slides.length;
+      }
+
+      // 1초 간격으로 애니메이션 반복
+      setInterval(animateSlides, 1500);
+    </script>
   </body>
 </html>
