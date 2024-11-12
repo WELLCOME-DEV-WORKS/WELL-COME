@@ -13,7 +13,6 @@
     <style>
       /*  fourth  */
       .kv-fourth-container {
-        width: 1200px;
         height: auto;
         margin-top: 290px;
         background-color: #fff;
@@ -57,10 +56,6 @@
         object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
       }
 
-      .kv-fourth-container-mobile {
-        display: none;
-      }
-
       .kv-button.kv-fourth {
         margin-top: 40px;
       }
@@ -69,7 +64,6 @@
         .kv-fourth-container {
           display: none;
         }
-
         .kv-fourth-container-mobile {
           display: flex;
           flex-direction: column;
@@ -87,7 +81,7 @@
         .kv-fourth-title-mobile {
           line-height: 40px;
           font-family: 'SUIT Variable';
-          font-size: 21px;
+          font-size: 20px;
           font-weight: 600;
           color: black;
           text-align: center;
@@ -100,7 +94,7 @@
 
         .kv-fourth-subtitle-mobile {
           color: #004098;
-          font-size: 36px;
+          font-size: 32px;
           font-family: 'YESMyoungjo';
           margin-top: 15px;
         }
@@ -119,10 +113,6 @@
         }
       }
       @media (max-width: 767px) {
-        .kv-fourth-container {
-          display: none;
-        }
-
         .kv-fourth-container-mobile {
           display: flex;
           flex-direction: column;
@@ -136,11 +126,11 @@
         }
 
         .kv-fourth-title-mobile {
-          font-size: 20px;
+          font-size: 18px;
         }
 
         .kv-fourth-subtitle-mobile {
-          font-size: 30px;
+          font-size: 28px;
         }
 
         .kv-fourth-img_box-mobile {
@@ -163,10 +153,6 @@
       }
       /*mobile -3rd*/
       @media screen and (max-width: 497px) {
-        .kv-fourth-container {
-          display: none;
-        }
-
         .kv-fourth-container-mobile {
           width: 100%;
           padding: 18px;
@@ -212,7 +198,7 @@
     </style>
   </head>
   <body>
-    <div class="kv-container">
+    <div class="kv-container kv-fourth-container">
       <div class="kv-fourth-title">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에 관계없이 고객에게 최적의 비자 경로를
@@ -227,6 +213,30 @@
       </div>
       <div
         class="kv-button kv-fourth"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
+      >
+        즉시 신청
+      </div>
+    </div>
+    <div class="kv-container-mobile kv-fourth-container-mobile">
+      <div class="kv-fourth-title-mobile">
+        <span>WELL-COME VISA</span>
+        는 나이, 학력, 소득, 국적에
+        <br />
+        관계없이 고객에게 최적의 비자 경로를 제안합니다.
+        <br />
+        한국·해외 졸업생, 우수 인재,
+        <br />
+        창업 희망자, 해외 동포 등 각자의 목표에 맞춘
+      </div>
+      <div class="kv-fourth-subtitle-mobile">
+        맞춤형 비자 서비스를 만나보세요.
+      </div>
+      <div class="kv-fourth-img_box-mobile">
+        <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
+      </div>
+      <div
+        class="kv-button-mobile kv-fourth"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         즉시 신청

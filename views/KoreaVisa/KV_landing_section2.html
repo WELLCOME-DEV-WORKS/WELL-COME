@@ -11,6 +11,17 @@
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/Reset.css" />
     <style>
+      .kv-second-container {
+        height: auto;
+        margin-top: 290px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
       .kv-container-mobile {
         display: none;
       }
@@ -78,12 +89,16 @@
       }
 
       @media screen and (max-width: 497px) {
-        .kv-container {
+        .kv-second-container {
           display: none !important;
         }
 
         .kv-container-mobile {
           display: flex;
+          flex-direction: column !important;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
         }
         .kv-second-box {
           width: 100%;
@@ -106,7 +121,7 @@
 
   <body>
     <!-- second section -->
-    <div class="kv-container">
+    <div class="kv-container kv-second-container">
       <div class="kv-second-box">
         <div class="img_box">
           <img
@@ -130,7 +145,7 @@
         </div>
       </div>
       <div
-        class="kv-button"
+        class="kv-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         바로 한국비자 신청하기
