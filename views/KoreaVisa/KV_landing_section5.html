@@ -77,8 +77,32 @@
         margin: 50px 0;
       }
 
-      .kv-button.kv-fifth {
+      .kv-fifth-button {
         margin-top: 65px;
+      }
+
+      /* 반응형 */
+      @media screen and (max-width: 991px) {
+        .kv-fifth-button {
+          font-size: 24px;
+          line-height: 55px;
+          margin-top: 80px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-fifth-button {
+          height: 45px;
+          font-size: 20px;
+          line-height: 55px;
+          margin-top: 55px;
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-fifth-button {
+          display: none;
+        }
       }
 
       /* 반응형 스타일 */
@@ -109,12 +133,43 @@
           transition: transform 0.3s ease;
         }
       }
+
+      /* 웹 */
+      .kv-fifth-button {
+        width: 16em;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 120px;
+      }
+      .kv-fifth-button:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-fifth-button:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+      }
     </style>
   </head>
   <body>
     <!-- fifth container -->
 
-    <div class="kv-container">
+    <div class="kv-fifth-container">
       <div class="kv-fifth-title">
         <span>WELL-COME VISA</span>
         는 다양한 비자 서비스를 제공하여 고객의 다양한 요구를 충족합니다.
@@ -147,7 +202,7 @@
       </div>
 
       <div
-        class="kv-button kv-fifth"
+        class="kv-fifth-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
       >
         새로운 가능성을 발견하세요!
