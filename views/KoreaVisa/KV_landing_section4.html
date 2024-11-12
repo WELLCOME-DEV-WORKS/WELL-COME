@@ -60,36 +60,6 @@
         object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
       }
 
-      .kv-fourth-button {
-        width: 7.6em;
-        height: 50px;
-        background-color: #004098;
-        color: #fff;
-        font-family: 'SUIT Variable';
-        font-size: 26px;
-        font-weight: 400;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50px;
-        text-align: center;
-        line-height: 65px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        margin-top: 120px;
-      }
-      .kv-fourth-button:hover {
-        background-color: #a3c7ff;
-        color: #fefff5;
-      }
-
-      .kv-fourth-button:active {
-        background-color: #a3c7ff;
-        color: #004098;
-        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
-      }
-
       @media screen and (max-width: 991px) {
         .kv-fourth-container {
           display: none;
@@ -152,7 +122,7 @@
           height: 50px;
           font-size: 26px;
           line-height: 53px;
-          margin-top: 80px;
+          margin-top: 20px;
         }
       }
       @media (max-width: 767px) {
@@ -198,7 +168,7 @@
           height: 45px;
           font-size: 20px;
           line-height: 46px;
-          margin-top: 55px;
+          margin-top: 20px;
         }
       }
       /*mobile -3rd*/
@@ -244,11 +214,85 @@
           object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
           max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
         }
+      }
 
-        .kv-fourth-button-mobile {
+      /********* 
+버튼 디자인 
+**********/
+      /* 웹 */
+      .kv-fourth-button {
+        width: 7.6em;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 40px;
+      }
+      .kv-fourth-button:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-fourth-button:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      .kv-fourth-button-mobile:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-fourth-button-mobile:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+      }
+      /* 반응형 */
+      @media screen and (max-width: 991px) {
+        .kv-fourth-button {
+          font-size: 24px;
+          line-height: 55px;
+          margin-top: 80px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-fourth-button {
           height: 45px;
-          font-size: 15px;
+          font-size: 20px;
+          line-height: 55px;
           margin-top: 55px;
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-fourth-button {
+          display: none;
+        }
+        .kv-fourth-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 7.5em;
+          height: 35px;
+          font-size: 15px;
+          line-height: 38px;
+          margin-top: 20px;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         }
       }
     </style>
