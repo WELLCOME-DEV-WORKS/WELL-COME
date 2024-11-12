@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="../../static/css/KoreaVisa/KI_Landing_Global.css"
+  />
+  <link rel="stylesheet" href="../../static/css/KoreaVisa/ Reset.css" />
+</head>
+<body>
+
+    <!-- 공통 컨테이너 -->
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    @media (max-width: 1024px) and (min-width: 767px) {
+        body {
+            zoom: 0 !important;
+        }
+    }
+
+    .ki-section2-container {
+        height: auto;
+        margin-top: 250px;
+        /* margin: 150px 0px; */
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-color {
+        color: #004098;
+    }
+
+    .ki-section2-btn {
+        width: 12rem;
+        height: 3rem;
+        background-color: #000000;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        /* line-height: 65px; */
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 2rem;
+    }
+    .ki-section2-btn:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+    }
+
+    .ki-section2-btn:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    </style>
+
+    <!-- 데스크탑 -->
+    <style>
+        .ki-section2-bg {
+            background-color: black;
+        }
+
+        .ki-section2-box {
+            display: flex;
+            width: 2vh;
+            max-width: 100%;
+            flex-direction: column;
+        }
+        
+        .ki-section2-title {
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            font: 400 2rem GangwonEduPower, sans-serif;
+            margin: 10px;
+            background: linear-gradient(to left, #F2E9FF 0%, #8C5BD0 47%, #6223BA 88%);
+            background-clip: text;
+            -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+            -webkit-text-fill-color: transparent; /* 텍스트 색상 투명하게 설정 */
+        }
+        
+        .ki-section2-subTitle {
+            color: white;
+            margin: 5px;
+            font-size: 1.2rem;
+        }
+
+        .ki-section2-boxTitle {
+            color: white;
+            /* font-size: 1.2rem; */
+            font: 400 1.2rem SUIT Variable, sans-serif;
+        }
+
+        .ki-section2-btn {
+            background-color: #000;
+            box-shadow: 0 0 12px #ccb4ed;
+            align-self: center;
+            font: 800 1rem SUIT Variable, sans-serif;
+            color: #fff;
+            line-height: 65px;
+            background: linear-gradient(to right, #F2E9FF 0%, #8C5BD0 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* 텍스트 색상 투명하게 설정 */
+        }
+
+        
+        .ki-section2-box {
+            border-radius: 47px 47px 0 0;
+            background-color: rgba(74, 74, 74, 0.3);
+            display: flex;
+            margin-top: 22px;
+            width: 50rem;
+            max-width: 100%;
+            flex-direction: column;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 0 12px #ccb4ed;
+        }
+
+        .ki-section2-img {
+            margin-top: 3rem;
+        }
+        </style>
+        
+        <!-- 반응형 -->
+        <style>
+    @media screen and (max-width: 767px) {
+        .ki-section2-container {
+            display: none;
+        }
+
+        ki-section2-img-mobile
+
+        .ki-section2-btn {
+            height: 45px;
+            font-size: 20px;
+            line-height: 55px;
+            margin-top: 55px;
+        }
+    }
+        </style>
+        
+        <section class="ki-section2-container ki-section2-bg">
+                <div class="ki-section2-title">
+                    세계가 이렇게 넓은데, 왜 한국에 투자해야 할까요?!
+                </div>
+                <div class="ki-section2-subTitle">
+                    고급 의료, 선진국, 높은 시민의식, 안전한 치안, 우수한 복지
+                </div>
+                <div class="ki-section2-box">
+                    <div class="ki-section2-boxTitle">"한국은 세계에서 투자 금액이 가장 적어도 투자 비자를 <br> 받을 수 있는 국가 입니다."</div>
+                    <article class="ki-section2-img">
+                        <img src="https://cdn.imweb.me/thumbnail/20241112/173376a1084b4.png" alt="">
+                    </article>
+                    <div class="ki-section2-btn ki-section2-btn " role="button">
+                        바로 한국비자 받기
+                    </div>
+                </div>
+        </section>
+</body>
+</html>
