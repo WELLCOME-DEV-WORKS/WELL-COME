@@ -90,15 +90,12 @@
 
     <!-- 데스크탑 -->
     <style>
-        .ki-section2-bg {
-            background-color: black;
+        .ki-section2-container-mobile {
+            display: none;
         }
 
-        .ki-section2-box {
-            display: flex;
-            width: 2vh;
-            max-width: 100%;
-            flex-direction: column;
+        .ki-section2-bg {
+            background-color: black;
         }
         
         .ki-section2-title {
@@ -135,7 +132,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; /* 텍스트 색상 투명하게 설정 */
         }
-
         
         .ki-section2-box {
             border-radius: 47px 47px 0 0;
@@ -156,20 +152,82 @@
         
         <!-- 반응형 -->
         <style>
-    @media screen and (max-width: 767px) {
-        .ki-section2-container {
-            display: none;
-        }
+        @media screen and (max-width: 767px) {
+            .ki-section2-container {
+                display: none;
+            }
 
-        ki-section2-img-mobile
+            .ki-section2-container-mobile {
+                display: flex;
+                height: auto;
+                margin-top: 3rem;
+                /* margin: 150px 0px; */
+                padding: 0 1rem ;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
 
-        .ki-section2-btn {
-            height: 45px;
-            font-size: 20px;
-            line-height: 55px;
-            margin-top: 55px;
+            .ki-section2-title-mobile {
+                text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                font: 400 1.5rem GangwonEduPower, sans-serif;
+                margin: 10px;
+                background: linear-gradient(to left, #F2E9FF 0%, #8C5BD0 47%, #6223BA 88%);
+                background-clip: text;
+                -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+                -webkit-text-fill-color: transparent; /* 텍스트 색상 투명하게 설정 */
+            }
+            
+            .ki-section2-subTitle-mobile {
+                color: white;
+                margin: 5px;
+                font-size: 1rem;
+                margin: white;
+                border-radius: 50px;
+            }
+
+            .ki-section2-boxTitle-mobile {
+                color: white;
+                /* font-size: 1.2rem; */
+                font: 400 1.2rem SUIT Variable, sans-serif;
+            }
+
+            .ki-section2-btn-mobile {
+                background-color: #000;
+                box-shadow: 0 0 12px #ccb4ed;
+                align-self: center;
+                font: 800 1rem SUIT Variable, sans-serif;
+                color: #fff;
+                line-height: 65px;
+                background: linear-gradient(to right, #F2E9FF 0%, #8C5BD0 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; /* 텍스트 색상 투명하게 설정 */
+                height: 45px;
+                font-size: 20px;
+                line-height: 55px;
+                margin-top: 55px;
+            }
+
+            
+            .ki-section2-box-mobile {
+                border-radius: 47px 47px 0 0;
+                background-color: rgba(74, 74, 74, 0.3);
+                display: flex;
+                margin-top: 22px;
+                width: 50rem;
+                max-width: 100%;
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                box-shadow: 0 0 12px #ccb4ed;
+            }
+
+            .ki-section2-img-mobile {
+                margin-top: 3rem;
+            }
+
         }
-    }
         </style>
         
         <section class="ki-section2-container ki-section2-bg">
@@ -189,5 +247,29 @@
                     </div>
                 </div>
         </section>
+        <section class="ki-section2-container-mobile ki-section2-bg">
+            <div class="ki-section2-title-mobile">
+                세계가 이렇게 넓은데, <br> 왜 한국에 투자해야 할까요?!
+            </div>
+            <div class="ki-section2-subTitle-mobile">
+                고급 의료
+            </div>
+            <div class="ki-section2-subTitle-mobile">
+                선진국
+            </div>
+            <div class="ki-section2-subTitle-mobile">
+                치안 안전
+            </div>
+            <div class="ki-section2-subTitle-mobile">
+                우수 복지
+            </div>
+            <div class="ki-section2-box-mobile">
+                <div class="ki-section2-boxTitle-mobile">"한국은 세계에서 투자 금액이 가장 적어도 투자 비자를 <br> 받을 수 있는 국가 입니다."</div>
+                <img class="ki-section2-img-mobile" src="" alt="">
+                <div class="ki-section2-btn-mobile " role="button">
+                    바로 한국비자 받기
+                </div>
+            </div>
+    </section>
 </body>
 </html>
