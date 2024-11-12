@@ -13,7 +13,8 @@
     <style>
       .kv-second-container {
         height: auto;
-        margin-top: 290px;
+        margin: 150px 0;
+        padding: 0 15px;
         background-color: #fff;
         display: flex;
         flex-direction: column;
@@ -22,7 +23,7 @@
         text-align: center;
       }
 
-      .kv-container-mobile {
+      .kv-second-container-mobile {
         display: none;
       }
 
@@ -41,10 +42,13 @@
       }
 
       @media screen and (max-width: 991px) {
+        .kv-second-container {
+          height: auto;
+          margin: 150px 0;
+          padding: 0 15px;
+        }
         .kv-second-box {
           width: 100%; /* Full width for container */
-          padding: 25px; /* Increased padding for better spacing */
-          margin-top: 40px; /* Adjusted margin for spacing */
           display: flex; /* Use flexbox for responsive layout */
           flex-direction: column; /* Stack items vertically */
           align-items: center; /* Center-align items */
@@ -65,10 +69,13 @@
       }
 
       @media screen and (max-width: 767px) {
+        .kv-second-container {
+          height: auto;
+          margin: 80px 0;
+        }
+
         .kv-second-box {
           width: 100%; /* Full width for mobile */
-          padding: 20px; /* Increased padding for better spacing */
-          margin-top: 30px; /* Adjusted margin for spacing */
           display: flex; /* Use flexbox for responsive layout */
           flex-direction: column; /* Stack items vertically */
           align-items: center; /* Center-align items */
@@ -93,7 +100,7 @@
           display: none !important;
         }
 
-        .kv-container-mobile {
+        .kv-second-container-mobile {
           display: flex;
           flex-direction: column !important;
           justify-content: center;
@@ -102,8 +109,6 @@
         }
         .kv-second-box {
           width: 100%;
-          padding: 10px;
-          margin-top: 24px;
         }
         .kv-second-box .img box {
           width: 100px;
@@ -116,12 +121,76 @@
           margin-bottom: 5px; /* Adjust margin */
         }
       }
+
+      .kv-second-button {
+        width: 11.5em;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 120px;
+      }
+      .kv-second-button:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-second-button:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+      }
+      /* 반응형 */
+      @media screen and (max-width: 991px) {
+        .kv-second-button {
+          font-size: 24px;
+          line-height: 55px;
+          margin-top: 80px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-second-button {
+          height: 45px;
+          font-size: 20px;
+          line-height: 55px;
+          margin-top: 55px;
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-second-button {
+          display: none;
+        }
+        .kv-second-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 220px;
+          height: 35px;
+          font-size: 15px;
+          line-height: 38px;
+          margin-top: 50px;
+        }
+      }
     </style>
   </head>
 
   <body>
     <!-- second section -->
-    <div class="kv-container kv-second-container">
+    <div class="kv-second-container">
       <div class="kv-second-box">
         <div class="img_box">
           <img
@@ -130,13 +199,13 @@
         </div>
       </div>
       <div
-        class="kv-button"
+        class="kv-second-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         바로 한국비자 받기
       </div>
     </div>
-    <div class="kv-container-mobile">
+    <div class="kv-second-container-mobile">
       <div class="kv-second-box">
         <div class="img_box">
           <img
@@ -145,10 +214,10 @@
         </div>
       </div>
       <div
-        class="kv-button-mobile"
+        class="kv-second-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
-        바로 한국비자 신청하기
+        바로 한국비자 받기
       </div>
     </div>
   </body>

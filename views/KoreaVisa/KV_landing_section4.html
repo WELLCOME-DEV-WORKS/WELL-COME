@@ -14,13 +14,17 @@
       /*  fourth  */
       .kv-fourth-container {
         height: auto;
-        margin-top: 290px;
+        margin: 150px 0px;
         background-color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+      }
+
+      .kv-fourth-container-mobile {
+        display: none;
       }
 
       /* Title styles */
@@ -56,14 +60,41 @@
         object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
       }
 
-      .kv-button.kv-fourth {
-        margin-top: 40px;
+      .kv-fourth-button {
+        width: 7.6em;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 120px;
+      }
+      .kv-fourth-button:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-fourth-button:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
       }
 
       @media screen and (max-width: 991px) {
         .kv-fourth-container {
           display: none;
         }
+
         .kv-fourth-container-mobile {
           display: flex;
           flex-direction: column;
@@ -111,6 +142,18 @@
           object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
           max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
         }
+
+        .kv-fourth-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 7.6em;
+          height: 50px;
+          font-size: 26px;
+          line-height: 53px;
+          margin-top: 80px;
+        }
       }
       @media (max-width: 767px) {
         .kv-fourth-container-mobile {
@@ -149,6 +192,13 @@
           height: 100%;
           object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
           max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
+        }
+
+        .kv-fourth-button-mobile {
+          height: 45px;
+          font-size: 20px;
+          line-height: 46px;
+          margin-top: 55px;
         }
       }
       /*mobile -3rd*/
@@ -194,11 +244,17 @@
           object-fit: contain; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
           max-width: 100%; /* 이미지가 원본 크기를 넘지 않도록 설정 */
         }
+
+        .kv-fourth-button-mobile {
+          height: 45px;
+          font-size: 15px;
+          margin-top: 55px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="kv-container kv-fourth-container">
+    <div class="kv-fourth-container">
       <div class="kv-fourth-title">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에 관계없이 고객에게 최적의 비자 경로를
@@ -212,13 +268,13 @@
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-        class="kv-button kv-fourth"
+        class="kv-fourth-button"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         즉시 신청
       </div>
     </div>
-    <div class="kv-container-mobile kv-fourth-container-mobile">
+    <div class="kv-fourth-container-mobile">
       <div class="kv-fourth-title-mobile">
         <span>WELL-COME VISA</span>
         는 나이, 학력, 소득, 국적에
@@ -236,7 +292,7 @@
         <img src="https://cdn.imweb.me/thumbnail/20241104/6d6801a69d384.png" />
       </div>
       <div
-        class="kv-button-mobile kv-fourth"
+        class="kv-fourth-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         즉시 신청
