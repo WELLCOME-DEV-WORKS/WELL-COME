@@ -11,6 +11,10 @@
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/Reset.css" />
     <style>
+      .kv-fifth-container-mobile {
+        display: none;
+      }
+
       .kv-fifth-container {
         height: auto;
         margin: 150px 0;
@@ -136,9 +140,33 @@
         }
       }
 
-      /********* 
-버튼 디자인 
-**********/
+      @media (max-width: 497px) {
+        .kv-fifth-container {
+          display: none;
+        }
+
+        .kv-fifth-container-mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 15px;
+          margin: 80px 0;
+        }
+
+        .kv-fifth-img-box {
+          width: 100%;
+        }
+        .kv-fifth-img-box img {
+          width: 90%;
+          height: auto;
+        }
+      }
+
+      /*********
+      버튼 디자인
+      **********/
       /* 웹 */
       .kv-fifth-button {
         width: 16em;
@@ -188,7 +216,7 @@
       }
 
       @media screen and (max-width: 497px) {
-        .kv-fifth-button {
+        .kv-fifth-button-mobile {
           color: #fff;
           background: #004098;
           text-align: center;
@@ -239,6 +267,17 @@
 
       <div
         class="kv-fifth-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
+      >
+        새로운 가능성을 발견하세요!
+      </div>
+    </div>
+    <div class="kv-fifth-container-mobile">
+      <div class="kv-fifth-img-box">
+        <img src="https://cdn.imweb.me/thumbnail/20241113/d32f6bccf3412.png" />
+      </div>
+      <div
+        class="kv-fifth-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');"
       >
         새로운 가능성을 발견하세요!
