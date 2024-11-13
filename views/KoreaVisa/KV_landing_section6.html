@@ -45,7 +45,9 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* 다섯 칸 */
         gap: 1.5rem;
-        width: 100%;
+        width: 98%;
+        align-items: center;
+        justify-content: center;
       }
 
       .kv-sixth-processBox {
@@ -55,8 +57,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
-        margin-bottom: 60px;
+        margin: 50px 0;
+        padding: 0 10px;
       }
 
       .kv-sixth-processCard span {
@@ -74,6 +76,9 @@
         justify-content: center !important;
         align-items: center !important;
         margin-right: 20px;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
       }
 
       .active-slide {
@@ -87,8 +92,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type2 {
         background-image: linear-gradient(
@@ -96,8 +99,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type3 {
@@ -106,8 +107,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type4 {
@@ -116,8 +115,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type5 {
         background-image: linear-gradient(
@@ -125,8 +122,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       @media screen and (max-width: 991px) {
@@ -134,15 +129,26 @@
           display: none;
         }
 
-        .kv-sixth-container-mobile {
-          display: flex;
-          flex-direction: column;
+        .kv-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 16em;
+          height: 50px;
+          font-size: 21px;
+          line-height: 53px;
+          margin-top: 10px;
         }
 
         .kv-sixth-container-mobile {
           width: 100%;
           margin-top: 150px;
           padding: 0 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         .kv-sixth-title-mobile {
@@ -162,25 +168,36 @@
         .kv-sixth-processBox-mobile {
           height: auto;
           width: 100%;
-          max-width: 1055px;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 50px;
-          margin-bottom: 60px;
+          margin: 50px 0;
+          padding: 0 10px;
+        }
+
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 80%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
         }
 
         .kv-sixth-processCard-mobile {
           font-family: 'GangwonEduPower';
-          width: 251px;
-          height: 250px;
-          transition: border 0.2s ease-in-out;
+          width: 6em !important;
+          height: 9em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
           color: #fff;
-          font-size: 24px;
-          display: flex;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
+          font-size: 22px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 120%;
+          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type1 {
@@ -189,8 +206,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type2 {
           background-image: linear-gradient(
@@ -198,8 +213,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type3 {
@@ -208,8 +221,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type4 {
@@ -218,7 +229,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
-          background-size: 100%;
           background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type5 {
@@ -227,8 +237,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
       }
 
@@ -247,11 +255,73 @@
           color: black;
           text-align: center;
         }
+
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 60%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kv-sixth-processCard-mobile {
+          font-family: 'GangwonEduPower';
+          width: 4.5em !important;
+          height: 15em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+          color: #fff;
+          font-size: 15px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 250%;
+          background-repeat: no-repeat;
+        }
       }
 
       @media screen and (max-width: 497px) {
         .kv-container {
           display: none;
+        }
+
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 50%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kv-sixth-processCard-mobile {
+          font-family: 'GangwonEduPower';
+          width: 3.9em !important;
+          height: 13em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+          color: #fff;
+          font-size: 15px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 250%;
+          background-repeat: no-repeat;
+        }
+
+        .kv-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 16em;
+          height: 35px;
+          font-size: 15px;
+          line-height: 38px;
+          margin-top: 10px;
         }
       }
     </style>
@@ -341,7 +411,7 @@
       </article>
 
       <div
-        class="kv-button"
+        class="kv-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         한국비자 관련 모든 것 알아보기
