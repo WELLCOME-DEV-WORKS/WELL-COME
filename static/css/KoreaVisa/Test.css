@@ -1,0 +1,2619 @@
+body {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #fcfbf7 !important;
+}
+
+#s20240819369b1b06ceed7 > main {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/*web*/
+.newcorp-first-container {
+  width: 1200px;
+  height: auto;
+  margin-top: 290px;
+  background-color: #fcfbf7;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newcorp-slogan-short {
+  color: black;
+  font-family: 'BMJUA';
+  font-size: 38px;
+  width: 390px;
+  font-weight: 200;
+  letter-spacing: -1%;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.newcorp-slogan {
+  color: black;
+  font-family: 'Tenada';
+  font-size: 68px;
+  width: 790px;
+  font-weight: 800;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.newcorp-slogan span {
+  font-family: 'Tenada' !important;
+  color: #ffca42;
+  position: relative;
+  display: inline-block;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.newcorp-slogan .sloganText2 {
+  font-family: 'Tenada' !important;
+  color: #fcab40;
+  position: relative;
+  display: inline-block;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.newcorp-slogan-main-button {
+  width: 386px;
+  height: 65px;
+  background-color: #fcab40;
+  font-family: 'BMJUA';
+  font-size: 28px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.newcorp-slogan-main-button .text {
+  font-family: 'BMJUA' !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.newcorp-slogan-main-button .text.fade-out {
+  opacity: 0;
+}
+
+.newcorp-slogan-main-button .text.fade-in {
+  opacity: 1;
+}
+
+.newcorp-slogan-main-button:hover {
+  background-color: #1a1a1a;
+  color: #fcab40;
+}
+
+.newcorp-slogan-main-button:active {
+  background-color: #333333;
+  color: #fcab40;
+  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+}
+
+.newcorp-slogan-sub-button {
+  width: 400px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.newcorp-slogan-sub-button img {
+  height: 52px;
+  width: 52px;
+}
+
+.newcorp-slogan-sub-button span {
+  padding-top: 0px;
+  font-family: 'SUIT';
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}
+
+.newcorp-first-container-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .newcorp-first-container-mobile {
+    display: none;
+  }
+  .newcorp-first-container {
+    width: 100%;
+    margin-top: 150px;
+    gap: 50px;
+    padding: 0 15px;
+  }
+
+  .newcorp-slogan-short {
+    font-size: 32px; /* Reduced font size for better readability */
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Centered text for better visual appearance */
+  }
+
+  .newcorp-slogan {
+    font-size: 54px; /* Reduced font size for better readability */
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Centered text for better visual appearance */
+  }
+
+  .newcorp-slogan-main-button {
+    width: 300px; /* Reduced width for smaller screens */
+    height: 55px; /* Adjusted height for smaller screens */
+    font-size: 24px; /* Reduced font size for better readability */
+    line-height: 55px; /* Adjusted line-height for better alignment */
+  }
+
+  .newcorp-slogan-sub-button {
+    width: 350px; /* Reduced width for smaller screens */
+    height: 45px; /* Adjusted height for smaller screens */
+    gap: 5px; /* Reduced gap between elements */
+  }
+
+  .newcorp-slogan-sub-button span {
+    font-size: 14px; /* Reduced font size for better readability */
+  }
+
+  .newcorp-slogan-sub-button img {
+    height: 40px; /* Reduced icon size */
+    width: 40px; /* Reduced icon size */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newcorp-first-container-mobile {
+    display: none;
+  }
+  .newcorp-first-container {
+    width: 100%; /* Make container width responsive */
+    max-width: 600px; /* Constrain max-width for better fit on larger mobile devices */
+    height: auto;
+    margin: 80px auto; /* Adjusted margin for more balanced spacing */
+    background-color: #fcfbf7;
+    gap: 50px; /* Reduced gap for better spacing on smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  .newcorp-slogan-short {
+    color: black;
+    font-family: 'BMJUA';
+    font-size: 28px; /* Adjusted font size for readability */
+    width: 90%; /* Make width responsive */
+    font-weight: 200;
+    letter-spacing: -1%;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center; /* Center text for smaller screens */
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .newcorp-slogan {
+    color: black;
+    font-family: 'Tenada';
+    font-size: 48px; /* Adjusted font size for readability */
+    width: 90%; /* Make width responsive */
+    font-weight: 800;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center; /* Center text for smaller screens */
+    margin-bottom: 30px; /* Added margin for spacing */
+  }
+
+  .newcorp-slogan span {
+    font-family: 'Tenada' !important;
+    color: #ffca42;
+    position: relative;
+    display: inline-block;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  .newcorp-slogan .sloganText2 {
+    font-family: 'Tenada' !important;
+    color: #fcab40;
+    position: relative;
+    display: inline-block;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  .newcorp-slogan-main-button {
+    width: 100%; /* Make button width responsive */
+    max-width: 300px; /* Constrain max-width for better usability on smaller screens */
+    height: 55px; /* Adjusted height for better touch area */
+    background-color: #fcab40;
+    font-family: 'BMJUA';
+    font-size: 20px; /* Adjusted font size for readability */
+    font-weight: 400;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 55px; /* Adjusted line-height to match button height */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .newcorp-slogan-main-button .text {
+    font-family: 'BMJUA' !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .newcorp-slogan-main-button:hover {
+    background-color: #1a1a1a;
+    color: #fcab40;
+  }
+
+  .newcorp-slogan-main-button:active {
+    background-color: #333333;
+    color: #fcab40;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+  }
+
+  .newcorp-slogan-sub-button {
+    width: 100%; /* Make button width responsive */
+    max-width: 300px; /* Constrain max-width for better usability */
+    height: 45px; /* Adjusted height for better touch area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Increased gap for better spacing */
+    cursor: pointer;
+    margin-top: 10px; /* Added margin for spacing */
+  }
+
+  .newcorp-slogan-sub-button img {
+    height: 45px; /* Adjusted icon size for smaller button */
+    width: 45px; /* Adjusted icon size for smaller button */
+  }
+
+  .newcorp-slogan-sub-button span {
+    font-family: 'SUIT';
+    font-size: 16px; /* Adjusted font size for better readability */
+    font-weight: 600;
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .newcorp-first-container {
+    display: none;
+  }
+  .newcorp-first-container-mobile {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    background-color: #fcfbf7;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 80px auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .newcorp-slogan-short-mobile {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: center;
+    font-family: 'BMJUA';
+  }
+
+  .newcorp-slogan-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sloganText2-mobile,
+  .sloganText-mobile {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+    font-family: 'Tenada';
+    position: relative;
+  }
+
+  .sloganText-mobile span {
+    font-size: 34px;
+    font-weight: 800;
+    font-family: 'Tenada' !important;
+    color: #ffca42;
+    position: relative;
+    display: inline-block;
+  }
+
+  .sloganText2-mobile span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fcab40;
+    font-family: 'Tenada';
+    position: relative;
+    display: inline-block;
+  }
+
+  .newcorp-slogan-main-button-mobile {
+    width: 266px;
+    height: 45px;
+    background-color: #fcab40;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 65px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .newcorp-slogan-main-button-mobile .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-in-out;
+    font-family: 'BMJUA';
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .newcorp-slogan-main-button-mobile .text:active {
+    background-color: #fcab40;
+    color: #000;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .newcorp-slogan-sub-button-mobile {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+  }
+
+  .newcorp-slogan-sub-button-mobile img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .newcorp-slogan-sub-button-mobile span {
+    font-size: 12px;
+    color: #000;
+    font-weight: 400;
+    font-family: 'SUIT';
+    text-decoration: underline;
+  }
+  .newcorp-slogan-sub-button-mobile span:active {
+    color: #fcab40;
+  }
+}
+/* second container*/
+
+.newcorp-second-container {
+  width: 1200px;
+  height: auto;
+  margin-top: 203px;
+  background-color: #fcfbf7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newcorp-second-title {
+  color: black;
+  font-family: 'Tenada';
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.newcorp-second-subtitle {
+  color: #ff6f00;
+  font-family: 'SUIT';
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.newcorp-second-box {
+  width: 1036px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'BMJUA';
+}
+.newcorp-second-box-text {
+  font-family: 'BMJUA';
+  font-size: 32px;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.newcorp-second-box .img box {
+  width: 132px;
+  height: 132px;
+}
+
+.newcorp-secondBox-hashTagLine {
+  width: 728px;
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 12px;
+  align-items: stretch;
+}
+
+.newcorp-secondBox-hashTagLine .newcorp-hashTag {
+  font-family: 'BMJUA';
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #ffd7a1;
+  border-radius: 20px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 42px;
+  max-width: fill-content;
+}
+
+.newcorp-secondBox-hashTagLine > div:nth-child(3),
+.newcorp-secondBox-hashTagLine > div:nth-child(6) {
+  background-color: black;
+  color: white;
+}
+
+.newcorp-second-button {
+  width: 385px;
+  height: 65px;
+  margin-top: 88px;
+  background-color: #fcab40;
+  font-family: 'BMJUA';
+  font-size: 24px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.newcorp-second-button:hover {
+  background-color: #1a1a1a;
+  color: #fcab40;
+}
+
+.newcorp-second-button:active {
+  background-color: #333333;
+  color: #fcab40;
+  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+}
+
+@media screen and (max-width: 991px) {
+  .newcorp-second-container {
+    width: 90%; /* Increased width but not full to maintain some spacing */
+    padding: 30px; /* Increased padding for more spacing */
+    height: auto;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin: 0 auto;
+    margin-top: 15%;
+  }
+
+  .newcorp-second-title {
+    font-size: 36px; /* Slightly larger font size for better readability */
+    font-weight: 800; /* Ensuring bold title */
+    text-align: center; /* Center-align title for better aesthetics */
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-subtitle {
+    font-size: 20px; /* Increased font size for better readability */
+    margin-top: 15px; /* Increased top margin for spacing */
+    margin-bottom: 25px; /* Adjusted margin for consistency */
+    text-align: center; /* Center-align subtitle */
+  }
+
+  .newcorp-second-box {
+    width: 100%; /* Full width for container */
+    padding: 25px; /* Increased padding for better spacing */
+    margin-top: 40px; /* Adjusted margin for spacing */
+    display: flex; /* Use flexbox for responsive layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .newcorp-second-box .img-box {
+    width: 180px; /* Increased image box size for larger screens */
+    height: 180px; /* Increased image box size */
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-box-text {
+    font-size: 26px; /* Increased font size for readability */
+    margin-top: 20px; /* Increased top margin for spacing */
+    margin-bottom: 15px; /* Increased bottom margin for spacing */
+    text-align: center; /* Center-align text */
+  }
+
+  .newcorp-secondBox-hashTagLine {
+    width: 600px; /* Increased width for hashtag container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px; /* Adjusted gap for better spacing */
+    align-items: stretch;
+    margin-top: 10px; /* Increased margin-top for spacing */
+  }
+
+  .newcorp-secondBox-hashTagLine .newcorp-hashTag {
+    width: 22%; /* Increased width to make hashtags more prominent */
+    min-width: 80px; /* Increased minimum width for better appearance */
+    height: 40px; /* Increased height for better touch area */
+    font-size: 18px; /* Increased font size for readability */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .newcorp-second-button {
+    width: 100%; /* Full width for button */
+    max-width: 350px; /* Increased max-width for better fit */
+    height: 55px; /* Increased height for better touch area */
+    font-size: 24px; /* Increased font size for readability */
+    line-height: 55px; /* Adjusted line-height to match button height */
+    margin-top: 60px; /* Adjusted margin for better spacing */
+    text-align: center; /* Center-align text */
+    display: flex; /* Flexbox for consistent alignment */
+    justify-content: center; /* Center-align items */
+    align-items: center; /* Center-align items */
+    background-color: #fcab40; /* Button background color */
+    color: #000; /* Button text color */
+    cursor: pointer; /* Cursor pointer for interactivity */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
+  }
+
+  .newcorp-second-button:hover {
+    background-color: #e0a830; /* Slightly darker color on hover */
+    color: #000; /* Text color on hover */
+  }
+
+  .newcorp-second-button:active {
+    background-color: #d49b30; /* Darker color on active */
+    color: #000; /* Text color on active */
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newcorp-second-container {
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Reduced padding for smaller screens */
+    margin-top: 100px; /* Adjusted margin for balanced spacing */
+    height: auto;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  .newcorp-second-title {
+    font-size: 32px; /* Slightly larger font size for readability */
+    font-weight: 800; /* Ensuring bold title */
+    text-align: center; /* Center-align title for better aesthetics */
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-subtitle {
+    font-size: 18px; /* Increased font size for better readability */
+    margin-top: 10px; /* Increased top margin for better spacing */
+    margin-bottom: 20px; /* Adjusted margin for consistency */
+    text-align: center; /* Center-align subtitle */
+  }
+
+  .newcorp-second-box {
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Increased padding for better spacing */
+    margin-top: 30px; /* Adjusted margin for spacing */
+    display: flex; /* Use flexbox for responsive layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .newcorp-second-box .img-box {
+    width: 150px; /* Increased image box size */
+    height: 150px; /* Increased image box size */
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-box-text {
+    font-size: 24px; /* Increased font size for readability */
+    margin-top: 15px; /* Increased top margin for spacing */
+    margin-bottom: 10px; /* Increased bottom margin for spacing */
+    text-align: center; /* Center-align text */
+  }
+
+  .newcorp-secondBox-hashTagLine {
+    width: 520px; /* Width for hashtag container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px; /* Adjusted gap for better spacing */
+    align-items: stretch;
+    margin-top: 5px; /* Increased margin-top for spacing */
+  }
+
+  .newcorp-secondBox-hashTagLine .newcorp-hashTag {
+    width: 20%; /* Width to make hashtags more prominent */
+    min-width: 70px; /* Minimum width for better appearance */
+    height: 30px; /* Increased height for better touch area */
+    font-size: 14px; /* Increased font size for readability */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .newcorp-second-button {
+    width: 100%; /* Full width for button */
+    max-width: 300px; /* Constrain max-width for better fit */
+    height: 50px; /* Adjusted height for better touch area */
+    font-size: 18px; /* Increased font size for readability */
+    line-height: 50px; /* Adjusted line-height to match button height */
+    margin-top: 50px; /* Reduced margin for better spacing */
+    text-align: center; /* Center-align text */
+    display: flex; /* Flexbox for consistent alignment */
+    justify-content: center; /* Center-align items */
+    align-items: center; /* Center-align items */
+    background-color: #fcab40; /* Button background color */
+    color: #000; /* Button text color */
+    cursor: pointer; /* Cursor pointer for interactivity */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
+  }
+
+  .newcorp-second-button:hover {
+    background-color: #e0a830; /* Slightly darker color on hover */
+    color: #000; /* Text color on hover */
+  }
+
+  .newcorp-second-button:active {
+    background-color: #d49b30; /* Darker color on active */
+    color: #000; /* Text color on active */
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newcorp-second-container {
+    width: 100%; /* Full width for mobile */
+
+    padding: 20px; /* Added padding for better spacing */
+    margin-top: 100px; /* Adjusted margin for more balanced spacing */
+    height: auto;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  .newcorp-second-title {
+    font-size: 32px; /* Slightly larger font size for readability */
+    font-weight: 800; /* Corrected from duplicate 'font-size' to 'font-weight' */
+    text-align: center; /* Center-align title for better aesthetics */
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-subtitle {
+    font-size: 18px; /* Increased font size for better readability */
+    margin-top: 10px; /* Increased top margin for better spacing */
+    margin-bottom: 20px; /* Adjusted margin for consistency */
+    text-align: center; /* Center-align subtitle */
+  }
+
+  .newcorp-second-box {
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Increased padding for better spacing */
+    margin-top: 30px; /* Adjusted margin for spacing */
+    display: flex; /* Use flexbox for responsive layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .newcorp-second-box .img-box {
+    width: 150px; /* Increased image box size */
+    height: 150px; /* Increased image box size */
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .newcorp-second-box-text {
+    font-size: 24px; /* Increased font size for readability */
+    margin-top: 15px; /* Increased top margin for spacing */
+    margin-bottom: 10px; /* Increased bottom margin for spacing */
+    text-align: center; /* Center-align text */
+  }
+
+  .newcorp-secondBox-hashTagLine {
+    width: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px;
+    align-items: stretch;
+    margin-top: 5px;
+  }
+
+  .newcorp-secondBox-hashTagLine .newcorp-hashTag {
+    width: 20%;
+    min-width: 70px;
+    height: 30px;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .newcorp-second-button {
+    width: 100%; /* Full width for button */
+    max-width: 300px; /* Constrain max-width for better fit */
+    height: 50px; /* Adjusted height for better touch area */
+    font-size: 16px; /* Increased font size for readability */
+    line-height: 50px; /* Adjusted line-height to match button height */
+    margin-top: 50px; /* Reduced margin for better spacing */
+    text-align: center; /* Center-align text */
+    display: flex; /* Flexbox for consistent alignment */
+    justify-content: center; /* Center-align items */
+    align-items: center; /* Center-align items */
+    background-color: #fcab40; /* Button background color */
+    color: #000; /* Button text color */
+    cursor: pointer; /* Cursor pointer for interactivity */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
+  }
+
+  .newcorp-second-button:hover {
+    background-color: #e0a830; /* Slightly darker color on hover */
+    color: #000; /* Text color on hover */
+  }
+
+  .newcorp-second-button:active {
+    background-color: #d49b30; /* Darker color on active */
+    color: #000; /* Text color on active */
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25); /* Inset shadow on active */
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .newcorp-second-container {
+    width: 100%;
+    padding: 10px;
+    margin-top: 128px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .newcorp-second-title {
+    font-size: 24px;
+    font-size: 800;
+  }
+
+  .newcorp-second-subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .newcorp-second-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 24px;
+  }
+  .newcorp-second-box .img box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .newcorp-second-box-text {
+    font-size: 20px; /* Reduce font size */
+    margin-top: 10px;
+    margin-bottom: 5px; /* Adjust margin */
+  }
+
+  .newcorp-secondBox-hashTagLine {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px;
+    align-items: stretch;
+    margin-top: 5px;
+  }
+
+  .newcorp-secondBox-hashTagLine .newcorp-hashTag {
+    width: 30%;
+    min-width: 66px;
+    height: 30px;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .newcorp-secondBox-hashTagLine .newcorp-hashTag:nth-child(4) {
+    order: 7;
+  }
+
+  .newcorp-second-button {
+    width: 100%;
+    max-width: 266px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 50px;
+    margin-top: 64px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newcorp-second-button:hover {
+    background-color: #fcab40;
+    color: #000;
+  }
+  .newcorp-second-button:active {
+    background-color: #fcab40;
+    color: #000;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*  third  */
+.newcorp-third-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0px 50px;
+  background-color: #fcfbf7;
+  margin-top: 15%;
+  box-sizing: border-box;
+}
+
+/* Left section styles */
+.newcorp-third-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styles */
+.newcorp-third-title {
+  font-family: 'Tenada';
+  font-size: 64px;
+  font-weight: 800;
+  color: black;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Button styles */
+.newcorp-third-button {
+  font-family: 'BMJUA';
+  font-size: 28px;
+  color: white;
+  background-color: #fcab40;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.newcorp-third-button:hover {
+  background: #1a1a1a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.newcorp-third-button:active {
+  background: #333333;
+  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+
+/* Steps section */
+.newcorp-third-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-right: 10%;
+}
+
+/* Step content styles */
+.newcorp-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Step box styling */
+.newcorp-step-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: -2px 5px 24.6px rgba(0, 0, 0, 0.25);
+  width: 380px;
+  height: auto;
+  border: 5px solid transparent;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Step box hover effects */
+.newcorp-step-box:nth-child(1):hover {
+  border-color: #fcab40;
+}
+
+.newcorp-step-box:nth-child(2):hover {
+  border-color: #84c167;
+}
+
+.newcorp-step-box:nth-child(3):hover {
+  border-color: #ffb7e7;
+}
+
+.newcorp-step-box:nth-child(4):hover {
+  border-color: #7cb8ef;
+}
+
+.newcorp-step-box:nth-child(5):hover {
+  border-color: #d1a0ff;
+}
+
+/* Step number styles */
+.newcorp-step-number {
+  font-family: 'SUIT';
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  background-color: #ffd79a;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* Icon styles */
+.newcorp-step-icon {
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+}
+
+.newcorp-step-text {
+  font-family: 'BMJUA';
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.newcorp-third-container-mobile {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .newcorp-third-container {
+    flex-direction: row; /* Stack sections vertically */
+    align-items: center; /* Center-align content */
+    padding: 30px 20px; /* Adjust padding for better spacing */
+    margin: 0 auto; /* Reduced margin for smaller screens */
+    margin-top: 10%; /* Adjusted margin-top for better spacing */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 900px; /* Allow full width usage */
+  }
+
+  /* Left section styles */
+  .newcorp-third-left {
+    margin-bottom: 30px; /* Added margin-bottom to separate sections */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Center-align text */
+  }
+
+  /* Title styles */
+  .newcorp-third-title {
+    font-size: 48px; /* Reduced font size for smaller screens */
+    margin-bottom: 30px; /* Reduced margin for better spacing */
+  }
+
+  /* Button styles */
+  .newcorp-third-button {
+    width: 100%; /* Full width for button */
+    max-width: 300px; /* Constrain max-width for better fit */
+    padding: 10px 20px; /* Adjusted padding for better spacing */
+    font-size: 24px; /* Slightly smaller font size */
+  }
+
+  /* Steps section */
+  .newcorp-third-right {
+    margin-right: 0; /* Remove right margin */
+    gap: 30px; /* Increased gap between step boxes for better spacing */
+  }
+
+  /* Step box styling */
+  .newcorp-step-box {
+    width: 100%; /* Full width for step boxes */
+    max-width: 320px; /* Constrain max-width for better fit */
+    padding: 15px 20px; /* Increased padding for better spacing */
+  }
+
+  /* Step number styles */
+  .newcorp-step-number {
+    font-size: 22px; /* Slightly smaller font size */
+    width: 28px; /* Adjusted width for smaller screens */
+    height: 28px; /* Adjusted height for smaller screens */
+    margin-right: 15px; /* Increased margin for better spacing */
+  }
+
+  /* Icon styles */
+  .newcorp-step-icon {
+    width: 60px; /* Reduced icon size for smaller screens */
+    height: 60px; /* Reduced icon size for smaller screens */
+  }
+
+  /* Step text styles */
+  .newcorp-step-text {
+    font-size: 24px; /* Slightly smaller font size for readability */
+    text-align: center; /* Center-align text */
+    margin-top: 10px; /* Added margin-top for spacing */
+  }
+}
+
+@media (max-width: 767px) {
+  .newcorp-third-container-mobile {
+    display: none;
+  }
+  .newcorp-third-container {
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .newcorp-third-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .newcorp-third-button {
+    font-size: 18px;
+    width: 280px;
+    height: 50px;
+    line-height: 25px;
+  }
+
+  .newcorp-third-button:hover {
+    background: #1a1a1a;
+  }
+
+  .newcorp-third-button:active {
+    background: #333333;
+  }
+
+  .newcorp-third-right {
+    margin-right: 0;
+  }
+
+  .newcorp-step-box {
+    height: 65px;
+    width: 210px;
+    border-radius: 6px;
+    box-shadow: -1px 3px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newcorp-step-number {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    margin-left: -10px;
+  }
+
+  .newcorp-step-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: -20px;
+    margin-top: 2px;
+  }
+
+  .newcorp-step-text {
+    font-size: 20px;
+  }
+}
+/*mobile -3rd*/
+@media screen and (max-width: 497px) {
+  .newcorp-third-container {
+    display: none;
+  }
+
+  .newcorp-third-container-mobile {
+    width: 100%;
+    padding: 16px;
+    background-color: #fcfbf7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    box-sizing: border-box;
+  }
+
+  .newcorp-third-title-mobile {
+    font-family: 'Tenada';
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .newcorp-step-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .newcorp-step-mobile {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 70px;
+    background-color: white;
+    margin-bottom: 20px;
+    background: #ffffff;
+    box-shadow: -2px 5px 24.6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    justify-content: center; /* Center content */
+    padding: 0 10px; /* Padding for internal spacing */
+    position: relative; /* Needed for absolute positioning of the icon */
+  }
+
+  /* Zigzag positioning */
+  .newcorp-step-mobile:nth-child(odd) {
+    margin-left: -40px; /* Move odd steps to the left */
+  }
+
+  .newcorp-step-mobile:nth-child(even) {
+    margin-left: 40px; /* Move even steps to the right */
+  }
+
+  .newcorp-step-number-mobile {
+    font-family: 'SUIT';
+    font-size: 16px;
+    color: #000;
+    background-color: #ffd7a1;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .newcorp-step-content-mobile {
+    display: flex;
+    justify-content: ;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+  }
+
+  .newcorp-step-content-mobile span {
+    font-family: 'BMJUA';
+    font-size: 20px;
+    color: black;
+    width: 90%;
+  }
+
+  .newcorp-step-icon-mobile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Center icon content */
+    align-items: center; /* Center icon content */
+    position: absolute; /* Position icon absolutely */
+    right: -10px; /* Align to the right edge */
+    top: 50%; /* Center vertically within the container */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    margin-left: 20px;
+  }
+
+  .newcorp-button-mobile {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    font-family: 'BMJUA';
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #fcab40;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  .newcorp-button-mobile:hover {
+    background-color: #fcab40;
+    color: #fff;
+  }
+
+  .newcorp-button-mobile:active {
+    background-color: #333333;
+    color: #fff;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* fourth*/
+.newcorp-fourth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  padding: 40px 20px;
+  margin-top: 15%;
+}
+.newcorp-fourth-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcab40;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 940px;
+  height: 140px;
+  position: relative;
+}
+
+.newcorp-fourth-header p {
+  font-family: 'Tenada';
+  font-size: 36px;
+  color: black;
+  padding: 15px;
+  font-weight: 800;
+  flex: 1;
+  height: 100%;
+}
+
+.newcorp-fourth-header-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  position: absolute;
+  right: 50px;
+  top: -20%;
+  transform: translateY(-20%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.newcorp-fourth-row-text {
+  font-family: 'SUIT';
+  font-size: 28px;
+  color: black;
+  text-align: right;
+  font-weight: 900;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 40%;
+  margin-left: -3%;
+}
+
+.newcorp-fourth-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 940px;
+  width: 100%;
+  margin-top: 4%;
+  position: relative;
+}
+
+.newcorp-fourth-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.newcorp-fourth-row:nth-child(1) {
+  margin-left: -5%;
+  justify-content: center;
+}
+
+.newcorp-fourth-row:nth-child(2) {
+  margin-left: -20%;
+  justify-content: center;
+}
+
+.newcorp-fourth-row:nth-child(3) {
+  margin-left: 20%;
+  justify-content: center;
+}
+
+.newcorp-fourth-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 80%;
+  max-width: 360px;
+  position: relative;
+}
+
+.newcorp-fourth-box p {
+  font-family: 'BMJUA';
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newcorp-fourth-box:hover {
+  box-shadow: 0px 15px 20px rgba(51, 51, 51, 0.5);
+}
+
+.newcorp-fourth-box:hover .newcorp-fourth-box-image {
+  border: 2px solid #fcab40;
+}
+
+.newcorp-fourth-box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  background-color: #fcab40;
+  border-radius: 50%;
+  display: none;
+  z-index: 2;
+}
+
+.newcorp-fourth-box:hover::before {
+  display: block;
+}
+
+.newcorp-fourth-box-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.newcorp-fourth-footer {
+  margin-top: 20px;
+}
+
+.newcorp-fourth-button {
+  font-family: 'BMJUA';
+  font-size: 28px;
+  color: #fcab40;
+  background-color: black;
+  padding: 10px 20px;
+  border: none;
+  width: 370px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.newcorp-fourth-button:hover {
+  color: #000;
+  background-color: #fcab40;
+}
+.newcorp-fourth-button:active {
+  color: #000;
+  background: #ffd7a1;
+  box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 991px) {
+  .newcorp-fourth-container {
+    gap: 15px; /* Reduced gap for better spacing */
+    padding: 30px 15px; /* Adjusted padding for smaller screens */
+    width: 100%;
+    max-width: 900px;
+    margin: 15% auto;
+    position: relative;
+  }
+
+  .newcorp-fourth-header {
+    flex-direction: row; /* Stack header content vertically */
+    align-items: center; /* Center-align header content */
+    justify-content: center; /* Center-align header content */
+    height: 140px; /* Allow height to adjust to content */
+    padding: 20px 15px; /* Reduced padding */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 790px;
+    text-align: center; /* Center-align text in the header */
+    position: relative; /* Position relative for flexibility */
+  }
+
+  .newcorp-fourth-header p {
+    font-size: 36px; /* Reduced font size for readability on smaller screens */
+    padding: 10px; /* Reduced padding */
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .newcorp-fourth-header-image {
+    width: 300px;
+    right: 20px;
+    top: -30px;
+    position: absolute;
+    margin-top: 20px;
+  }
+
+  .newcorp-fourth-grid {
+    gap: 15px; /* Reduced gap between grid items */
+    margin-top: 5%; /* Adjusted margin for spacing */
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .newcorp-fourth-row {
+    flex-direction: row; /* Stack rows vertically */
+    gap: 15px; /* Reduced gap for spacing */
+    margin-left: 0; /* Remove margin to center-align */
+    align-items: center; /* Center-align rows */
+  }
+
+  .newcorp-fourth-box {
+    width: 100%; /* Full width for boxes */
+    max-width: 300px; /* Constrain max-width for better fit */
+    height: auto;
+    flex-direction: row; /* Stack content vertically */
+    align-items: center; /* Center-align box content */
+    justify-content: center; /* Center-align box content */
+    gap: 10px; /* Gap between items */
+  }
+
+  .newcorp-fourth-box p {
+    font-size: 24px; /* Reduced font size for readability */
+    margin-top: 10px; /* Added margin for spacing */
+    margin-bottom: 10px; /* Added margin for spacing */
+  }
+
+  .newcorp-fourth-box-image {
+    width: 60px; /* Reduced image size */
+    height: 60px; /* Reduced image size */
+  }
+
+  .newcorp-fourth-footer {
+    margin-top: 30px; /* Increased margin for better spacing */
+    text-align: center; /* Center-align footer content */
+  }
+
+  .newcorp-fourth-button {
+    width: 100%;
+    max-width: 320px;
+    font-size: 24px;
+    margin: 0 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newcorp-fourth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 80px auto;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .newcorp-fourth-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 100px);
+    max-width: 700px;
+    height: 130px;
+    padding: 20px;
+    gap: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fourth-header p {
+    font-size: 28px;
+    padding-left: 10px;
+    z-index: 1;
+    width: 400px;
+    line-height: 40px;
+  }
+
+  .newcorp-fourth-header-image {
+    width: 200px;
+    height: 90px;
+    position: absolute;
+    transform: translateY(-10px);
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: -20px;
+    box-shadow: none;
+    z-index: 2;
+  }
+
+  /* Row text styles */
+  .newcorp-fourth-row-text {
+    font-size: 22px;
+    width: 120%;
+    padding: 0;
+    text-align: right;
+    margin-left: 5px;
+    letter-spacing: -0.06em;
+  }
+
+  /* Grid and row styles */
+  .newcorp-fourth-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 35px);
+    max-width: 700px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fourth-row {
+    align-items: center;
+    margin-left: 0;
+    gap: 15px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .newcorp-fourth-row:nth-child(1),
+  .newcorp-fourth-row:nth-child(2),
+  .newcorp-fourth-row:nth-child(3) {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  /* Box styles */
+  .newcorp-fourth-box {
+    max-width: 270px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fourth-box p {
+    font-size: 18px;
+  }
+
+  .newcorp-fourth-box-image {
+    max-width: 62px;
+    max-height: 62px;
+  }
+
+  /* Button styles */
+  .newcorp-fourth-button {
+    font-size: 0px;
+    width: 280px;
+    height: 50px;
+    line-height: 25px;
+    margin-top: 30px;
+  }
+  .newcorp-fourth-button::before {
+    content: '1분만에 견적 받아보기';
+    display: block;
+    text-align: center;
+    font-family: 'BMJUA';
+    font-size: 18px; /* Increase font size */
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .newcorp-fourth-footer {
+    margin-top: 15px;
+  }
+  .newcorp-fourth-button:hover {
+    background-color: #1a1a1a;
+    color: #fcab40;
+  }
+  .newcorp-fourth-button:active {
+    background-color: #333333;
+    color: #fcab40;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .newcorp-fourth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    padding: 40px 20px;
+    margin: 80px auto;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fourth-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    height: 80px;
+    position: relative;
+    text-align: left;
+    padding: 5px;
+    position: relative;
+  }
+
+  .newcorp-fourth-header p {
+    font-family: 'Tenada';
+    font-size: 24px;
+    color: black;
+    padding: 15px;
+    font-weight: 800;
+    flex: 1;
+    height: 100%;
+    line-height: 28px;
+    margin: 0;
+  }
+
+  .newcorp-fourth-header-image {
+    width: 176px;
+    height: auto;
+    border-radius: 8px;
+    position: absolute;
+    right: 20px;
+    top: -15%;
+    transform: translateY(-15%);
+  }
+
+  .newcorp-fourth-row-text {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newcorp-fourth-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fourth-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    gap: 10px;
+    width: 100%;
+    max-width: 355px;
+  }
+
+  .newcorp-fourth-row:nth-child(1) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .newcorp-fourth-row:nth-child(2),
+  .newcorp-fourth-row:nth-child(3) {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .newcorp-fourth-box {
+    width: 100%;
+    max-width: 175px;
+    height: 63px;
+    padding: 10px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background: #ffffff;
+    box-shadow: 0px 5px 9.8px rgba(143, 143, 143, 0.72);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .newcorp-fourth-box p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newcorp-fourth-box-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .newcorp-fourth-box:hover::before {
+    display: none;
+  }
+
+  .newcorp-fourth-box:hover .newcorp-fourth-box-image {
+    border: none;
+  }
+  .newcorp-fourth-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .newcorp-fourth-button {
+    font-size: 0px;
+    width: 100%;
+    max-width: 266px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newcorp-fourth-button::before {
+    content: '1분만에 견적 받아보기';
+    display: block;
+    text-align: center;
+    font-family: 'BMJUA';
+    font-size: 16px; /* Increase font size */
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .newcorp-fourth-button:hover {
+    background-color: #1a1a1a;
+    color: #fcab40;
+  }
+  .newcorp-fourth-button:active {
+    background-color: #333333;
+    color: #fcab40;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/*fifth*/
+.newcorp-fifth-container {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.newcorp-fifth-contentBox {
+  width: 873px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 30px;
+  background: #ffffff;
+  padding: 70px 30px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.newcorp-fifth-title {
+  font-family: 'tenada';
+  font-size: 36px;
+  font-weight: 800;
+  text-align: left;
+  margin: 0px 30px;
+}
+
+.newcorp-fifth-contentCard {
+  width: 813px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.newcorp-fifth-cardSubtitle {
+  width: 752px;
+  font-family: 'BMJUA';
+  font-size: 32px;
+  line-height: 25px;
+  color: #1a1a1a;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: #fcab40;
+  padding: 14px 30px 8px 30px;
+  margin: 30px;
+}
+
+.newcorp-fifth-cardSubtitle span:nth-child(1) {
+  font-family: 'BMJUA' !important;
+  font-size: 24px;
+}
+
+.newcorp-fifth-cardSubtitle span:nth-child(2) {
+  font-family: 'BMJUA' !important;
+  background: black;
+  color: #fcab40;
+}
+
+.newcorp-fifth-cardKeyword {
+  font-family: 'Tenada';
+  font-size: 32px;
+  color: #fcab40;
+  padding: 0 28px;
+  text-align: left;
+  margin-left: 12%;
+  margin-top: 10px;
+}
+
+.newcorp-fifth-cardKeyword-2 {
+  font-family: 'Tenada';
+  font-size: 32px;
+  color: #fcab40;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.newcorp-fifth-contentCard > p {
+  font-family: 'BMJUA';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  padding: 0 28px;
+  margin-left: 12%;
+}
+
+@media screen and (max-width: 991px) {
+  .newcorp-fifth-container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 15%; /* Reduce top margin for better fit */
+    padding: 20px; /* Add padding to container */
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .newcorp-fifth-contentBox {
+    width: 100%; /* Full width for better use of space */
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+    gap: 20px; /* Adjust gap for better spacing */
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  .newcorp-fifth-title {
+    font-size: 32px; /* Reduce font size for readability */
+    margin: 0px 20px; /* Adjust margin for better fit */
+  }
+
+  .newcorp-fifth-contentCard {
+    width: 100%; /* Full width for content card */
+    padding: 0 20px; /* Add padding for spacing */
+  }
+
+  .newcorp-fifth-cardSubtitle {
+    width: 100%; /* Full width for subtitles */
+    max-width: 100%; /* Constrain max-width to container width */
+    font-size: 28px; /* Reduce font size for readability */
+    line-height: 1.5; /* Adjust line height */
+    padding: 10px 20px; /* Reduce padding */
+    margin: 20px 0; /* Adjust margin for spacing */
+  }
+
+  .newcorp-fifth-cardSubtitle span:nth-child(1) {
+    font-size: 22px; /* Reduce font size for nested text */
+  }
+
+  .newcorp-fifth-cardSubtitle span:nth-child(2) {
+    font-size: 28px; /* Reduce font size for nested text */
+  }
+
+  .newcorp-fifth-cardKeyword {
+    font-size: 28px; /* Reduce font size for keywords */
+    text-align: left; /* Center-align text */
+    margin-top: 5px; /* Adjust top margin */
+    margin-bottom: 5px; /* Adjust bottom margin */
+    margin-left: 4%;
+  }
+  .newcorp-fifth-cardKeyword-2 {
+    font-size: 28px; /* Reduce font size for keywords */
+    text-align: center; /* Center-align text */
+    margin-top: 5px; /* Adjust top margin */
+    margin-bottom: 5px; /* Adjust bottom margin */
+  }
+
+  .newcorp-fifth-contentCard > p {
+    font-size: 24px; /* Reduce font size for paragraph text */
+    line-height: 24px; /* Adjust line height */
+    padding: 0 20px; /* Adjust padding for better spacing */
+    margin-left: 5%; /* Adjust left margin for centering */
+    margin-right: 5%; /* Adjust right margin for centering */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .newcorp-fifth-container {
+    width: 100%;
+    max-width: 550px;
+    margin-top: 10%;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newcorp-fifth-contentBox {
+    width: 100%; /* Full width for smaller screens */
+    padding: 20px; /* Reduce padding for mobile */
+    margin-bottom: 30px; /* Reduce bottom margin */
+    background-color: transparent;
+    box-shadow: none;
+    gap: 0;
+  }
+
+  /* Title styles */
+  .newcorp-fifth-title {
+    font-size: 28px; /* Decrease font size */
+    margin: 10px 0; /* Reduce margins */
+    text-align: left; /* Center-align text */
+    margin-left: 5px;
+  }
+
+  /* Content Card styles */
+  .newcorp-fifth-contentCard {
+    width: 100%; /* Full width for smaller screens */
+    align-items: flex-start; /* Align to the start for better readability */
+    padding: 0; /* Remove padding */
+  }
+
+  /* Subtitle styles */
+  .newcorp-fifth-cardSubtitle {
+    width: 100%; /* Full width for smaller screens */
+    font-size: 24px; /* Reduce font size */
+    line-height: 1.2; /* Adjust line height */
+    padding: 10px 20px; /* Adjust padding */
+    margin: 20px 0; /* Reduce margin */
+    text-align: left; /* Center-align text */
+  }
+
+  /* Subtitle span styles */
+  .newcorp-fifth-cardSubtitle span:nth-child(1) {
+    font-size: 20px; /* Adjust span font size */
+  }
+
+  .newcorp-fifth-cardKeyword {
+    font-size: 24px; /* Reduce font size */
+    margin: 5px 0; /* Adjust margin */
+    padding-left: 20px; /* Adjust padding */
+    text-align: left; /* Center-align text */
+    margin-left: 15px;
+  }
+
+  .newcorp-fifth-cardKeyword-2 {
+    font-size: 24px; /* Reduce font size */
+    margin: 5px 0; /* Adjust margin */
+    padding: 0; /* Adjust padding */
+    text-align: center; /* Center-align text */
+  }
+  .newcorp-fifth-cardSubtitle span:nth-child(2) {
+    font-family: 'BMJUA' !important;
+    font-size: 20px;
+  }
+
+  .newcorp-fifth-contentCard > p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 10px 10px;
+    margin-top: 10px;
+    text-align: left;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .newcorp-fifth-container {
+    width: 100%;
+    padding: 40px 10px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .newcorp-fifth-contentBox {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+  }
+
+  .newcorp-fifth-title {
+    font-size: 24px;
+    margin: 0px 10px;
+    text-align: left;
+  }
+
+  .newcorp-fifth-contentCard {
+    width: 100%;
+    max-width: 441px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /justify-content: center;
+    text-align: left;
+  }
+
+  .newcorp-fifth-cardSubtitle {
+    width: 100%;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  .newcorp-fifth-cardSubtitle span:nth-child(1),
+  .newcorp-fifth-cardSubtitle span:nth-child(2) {
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  .newcorp-fifth-cardKeyword {
+    font-size: 20px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .newcorp-fifth-cardKeyword-2 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .newcorp-fifth-contentCard > p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 15px;
+    text-align: left;
+    margin: 5px 0;
+  }
+}
+
+/*sixth*/
+.newcorp-sixth-container {
+  width: 1100px;
+  height: auto;
+  margin: 300px 0 200px 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25%;
+  position: relative;
+}
+
+.newcorp-sixth-title {
+  position: relative;
+  left: 80px;
+  font-family: 'tenada';
+  font-size: 128px;
+  color: #fcab40;
+  line-height: 120px;
+  text-shadow: 4px 4px 0px black;
+  font-weight: 800;
+  text-align: right;
+  margin-right: 30px;
+  margin-top: -50px;
+  z-index: 3;
+}
+
+.newcorp-sixth-contentBox {
+  position: relative;
+  right: 30px;
+  margin-top: 40px;
+  z-index: 1;
+  width: 794px;
+  height: auto;
+  padding-left: 80px;
+  border-radius: 8px;
+  box-shadow: 3px 4px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 4px black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.newcorp-sixth-contentSubtitle {
+  font-family: 'Tenada';
+  font-size: 46px;
+  font-weight: 400;
+  color: black;
+  margin: 80px 0 0px 40px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.newcorp-sixth-hightlight {
+  font-family: 'SUIT' !important;
+  background-color: black;
+  color: #fcab40;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+.newcorp-sixth-contentBox p {
+  font-family: 'SUIT';
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  margin-left: 40px;
+  padding: 20px 0;
+  line-height: 30px;
+}
+
+.newcorp-sixth-button {
+  width: 284px;
+  height: 65px;
+  font-size: 24px;
+  background-color: #fcab40;
+  font-family: 'BMJUA' !important;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 30px 0px 30px 380px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.newcorp-sixth-button:hover {
+  background-color: black;
+  color: #fcab40;
+}
+
+.newcorp-sixth-button:active {
+  background-color: #333333;
+  color: #fcab40;
+  box-shadow: inset 0px 8px 8px rgba(0, 0, 0, 0.95);
+}
+
+.sixth-section-container-mobile {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .newcorp-sixth-container {
+    width: 900px;
+    height: auto;
+    margin: 100px 120px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+    position: relative;
+  }
+
+  .newcorp-sixth-title {
+    position: relative;
+    left: 100px;
+    font-family: 'tenada';
+    font-size: 64px;
+    color: #fcab40;
+    line-height: 65px;
+    text-shadow: 4px 4px 0px black;
+    font-weight: 800;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: -10px;
+    z-index: 3;
+  }
+
+  .newcorp-sixth-contentBox {
+    position: relative;
+    right: 0px;
+    margin-top: 40px;
+    z-index: 1;
+    width: 650px;
+    height: auto;
+    padding: 0 0px 0 40px;
+  }
+
+  .newcorp-sixth-contentSubtitle {
+    font-family: 'Tenada';
+    font-size: 42px;
+    font-weight: 400;
+    color: black;
+    margin: 50px 0 0px 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .newcorp-sixth-hightlight {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .newcorp-sixth-contentBox p {
+    font-family: 'SUIT';
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+    margin-left: 40px;
+    padding: 30px 0;
+    line-height: 30px;
+  }
+
+  .newcorp-sixth-button {
+    width: 280px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    margin: 20px auto;
+    margin-left: 40%;
+    margin-top: -10px;
+  }
+
+  .newcorp-sixth-button:hover {
+    background-color: black;
+    color: #fcab40;
+  }
+
+  .newcorp-sixth-button:active {
+    background-color: #333333;
+    color: #fcab40;
+    box-shadow: inset 0px 8px 8px rgba(0, 0, 0, 0.95);
+  }
+
+  .sixth-section-container-mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .newcorp-sixth-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px; /* Adjusted max-width to better fit larger screens */
+    height: auto;
+    margin: 40px auto; /* Increased margin for more spacing */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Increased padding for better spacing */
+    position: relative;
+  }
+
+  .newcorp-sixth-title {
+    font-size: 50px; /* Slightly larger font size for better readability */
+    text-shadow: 4px 3px 0px #000000; /* Slightly reduced shadow for subtlety */
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    line-height: 50px;
+  }
+
+  .newcorp-sixth-contentBox {
+    position: relative;
+    left: 3%;
+    margin-top: 60px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12%;
+  }
+
+  .newcorp-sixth-contentBox > .newcorp-sixth-contentSubtitle {
+    font-size: 34px; /* Slightly larger font size for subtitles */
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    margin-top: 20px; /* Adjusted margin-top for spacing */
+    width: 88%;
+    text-align: left;
+    margin-left: -10%;
+  }
+
+  .newcorp-sixth-contentBox > p {
+    font-size: 18px; /* Slightly larger font size for better readability */
+    font-weight: 600;
+    padding: 15px 0; /* Increased padding for text spacing */
+    line-height: 28px; /* Increased line height for readability */
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .newcorp-sixth-contentBox > .newcorp-sixth-button {
+    max-width: 200px; /* Slightly wider button for larger screens */
+    height: 45px; /* Increased button height for comfort */
+    font-size: 18px; /* Increased font size for the button text */
+    line-height: 45px; /* Adjusted line height to match button height */
+    margin-left: 0;
+    margin-top: 25px; /* Increased margin-top for spacing */
+    margin-bottom: 30px; /* Increased margin-bottom for spacing */
+  }
+
+  .newcorp-sixth-contentBox > .newcorp-sixth-button:hover {
+    background-color: #fcab40; /* Maintain hover effect */
+    color: #000; /* Maintain hover text color */
+  }
+
+  .newcorp-sixth-contentBox > .newcorp-sixth-button:active {
+    background-color: #333333; /* Maintain active effect */
+    color: #fcab40; /* Maintain active text color */
+    box-shadow: inset 0px 8px 6px rgba(0, 0, 0, 0.4); /* Softer inset shadow */
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .newcorp-sixth-container {
+    display: none;
+  }
+
+  .sixth-section-container-mobile {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sixth-section-title-mobile {
+    font-family: 'Tenada';
+    font-size: 32px;
+    color: #fcab40;
+    text-shadow: 5px 4px 0px #000000;
+    font-weight: 800;
+    text-align: right;
+    margin: 0;
+    z-index: 3;
+    position: absolute;
+    top: 23px;
+    left: 27px;
+    line-height: 34px;
+  }
+
+  .sixth-section-content-box-mobile {
+    position: relative;
+    left: 15px;
+    margin-top: 40px;
+    z-index: 1;
+    width: 310px;
+    height: auto;
+    padding-left: 45px;
+    border-radius: 8px;
+    box-shadow: 3px 4px 32px rgba(0, 0, 0, 0.25);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+
+  .sixth-section-subtitle-mobile {
+    font-family: 'Tenada';
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .sixth-section-content-box-mobile p {
+    font-family: 'SUIT';
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    padding: 10px 0px;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .sixth-section-highlight-mobile {
+    font-family: 'SUIT' !important;
+    background-color: black;
+    color: #fcab40;
+    padding: 0 5px;
+    display: inline-block;
+    font-size: 16px !important;
+    font-weight: 800;
+  }
+
+  .sixth-section-button-mobile {
+    width: 100%;
+    max-width: 175px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #fcab40;
+    font-family: 'BMJUA' !important;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .sixth-section-button-mobile:hover {
+    background-color: #fcab40;
+    color: #000;
+  }
+
+  .sixth-section-button-mobile:active {
+    background-color: #333333;
+    color: #fcab40;
+    box-shadow: inset 0px 12px 8px rgba(0, 0, 0, 0.5);
+  }
+}

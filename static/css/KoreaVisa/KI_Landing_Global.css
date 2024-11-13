@@ -59,8 +59,8 @@ body {
 /* 웹 */
 .ki-container {
   height: auto;
-  margin-top: 250px;
-  /* margin: 150px 0px; */
+  margin: 150px 0px;
+  padding: 0 15px;
   background-color: #fff;
   display: flex;
   flex-direction: column;

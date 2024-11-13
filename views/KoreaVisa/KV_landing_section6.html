@@ -18,6 +18,19 @@
 
     <style>
       /* kv-sixth */
+      .kv-sixth-container {
+        margin: 150px 0;
+        padding: 0 15px;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
       .kv-sixth-container-mobile {
         display: none;
       }
@@ -31,10 +44,6 @@
         margin-bottom: 40px;
       }
 
-      .kv-button.kv-sixth {
-        margin-top: 50px;
-      }
-
       .kv-sixth-title span {
         font-family: 'SUIT Variable';
         color: #004097;
@@ -45,7 +54,9 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* 다섯 칸 */
         gap: 1.5rem;
-        width: 100%;
+        width: 98%;
+        align-items: center;
+        justify-content: center;
       }
 
       .kv-sixth-processBox {
@@ -55,8 +66,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
-        margin-bottom: 60px;
+        margin: 50px 0;
+        padding: 0 10px;
       }
 
       .kv-sixth-processCard span {
@@ -74,6 +85,9 @@
         justify-content: center !important;
         align-items: center !important;
         margin-right: 20px;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
       }
 
       .active-slide {
@@ -87,8 +101,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type2 {
         background-image: linear-gradient(
@@ -96,8 +108,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type3 {
@@ -106,8 +116,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       .kv-sixth-processCard.type4 {
@@ -116,8 +124,6 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
       .kv-sixth-processCard.type5 {
         background-image: linear-gradient(
@@ -125,24 +131,34 @@
             rgba(94, 94, 94, 0.5)
           ),
           url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
 
       @media screen and (max-width: 991px) {
-        .kv-container {
+        .kv-sixth-container {
           display: none;
         }
 
-        .kv-sixth-container-mobile {
-          display: flex;
-          flex-direction: column;
+        .kv-sixth-button-mobile {
+          color: #fff;
+          background: #004098;
+          text-align: center;
+          border-radius: 50px;
+          width: 16em;
+          height: 50px;
+          font-size: 21px;
+          line-height: 53px;
+          margin-top: 10px;
+          cursor: pointer;
         }
 
         .kv-sixth-container-mobile {
           width: 100%;
           margin-top: 150px;
           padding: 0 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         .kv-sixth-title-mobile {
@@ -162,25 +178,36 @@
         .kv-sixth-processBox-mobile {
           height: auto;
           width: 100%;
-          max-width: 1055px;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 50px;
-          margin-bottom: 60px;
+          margin: 50px 0;
+          padding: 0 10px;
+        }
+
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 80%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
         }
 
         .kv-sixth-processCard-mobile {
           font-family: 'GangwonEduPower';
-          width: 251px;
-          height: 250px;
-          transition: border 0.2s ease-in-out;
+          width: 6em !important;
+          height: 9em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
           color: #fff;
-          font-size: 24px;
-          display: flex;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
+          font-size: 22px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 120%;
+          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type1 {
@@ -189,8 +216,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/bfed0c9647193.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type2 {
           background-image: linear-gradient(
@@ -198,8 +223,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/43060b5ad9aa0.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type3 {
@@ -208,8 +231,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/7938dce6bac36.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
 
         .kv-sixth-processCard-mobile.type4 {
@@ -218,7 +239,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/74da34b13d735.png');
-          background-size: 100%;
           background-repeat: no-repeat;
         }
         .kv-sixth-processCard-mobile.type5 {
@@ -227,8 +247,6 @@
               rgba(94, 94, 94, 0.5)
             ),
             url('https://cdn.imweb.me/thumbnail/20241106/f7933907cce50.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
         }
       }
 
@@ -239,13 +257,36 @@
           padding: 0 15px;
         }
 
-        .kv-sixth-title-mobile {
-          line-height: 40px;
-          font-family: 'SUIT Variable';
-          font-size: 21px;
-          font-weight: 600;
-          color: black;
-          text-align: center;
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 60%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kv-sixth-processCard-mobile {
+          font-family: 'GangwonEduPower';
+          width: 4.5em !important;
+          height: 15em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+          color: #fff;
+          font-size: 15px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 250%;
+          background-repeat: no-repeat;
+        }
+
+        .kv-sixth-button-mobile {
+          height: 45px;
+          font-size: 20px;
+          line-height: 46px;
+          margin-top: 55px;
         }
       }
 
@@ -253,11 +294,105 @@
         .kv-container {
           display: none;
         }
+
+        .kv-sixth-mobile.swiper-wrapper {
+          width: 50%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kv-sixth-processCard-mobile {
+          font-family: 'GangwonEduPower';
+          width: 3.9em !important;
+          height: 13em !important;
+          transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+          color: #fff;
+          font-size: 15px;
+          display: flex !important;
+          text-align: center !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-right: 20px;
+          background-position: center;
+          background-size: 250%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      /********* 
+버튼 디자인 
+**********/
+      /* 웹 */
+      .kv-sixth-button {
+        width: 16em;
+        height: 50px;
+        background-color: #004098;
+        color: #fff;
+        font-family: 'SUIT Variable';
+        font-size: 26px;
+        font-weight: 400;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        text-align: center;
+        line-height: 65px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-top: 50px;
+      }
+      .kv-sixth-button:hover {
+        background-color: #a3c7ff;
+        color: #fefff5;
+      }
+
+      .kv-sixth-button:active {
+        background-color: #a3c7ff;
+        color: #004098;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+      }
+      /* 반응형 */
+      @media screen and (max-width: 991px) {
+        .kv-sixth-button {
+          font-size: 24px;
+          line-height: 55px;
+          margin-top: 80px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .kv-sixth-button {
+          height: 45px;
+          font-size: 20px;
+          line-height: 55px;
+          margin-top: 55px;
+        }
+      }
+
+      @media screen and (max-width: 497px) {
+        .kv-sixth-button {
+          display: none;
+        }
+        .kv-sixth-button-mobile {
+          color: #fff;
+          background: #004098;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          text-align: center;
+          border-radius: 50px;
+          width: 220px;
+          height: 35px;
+          font-size: 15px;
+          line-height: 38px;
+          margin-top: 10px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="kv-container">
+    <div class="kv-sixth-container">
       <div class="kv-sixth-title">
         <span>WELL-COME VISA</span>
         는
@@ -295,7 +430,7 @@
       </article>
 
       <div
-        class="kv-button kv-sixth"
+        class="kv-sixth-button kv-sixth"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         한국비자 관련 모든 것 알아보기
@@ -341,7 +476,7 @@
       </article>
 
       <div
-        class="kv-button"
+        class="kv-sixth-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank')"
       >
         한국비자 관련 모든 것 알아보기

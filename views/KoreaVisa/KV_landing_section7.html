@@ -11,15 +11,20 @@
     />
     <link rel="stylesheet" href="../../static/css/KoreaVisa/Reset.css" />
     <style>
-      .kv-seventh-container {
-        margin-top: 10%;
-      }
-
       .kv-seventh-mobile-box {
         display: none;
       }
 
+      .kv-seventh-img {
+        width: 100%;
+        padding: 0 30px;
+      }
+
       @media screen and (max-width: 767px) {
+        .kv-container {
+          margin: 80px 0;
+        }
+
         .kv-seventh-mobile-box {
           display: flex;
         }
@@ -33,16 +38,26 @@
   <body>
     <section class="kv-container">
       <article class="kv-seventh-mobile-box">
-        <img src="https://cdn.imweb.me/thumbnail/20241106/2bef43d560e10.png" />
+        <img
+          class="kv-seventh-img"
+          src="https://cdn.imweb.me/thumbnail/20241106/2bef43d560e10.png"
+        />
       </article>
       <article class="kv-seventh-desktop-box">
         <img
+          class="kv-seventh-img"
           src="https://cdn.imweb.me/thumbnail/20241106/b7f82040c8d41.png"
           alt=""
         />
       </article>
       <div
         class="kv-button"
+        onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');"
+      >
+        맞춤형 솔루션 받기
+      </div>
+      <div
+        class="kv-button-mobile"
         onclick="window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');"
       >
         맞춤형 솔루션 받기
